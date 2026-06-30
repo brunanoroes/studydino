@@ -351,7 +351,7 @@ export default function Agenda({ materias, onIniciarCronometro }: Props) {
           corBloco={corBloco}
           editavel={modo === 'planejado'}
           onAdd={abrirNovo}
-          onEdit={abrirEditar}
+          onEdit={(b) => abrirEditar(b as any)}
           onEstudar={onIniciarCronometro}
         />
       )}
@@ -362,7 +362,7 @@ export default function Agenda({ materias, onIniciarCronometro }: Props) {
           corBloco={corBloco}
           editavel={modo === 'planejado'}
           onAdd={abrirNovo}
-          onEdit={abrirEditar}
+          onEdit={(b) => abrirEditar(b as any)}
         />
       )}
       {visao === 'mes' && (
