@@ -690,4 +690,37 @@ app.delete('/api/trilhas/:id/materias-concluidas/:mid', (req, res) => {
   res.json({ ok: true });
 });
 
+// ── MIGRAÇÃO DE DADOS ───────────────────────────────────
+app.post('/api/admin/migrate-mock-data', verificarToken, (req, res) => {
+  try {
+    const { source_username, target_username } = req.body;
+    if (!source_username || !target_username) {
+      return res.status(400).json({ error: 'source_username e target_username obrigatórios' });
+    }
+
+    const source = db.prepare('SELECT id FROM usuarios WHERE username = ?').get(source_username);
+    const target = db.prepare('SELECT id FROM usuarios WHERE username = ?').get(target_username);
+
+    if (!source) return res.status(404).json({ error: 'Usuário origem não encontrado' });
+    if (!target) return res.status(404).json({ error: 'Usuário destino não encontrado' });
+
+    // Copiar sessões de estudo
+    const sessoes = db.prepare('SELECT * FROM sessoes WHERE usuario_id = ?').all(source.id);
+    const insertSessao = db.prepare(
+      'INSERT INTO sessoes (usuario_id, materia_id, duracao_segundos, iniciada_em, finalizada_em) VALUES (?, ?, ?, ?, ?)'
+    );
+
+    sessoes.forEach(s => {
+      insertSessao.run(target.id, s.materia_id, s.duracao_segundos, s.iniciada_em, s.finalizada_em);
+    });
+
+    res.json({
+      ok: true,
+      message: `${sessoes.length} sessões migradas de ${source_username} para ${target_username}`
+    });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 app.listen(PORT, () => console.log(`API rodando em http://localhost:${PORT}`));

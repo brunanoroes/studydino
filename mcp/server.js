@@ -107,12 +107,61 @@ function handleTool(name, args) {
         return adicionarMateriaTrilha(args);
       case 'remover_materia_trilha':
         return removerMateriaTrilha(args);
+      case 'criar_usuario':
+        return criarUsuario(args);
+      case 'migrar_dados_mockados':
+        return migrarDadosMockados(args);
       default:
         throw new Error(`Tool not found: ${name}`);
     }
   } catch (error) {
     throw error;
   }
+}
+
+// ──── User Management ────
+function criarUsuario({ username, senha }) {
+  const usuarioExistente = db.prepare('SELECT id FROM usuarios WHERE username = ?').get(username);
+  if (usuarioExistente) {
+    throw new Error('Usuário já existe');
+  }
+
+  const bcrypt = require('bcryptjs');
+  const senhaHash = bcrypt.hashSync(senha, 10);
+  const result = db.prepare('INSERT INTO usuarios (username, senha_hash) VALUES (?, ?)').run(username, senhaHash);
+
+  return {
+    success: true,
+    id: result.lastID,
+    username,
+    message: `Usuário ${username} criado com sucesso`
+  };
+}
+
+function migrarDadosMockados({ source_username, target_username }) {
+  const source = db.prepare('SELECT id FROM usuarios WHERE username = ?').get(source_username);
+  const target = db.prepare('SELECT id FROM usuarios WHERE username = ?').get(target_username);
+
+  if (!source) throw new Error(`Usuário origem ${source_username} não encontrado`);
+  if (!target) throw new Error(`Usuário destino ${target_username} não encontrado`);
+
+  // Copiar sessões de estudo
+  const sessoes = db.prepare('SELECT * FROM sessoes WHERE usuario_id = ?').all(source.id);
+  const insertSessao = db.prepare(
+    'INSERT INTO sessoes (usuario_id, materia_id, duracao_segundos, iniciada_em, finalizada_em) VALUES (?, ?, ?, ?, ?)'
+  );
+
+  let count = 0;
+  sessoes.forEach(s => {
+    insertSessao.run(target.id, s.materia_id, s.duracao_segundos, s.iniciada_em, s.finalizada_em);
+    count++;
+  });
+
+  return {
+    success: true,
+    sessoes_migradas: count,
+    message: `${count} sessões de estudo migradas de ${source_username} para ${target_username}`
+  };
 }
 
 function criarMateria({ nome, cor = '#4CAF50', emoji = '📚' }) {
@@ -352,6 +401,30 @@ rl.on('line', (line) => {
                 materia_id: { type: 'number', description: 'ID da matéria' },
               },
               required: ['trilha_id', 'materia_id'],
+            },
+          },
+          {
+            name: 'criar_usuario',
+            description: 'Cria um novo usuário no sistema',
+            inputSchema: {
+              type: 'object',
+              properties: {
+                username: { type: 'string', description: 'Nome de usuário' },
+                senha: { type: 'string', description: 'Senha do usuário (mín 6 chars, 1 letra, 1 número)' },
+              },
+              required: ['username', 'senha'],
+            },
+          },
+          {
+            name: 'migrar_dados_mockados',
+            description: 'Migra dados de estudo de um usuário para outro',
+            inputSchema: {
+              type: 'object',
+              properties: {
+                source_username: { type: 'string', description: 'Username origem (com dados mockados)' },
+                target_username: { type: 'string', description: 'Username destino (para receber os dados)' },
+              },
+              required: ['source_username', 'target_username'],
             },
           },
         ],
