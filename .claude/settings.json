@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "studydino": {
+      "command": "node",
+      "args": ["mcp/server.js"],
+      "description": "MCP Server para controlar dados do StudyDino"
+    }
+  }
+}
