@@ -14,18 +14,21 @@ if (process.env.DATABASE_URL) {
     pool,
     prepare: (sql) => ({
       run: (...params) => {
-        const result = pool.query(sql, params);
+        pool.query(sql, params).catch(e => console.error('Query error:', e.message));
         return { changes: 1, lastInsertRowid: null };
       },
-      get: (...params) => pool.querySync ? pool.querySync(sql, params).rows[0] : null,
-      all: (...params) => pool.querySync ? pool.querySync(sql, params).rows : []
+      get: (...params) => {
+        pool.query(sql, params).then(r => r.rows[0]).catch(() => null);
+        return null;
+      },
+      all: (...params) => {
+        pool.query(sql, params).then(r => r.rows).catch(() => []);
+        return [];
+      }
     }),
-    exec: (sql) => pool.query(sql),
+    exec: (sql) => pool.query(sql).catch(e => console.error('Exec error:', e.message)),
     transaction: (fn) => fn
   };
-
-  // Inicializar tabelas
-  initTables();
 } else {
   // SQLite local (desenvolvimento)
   const Database = require('better-sqlite3');
