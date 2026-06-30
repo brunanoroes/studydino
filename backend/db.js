@@ -33,146 +33,9 @@ if (process.env.DATABASE_URL) {
   // SQLite local (desenvolvimento)
   const Database = require('better-sqlite3');
   db = new Database(path.join(__dirname, 'estudos.db'));
-  initTables();
-}
 
-function initTables() {
-  const isPostgres = !!process.env.DATABASE_URL;
-
-  const sql = isPostgres ? `
-    CREATE TABLE IF NOT EXISTS materias (
-      id SERIAL PRIMARY KEY,
-      nome TEXT NOT NULL UNIQUE,
-      cor TEXT NOT NULL DEFAULT '#4CAF50',
-      emoji TEXT NOT NULL DEFAULT '📚',
-      criada_em TIMESTAMP NOT NULL DEFAULT NOW()
-    );
-
-    CREATE TABLE IF NOT EXISTS trilhas (
-      id SERIAL PRIMARY KEY,
-      nome TEXT NOT NULL UNIQUE,
-      cor TEXT NOT NULL DEFAULT '#2d6a4f',
-      criada_em TIMESTAMP NOT NULL DEFAULT NOW()
-    );
-
-    CREATE TABLE IF NOT EXISTS trilha_materias (
-      trilha_id INTEGER NOT NULL,
-      materia_id INTEGER NOT NULL,
-      PRIMARY KEY (trilha_id, materia_id),
-      FOREIGN KEY (trilha_id) REFERENCES trilhas(id) ON DELETE CASCADE,
-      FOREIGN KEY (materia_id) REFERENCES materias(id) ON DELETE CASCADE
-    );
-
-    CREATE TABLE IF NOT EXISTS config (
-      chave TEXT PRIMARY KEY,
-      valor TEXT NOT NULL
-    );
-
-    CREATE TABLE IF NOT EXISTS cronograma (
-      id SERIAL PRIMARY KEY,
-      dia_semana INTEGER NOT NULL,
-      hora_inicio TEXT NOT NULL,
-      hora_fim TEXT NOT NULL,
-      tipo TEXT NOT NULL DEFAULT 'estudo',
-      materia_id INTEGER,
-      descricao TEXT,
-      FOREIGN KEY (materia_id) REFERENCES materias(id) ON DELETE SET NULL
-    );
-
-    CREATE TABLE IF NOT EXISTS passos_completos (
-      trilha_id INTEGER NOT NULL,
-      passo_index INTEGER NOT NULL,
-      concluido_em TIMESTAMP NOT NULL DEFAULT NOW(),
-      PRIMARY KEY (trilha_id, passo_index),
-      FOREIGN KEY (trilha_id) REFERENCES trilhas(id) ON DELETE CASCADE
-    );
-
-    CREATE TABLE IF NOT EXISTS materias_concluidas (
-      trilha_id INTEGER NOT NULL,
-      materia_id INTEGER NOT NULL,
-      concluido_em TIMESTAMP NOT NULL DEFAULT NOW(),
-      PRIMARY KEY (trilha_id, materia_id),
-      FOREIGN KEY (trilha_id) REFERENCES trilhas(id) ON DELETE CASCADE,
-      FOREIGN KEY (materia_id) REFERENCES materias(id) ON DELETE CASCADE
-    );
-
-    CREATE TABLE IF NOT EXISTS cronograma_dias (
-      id SERIAL PRIMARY KEY,
-      data TEXT NOT NULL,
-      hora_inicio TEXT NOT NULL,
-      hora_fim TEXT NOT NULL,
-      tipo TEXT NOT NULL DEFAULT 'estudo',
-      materia_id INTEGER,
-      descricao TEXT,
-      serie_id TEXT,
-      FOREIGN KEY (materia_id) REFERENCES materias(id) ON DELETE SET NULL
-    );
-
-    CREATE INDEX IF NOT EXISTS idx_cronograma_dias_data ON cronograma_dias(data);
-    CREATE INDEX IF NOT EXISTS idx_cronograma_dias_serie ON cronograma_dias(serie_id);
-
-    CREATE TABLE IF NOT EXISTS sessoes (
-      id SERIAL PRIMARY KEY,
-      materia_id INTEGER NOT NULL,
-      duracao_segundos INTEGER NOT NULL,
-      iniciada_em TIMESTAMP NOT NULL,
-      finalizada_em TIMESTAMP,
-      anotacao TEXT,
-      usuario_id INTEGER,
-      FOREIGN KEY (materia_id) REFERENCES materias(id) ON DELETE CASCADE,
-      FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
-    );
-
-    CREATE TABLE IF NOT EXISTS capitulos (
-      id SERIAL PRIMARY KEY,
-      trilha_id INTEGER NOT NULL,
-      ordem INTEGER NOT NULL DEFAULT 0,
-      nome TEXT NOT NULL,
-      emoji TEXT NOT NULL DEFAULT '📚',
-      descricao TEXT,
-      FOREIGN KEY (trilha_id) REFERENCES trilhas(id) ON DELETE CASCADE
-    );
-
-    CREATE TABLE IF NOT EXISTS capitulo_materias (
-      capitulo_id INTEGER NOT NULL,
-      materia_id INTEGER NOT NULL,
-      ordem INTEGER NOT NULL DEFAULT 0,
-      PRIMARY KEY (capitulo_id, materia_id),
-      FOREIGN KEY (capitulo_id) REFERENCES capitulos(id) ON DELETE CASCADE,
-      FOREIGN KEY (materia_id) REFERENCES materias(id) ON DELETE CASCADE
-    );
-
-    CREATE TABLE IF NOT EXISTS capitulo_cronograma (
-      id SERIAL PRIMARY KEY,
-      capitulo_id INTEGER NOT NULL,
-      dia_semana INTEGER NOT NULL,
-      hora_inicio TEXT NOT NULL,
-      hora_fim TEXT NOT NULL,
-      tipo TEXT NOT NULL DEFAULT 'estudo',
-      materia_id INTEGER,
-      descricao TEXT,
-      FOREIGN KEY (capitulo_id) REFERENCES capitulos(id) ON DELETE CASCADE,
-      FOREIGN KEY (materia_id) REFERENCES materias(id) ON DELETE SET NULL
-    );
-
-    CREATE TABLE IF NOT EXISTS usuarios (
-      id SERIAL PRIMARY KEY,
-      username TEXT NOT NULL UNIQUE,
-      senha_hash TEXT NOT NULL,
-      criado_em TIMESTAMP NOT NULL DEFAULT NOW()
-    );
-
-    CREATE TABLE IF NOT EXISTS amizades (
-      id SERIAL PRIMARY KEY,
-      usuario_id INTEGER NOT NULL,
-      amigo_id INTEGER NOT NULL,
-      criado_em TIMESTAMP NOT NULL DEFAULT NOW(),
-      FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
-      FOREIGN KEY (amigo_id) REFERENCES usuarios(id) ON DELETE CASCADE,
-      UNIQUE(usuario_id, amigo_id)
-    );
-    CREATE INDEX IF NOT EXISTS idx_amizades_usuario ON amizades(usuario_id);
-  ` : `
+  // Inicializar tabelas apenas para SQLite
+  const sql = `
     CREATE TABLE IF NOT EXISTS materias (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       nome TEXT NOT NULL UNIQUE,
@@ -306,16 +169,7 @@ function initTables() {
     CREATE INDEX IF NOT EXISTS idx_amizades_usuario ON amizades(usuario_id);
   `;
 
-  if (isPostgres) {
-    db.pool.query(sql).catch(console.error);
-  } else {
-    db.exec(sql);
-    // Migração: adicionar usuario_id em sessoes (SQLite)
-    const colunas = db.prepare("PRAGMA table_info(sessoes)").all();
-    if (!colunas.some(c => c.name === 'usuario_id')) {
-      db.exec('ALTER TABLE sessoes ADD COLUMN usuario_id INTEGER');
-    }
-  }
+  db.exec(sql);
 }
 
 module.exports = db;
