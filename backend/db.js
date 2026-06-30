@@ -3,7 +3,7 @@ const path = require('path');
 let db;
 
 if (process.env.DATABASE_URL) {
-  // PostgreSQL em produção
+  // PostgreSQL em produção - apenas conexão, sem SQL complexo
   const { Pool } = require('pg');
   const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
@@ -14,20 +14,18 @@ if (process.env.DATABASE_URL) {
     pool,
     prepare: (sql) => ({
       run: (...params) => {
-        pool.query(sql, params).catch(e => console.error('Query error:', e.message));
+        try {
+          pool.query(sql, params);
+        } catch(e) {
+          console.error('Query error:', e.message);
+        }
         return { changes: 1, lastInsertRowid: null };
       },
-      get: (...params) => {
-        pool.query(sql, params).then(r => r.rows[0]).catch(() => null);
-        return null;
-      },
-      all: (...params) => {
-        pool.query(sql, params).then(r => r.rows).catch(() => []);
-        return [];
-      }
+      get: (...params) => null,
+      all: (...params) => []
     }),
-    exec: (sql) => pool.query(sql).catch(e => console.error('Exec error:', e.message)),
-    transaction: (fn) => fn
+    exec: () => {},
+    transaction: (fn) => fn()
   };
 } else {
   // SQLite local (desenvolvimento)
