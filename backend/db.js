@@ -305,12 +305,6 @@ function initTables() {
 
   if (isPostgres) {
     db.pool.query(sql).catch(console.error);
-    // Migração: adicionar usuario_id em sessoes
-    db.pool.query(`
-      ALTER TABLE sessoes ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
-      ALTER TABLE sessoes ADD CONSTRAINT fk_sessoes_usuario
-        FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE;
-    `).catch(() => {}); // Ignora erro se já existe
   } else {
     db.exec(sql);
     // Migração: adicionar usuario_id em sessoes (SQLite)
