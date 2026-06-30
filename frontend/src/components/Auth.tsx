@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Lock, Mail } from 'lucide-react';
+import { Lock } from 'lucide-react';
 
 interface Props {
   onLogin: (token: string, username: string) => void;

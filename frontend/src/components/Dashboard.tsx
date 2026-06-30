@@ -169,7 +169,7 @@ export default function Dashboard({ trilhas }: Props) {
               <XAxis dataKey="dia" tick={{ fontSize: 11, fill: 'var(--gray-400)' }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fontSize: 11, fill: 'var(--gray-400)' }} axisLine={false} tickLine={false} />
               <Tooltip
-                formatter={(v: number) => [`${v}h`, 'Horas']}
+                formatter={(v) => [`${v}h`, 'Horas']}
                 contentStyle={{ borderRadius: 8, border: 'none', boxShadow: 'var(--shadow)', fontSize: 13 }}
                 cursor={{ fill: 'rgba(90,158,58,0.07)' }}
               />
@@ -193,7 +193,7 @@ export default function Dashboard({ trilhas }: Props) {
                   {comHoras.map(m => <Cell key={m.id} fill={m.cor} />)}
                 </Pie>
                 <Tooltip
-                  formatter={(v: number) => [formatarTempo(v), 'Tempo']}
+                  formatter={(v) => [formatarTempo(v as number), 'Tempo']}
                   contentStyle={{ borderRadius: 8, border: 'none', boxShadow: 'var(--shadow)', fontSize: 13 }}
                 />
               </PieChart>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Pencil, Trash2, X, Check, Layers, Clock, ChevronRight, BookOpen } from 'lucide-react';
+import { Plus, Pencil, Trash2, X, Check, Layers, Clock, BookOpen } from 'lucide-react';
 import { api, formatarTempo } from '../api';
 import type { Materia, Trilha } from '../api';
 import TrilhaDetalhe from './TrilhaDetalhe';

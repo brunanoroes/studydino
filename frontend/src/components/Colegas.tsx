@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plus, Trash2, Users, Zap } from 'lucide-react';
+import { Plus, Trash2, Users } from 'lucide-react';
 import { api, formatarTempo } from '../api';
 import type { Amigo, ProgressoAmigo, StatusEstudando } from '../api';
 
