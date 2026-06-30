@@ -6,8 +6,9 @@ const db = require('./db');
 
 const app = express();
 app.use(cors({
-  origin: ['https://studydino-agmq53sf8-brunanoroes-projects.vercel.app', 'http://localhost:3000', 'http://localhost:5173'],
-  credentials: true
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
