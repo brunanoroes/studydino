@@ -1,0 +1,23 @@
+[    5509ms] [ERROR] TypeError: Cannot read properties of null (reading 'id')
+    at new e (https://content.estrategia.com/front-student/2bb3501.js:1:700)
+    at C (https://content.estrategia.com/front-student/2bb3501.js:1:2347)
+    at https://content.estrategia.com/front-student/da1723c.js:1:844
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/52aa859.js:1
+[    6988ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://perfil.estrategia.com/login?s=1&target=https%3A%2F%2Fconcursos.estrategia.com%2Fauth%2F%3Fpath%3D%252Festudos-em-andamento%252F%253Ftab%253Dmy_study_goals%26login%3D1:0
+[    7036ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.pt_BR.pSWgFDgntfI.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8PaSM4aRbaasi1-y8B4NP4fHs3aQ/cb=gapi.loaded_0?le=scs:429
+[    7292ms] [INFO] Loading the script 'https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.IdpIFrameHttp.pt_BR.sFk3yA5NVw4.2018.O/am=BCDAAQ/d=1/rs=AOaEmlFBumXGqxUlxAz4Y057Fqf9aBtkeg/m=base' violates the following Content Security Policy directive: "script-src 'unsafe-inline' 'unsafe-eval' blob: data:". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The policy is report-only, so the violation has been logged but no further action has been taken. @ https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fperfil.estrategia.com&rpcToken=253182296.57168326&clearCache=1&supportBlocked3PCookies=1:0
+[    7472ms] [WARNING] Your client application uses libraries for user authentication or authorization that are deprecated. See the [Migration Guide](https://developers.google.com/identity/gsi/web/guides/gis-migration) for more information. @ https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.pt_BR.pSWgFDgntfI.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8PaSM4aRbaasi1-y8B4NP4fHs3aQ/cb=gapi.loaded_0?le=scs:409
+[    7504ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://accounts.google.com/_/IdpIFrameHttp/cspreport/fine-allowlist:0
+[   47007ms] [WARNING] Max discount product not found, displaying first tab @ https://content.estrategia.com/front-student/2bb3501.js:0
+[   47248ms] [LOG] Initializing Beamer. [Update and engage users effortlessly - https://getbeamer.com] @ https://app.getbeamer.com/js/beamer-embed.js:14
+[   47752ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[   47754ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[   47754ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[   47756ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[   47757ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[   47757ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0

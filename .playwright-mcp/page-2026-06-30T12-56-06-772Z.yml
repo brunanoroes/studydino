@@ -1,0 +1,27 @@
+- generic [ref=f112e3]:
+  - banner [ref=f112e4]:
+    - generic [ref=f112e5]:
+      - img [ref=f112e7]
+      - generic [ref=f112e10]: StudyDino
+  - main [ref=f112e11]:
+    - generic [ref=f112e13]:
+      - img [ref=f112e15]
+      - paragraph [ref=f112e17]: Nenhuma matéria cadastrada
+      - paragraph [ref=f112e18]: Crie suas matérias antes de iniciar o cronômetro.
+      - button "Gerenciar Matérias" [ref=f112e19] [cursor=pointer]
+  - navigation [ref=f112e20]:
+    - button "Cronômetro" [ref=f112e21] [cursor=pointer]:
+      - img [ref=f112e22]
+      - generic [ref=f112e25]: Cronômetro
+    - button "Matérias" [ref=f112e26] [cursor=pointer]:
+      - img [ref=f112e27]
+      - generic [ref=f112e29]: Matérias
+    - button "Trilhas" [ref=f112e30] [cursor=pointer]:
+      - img [ref=f112e31]
+      - generic [ref=f112e35]: Trilhas
+    - button "Dashboard" [ref=f112e36] [cursor=pointer]:
+      - img [ref=f112e37]
+      - generic [ref=f112e38]: Dashboard
+    - button "Histórico" [ref=f112e39] [cursor=pointer]:
+      - img [ref=f112e40]
+      - generic [ref=f112e43]: Histórico

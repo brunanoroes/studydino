@@ -1,0 +1,273 @@
+- generic [ref=f112e3]:
+  - banner [ref=f112e4]:
+    - generic [ref=f112e5]:
+      - img [ref=f112e7]
+      - generic [ref=f112e10]: StudyDino
+    - generic [ref=f112e44]:
+      - generic [ref=f112e45]: Arquitetura de Computadores
+      - generic [ref=f112e46]: Banco de Dados
+      - generic [ref=f112e47]: Ciência de Dados
+      - generic [ref=f112e48]: Desenvolvimento de Software
+      - generic [ref=f112e49]: "+14"
+  - main [ref=f112e11]:
+    - generic [ref=f112e75]:
+      - generic [ref=f112e76]:
+        - generic [ref=f112e77]:
+          - heading "Matérias" [level=2] [ref=f112e78]:
+            - img [ref=f112e79]
+            - text: Matérias
+          - paragraph [ref=f112e81]: 18 matérias cadastradas
+        - button "Nova matéria" [ref=f112e82] [cursor=pointer]:
+          - img [ref=f112e83]
+          - text: Nova matéria
+      - generic [ref=f112e84]:
+        - generic [ref=f112e85]:
+          - generic [ref=f112e87]:
+            - generic [ref=f112e88]: Arquitetura de Computadores
+            - generic [ref=f112e89]:
+              - generic [ref=f112e90]:
+                - img [ref=f112e91]
+                - text: 0s
+              - generic [ref=f112e94]: 0 sessões
+          - generic [ref=f112e95]:
+            - button [ref=f112e96] [cursor=pointer]:
+              - img [ref=f112e97]
+            - button [ref=f112e100] [cursor=pointer]:
+              - img [ref=f112e101]
+        - generic [ref=f112e104]:
+          - generic [ref=f112e106]:
+            - generic [ref=f112e107]: Banco de Dados
+            - generic [ref=f112e108]:
+              - generic [ref=f112e109]:
+                - img [ref=f112e110]
+                - text: 0s
+              - generic [ref=f112e113]: 0 sessões
+          - generic [ref=f112e114]:
+            - button [ref=f112e115] [cursor=pointer]:
+              - img [ref=f112e116]
+            - button [ref=f112e119] [cursor=pointer]:
+              - img [ref=f112e120]
+        - generic [ref=f112e123]:
+          - generic [ref=f112e125]:
+            - generic [ref=f112e126]: Ciência de Dados
+            - generic [ref=f112e127]:
+              - generic [ref=f112e128]:
+                - img [ref=f112e129]
+                - text: 0s
+              - generic [ref=f112e132]: 0 sessões
+          - generic [ref=f112e133]:
+            - button [ref=f112e134] [cursor=pointer]:
+              - img [ref=f112e135]
+            - button [ref=f112e138] [cursor=pointer]:
+              - img [ref=f112e139]
+        - generic [ref=f112e142]:
+          - generic [ref=f112e144]:
+            - generic [ref=f112e145]: Desenvolvimento de Software
+            - generic [ref=f112e146]:
+              - generic [ref=f112e147]:
+                - img [ref=f112e148]
+                - text: 0s
+              - generic [ref=f112e151]: 0 sessões
+          - generic [ref=f112e152]:
+            - button [ref=f112e153] [cursor=pointer]:
+              - img [ref=f112e154]
+            - button [ref=f112e157] [cursor=pointer]:
+              - img [ref=f112e158]
+        - generic [ref=f112e161]:
+          - generic [ref=f112e163]:
+            - generic [ref=f112e164]: Engenharia de Software
+            - generic [ref=f112e165]:
+              - generic [ref=f112e166]:
+                - img [ref=f112e167]
+                - text: 0s
+              - generic [ref=f112e170]: 0 sessões
+          - generic [ref=f112e171]:
+            - button [ref=f112e172] [cursor=pointer]:
+              - img [ref=f112e173]
+            - button [ref=f112e176] [cursor=pointer]:
+              - img [ref=f112e177]
+        - generic [ref=f112e180]:
+          - generic [ref=f112e182]:
+            - generic [ref=f112e183]: Estatística e Probabilidade
+            - generic [ref=f112e184]:
+              - generic [ref=f112e185]:
+                - img [ref=f112e186]
+                - text: 0s
+              - generic [ref=f112e189]: 0 sessões
+          - generic [ref=f112e190]:
+            - button [ref=f112e191] [cursor=pointer]:
+              - img [ref=f112e192]
+            - button [ref=f112e195] [cursor=pointer]:
+              - img [ref=f112e196]
+        - generic [ref=f112e199]:
+          - generic [ref=f112e201]:
+            - generic [ref=f112e202]: Governança de TI
+            - generic [ref=f112e203]:
+              - generic [ref=f112e204]:
+                - img [ref=f112e205]
+                - text: 0s
+              - generic [ref=f112e208]: 0 sessões
+          - generic [ref=f112e209]:
+            - button [ref=f112e210] [cursor=pointer]:
+              - img [ref=f112e211]
+            - button [ref=f112e214] [cursor=pointer]:
+              - img [ref=f112e215]
+        - generic [ref=f112e218]:
+          - generic [ref=f112e220]:
+            - generic [ref=f112e221]: Inglês
+            - generic [ref=f112e222]:
+              - generic [ref=f112e223]:
+                - img [ref=f112e224]
+                - text: 0s
+              - generic [ref=f112e227]: 0 sessões
+          - generic [ref=f112e228]:
+            - button [ref=f112e229] [cursor=pointer]:
+              - img [ref=f112e230]
+            - button [ref=f112e233] [cursor=pointer]:
+              - img [ref=f112e234]
+        - generic [ref=f112e237]:
+          - generic [ref=f112e239]:
+            - generic [ref=f112e240]: LGPD e Privacidade
+            - generic [ref=f112e241]:
+              - generic [ref=f112e242]:
+                - img [ref=f112e243]
+                - text: 0s
+              - generic [ref=f112e246]: 0 sessões
+          - generic [ref=f112e247]:
+            - button [ref=f112e248] [cursor=pointer]:
+              - img [ref=f112e249]
+            - button [ref=f112e252] [cursor=pointer]:
+              - img [ref=f112e253]
+        - generic [ref=f112e256]:
+          - generic [ref=f112e258]:
+            - generic [ref=f112e259]: Legislação Institucional
+            - generic [ref=f112e260]:
+              - generic [ref=f112e261]:
+                - img [ref=f112e262]
+                - text: 0s
+              - generic [ref=f112e265]: 0 sessões
+          - generic [ref=f112e266]:
+            - button [ref=f112e267] [cursor=pointer]:
+              - img [ref=f112e268]
+            - button [ref=f112e271] [cursor=pointer]:
+              - img [ref=f112e272]
+        - generic [ref=f112e275]:
+          - generic [ref=f112e277]:
+            - generic [ref=f112e278]: Linguagens de Programação
+            - generic [ref=f112e279]:
+              - generic [ref=f112e280]:
+                - img [ref=f112e281]
+                - text: 0s
+              - generic [ref=f112e284]: 0 sessões
+          - generic [ref=f112e285]:
+            - button [ref=f112e286] [cursor=pointer]:
+              - img [ref=f112e287]
+            - button [ref=f112e290] [cursor=pointer]:
+              - img [ref=f112e291]
+        - generic [ref=f112e294]:
+          - generic [ref=f112e296]:
+            - generic [ref=f112e297]: Língua Portuguesa
+            - generic [ref=f112e298]:
+              - generic [ref=f112e299]:
+                - img [ref=f112e300]
+                - text: 0s
+              - generic [ref=f112e303]: 0 sessões
+          - generic [ref=f112e304]:
+            - button [ref=f112e305] [cursor=pointer]:
+              - img [ref=f112e306]
+            - button [ref=f112e309] [cursor=pointer]:
+              - img [ref=f112e310]
+        - generic [ref=f112e313]:
+          - generic [ref=f112e315]:
+            - generic [ref=f112e316]: Matemática
+            - generic [ref=f112e317]:
+              - generic [ref=f112e318]:
+                - img [ref=f112e319]
+                - text: 0s
+              - generic [ref=f112e322]: 0 sessões
+          - generic [ref=f112e323]:
+            - button [ref=f112e324] [cursor=pointer]:
+              - img [ref=f112e325]
+            - button [ref=f112e328] [cursor=pointer]:
+              - img [ref=f112e329]
+        - generic [ref=f112e332]:
+          - generic [ref=f112e334]:
+            - generic [ref=f112e335]: Raciocínio Lógico
+            - generic [ref=f112e336]:
+              - generic [ref=f112e337]:
+                - img [ref=f112e338]
+                - text: 0s
+              - generic [ref=f112e341]: 0 sessões
+          - generic [ref=f112e342]:
+            - button [ref=f112e343] [cursor=pointer]:
+              - img [ref=f112e344]
+            - button [ref=f112e347] [cursor=pointer]:
+              - img [ref=f112e348]
+        - generic [ref=f112e351]:
+          - generic [ref=f112e353]:
+            - generic [ref=f112e354]: Redes e Segurança
+            - generic [ref=f112e355]:
+              - generic [ref=f112e356]:
+                - img [ref=f112e357]
+                - text: 0s
+              - generic [ref=f112e360]: 0 sessões
+          - generic [ref=f112e361]:
+            - button [ref=f112e362] [cursor=pointer]:
+              - img [ref=f112e363]
+            - button [ref=f112e366] [cursor=pointer]:
+              - img [ref=f112e367]
+        - generic [ref=f112e370]:
+          - generic [ref=f112e372]:
+            - generic [ref=f112e373]: Segurança da Informação
+            - generic [ref=f112e374]:
+              - generic [ref=f112e375]:
+                - img [ref=f112e376]
+                - text: 0s
+              - generic [ref=f112e379]: 0 sessões
+          - generic [ref=f112e380]:
+            - button [ref=f112e381] [cursor=pointer]:
+              - img [ref=f112e382]
+            - button [ref=f112e385] [cursor=pointer]:
+              - img [ref=f112e386]
+        - generic [ref=f112e389]:
+          - generic [ref=f112e391]:
+            - generic [ref=f112e392]: Servidores e Infraestrutura
+            - generic [ref=f112e393]:
+              - generic [ref=f112e394]:
+                - img [ref=f112e395]
+                - text: 0s
+              - generic [ref=f112e398]: 0 sessões
+          - generic [ref=f112e399]:
+            - button [ref=f112e400] [cursor=pointer]:
+              - img [ref=f112e401]
+            - button [ref=f112e404] [cursor=pointer]:
+              - img [ref=f112e405]
+        - generic [ref=f112e408]:
+          - generic [ref=f112e410]:
+            - generic [ref=f112e411]: Sistemas Operacionais
+            - generic [ref=f112e412]:
+              - generic [ref=f112e413]:
+                - img [ref=f112e414]
+                - text: 0s
+              - generic [ref=f112e417]: 0 sessões
+          - generic [ref=f112e418]:
+            - button [ref=f112e419] [cursor=pointer]:
+              - img [ref=f112e420]
+            - button [ref=f112e423] [cursor=pointer]:
+              - img [ref=f112e424]
+  - navigation [ref=f112e20]:
+    - button "Cronômetro" [ref=f112e21] [cursor=pointer]:
+      - img [ref=f112e22]
+      - generic [ref=f112e25]: Cronômetro
+    - button "Matérias" [active] [ref=f112e26] [cursor=pointer]:
+      - img [ref=f112e27]
+      - generic [ref=f112e29]: Matérias
+    - button "Trilhas" [ref=f112e30] [cursor=pointer]:
+      - img [ref=f112e31]
+      - generic [ref=f112e35]: Trilhas
+    - button "Dashboard" [ref=f112e36] [cursor=pointer]:
+      - img [ref=f112e37]
+      - generic [ref=f112e38]: Dashboard
+    - button "Histórico" [ref=f112e39] [cursor=pointer]:
+      - img [ref=f112e40]
+      - generic [ref=f112e43]: Histórico

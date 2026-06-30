@@ -1,0 +1,141 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e3941]:
+          - listitem [ref=f42e3942]:
+            - button "Todos os Cursos" [ref=f42e3943] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e3944]:
+            - button "Analista Tecnologia da Informação - Análise de Negócios (DATAPREV)" [ref=f42e3945] [cursor=pointer]
+        - generic [ref=f42e3946]:
+          - generic [ref=f42e3947]:
+            - generic [ref=f42e3950]:
+              - generic [ref=f42e3953]: Analista Tecnologia da Informação - Análise de Negócios (DATAPREV)
+              - img [ref=f42e3956] [cursor=pointer]: 
+            - generic [ref=f42e3958]:
+              - button "Filtro Avançado" [ref=f42e3960] [cursor=pointer]:
+                - generic [ref=f42e3961]:
+                  - img [ref=f42e3962]: 
+                  - generic [ref=f42e3963]: Filtro Avançado
+              - generic [ref=f42e3967] [cursor=pointer]:
+                - img [ref=f42e3968]: 
+                - generic [ref=f42e3969]: Autor
+          - generic [ref=f42e3970]:
+            - complementary [ref=f42e3971]:
+              - generic [ref=f42e3972]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e3973]
+                - button "Fechar" [ref=f42e3974] [cursor=pointer]:
+                  - generic [ref=f42e3975]: Fechar
+              - generic [ref=f42e3978]:
+                - textbox [ref=f42e3979]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e3980]
+              - generic [ref=f42e3982]:
+                - generic [ref=f42e3983]:
+                  - generic [ref=f42e3985] [cursor=pointer]:
+                    - paragraph [ref=f42e3986]: Filtros selecionados
+                    - img [ref=f42e3987]: 
+                  - generic [ref=f42e3988]:
+                    - generic [ref=f42e3990] [cursor=pointer]:
+                      - generic [ref=f42e3991]: Somente meus conteúdos
+                      - button [ref=f42e3992]:
+                        - img [ref=f42e3993]
+                    - generic [ref=f42e3995]: Limpar filtros
+                - generic [ref=f42e3997]:
+                  - generic [ref=f42e3999] [cursor=pointer]:
+                    - paragraph [ref=f42e4000]: Tipo de Conteúdo
+                    - img [ref=f42e4001]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e4003] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e4006]
+                    - generic [ref=f42e4007]: LDIs
+            - generic [ref=f42e4011]:
+              - generic [ref=f42e4012]:
+                - heading "LDIs" [level=6] [ref=f42e4013]
+                - paragraph [ref=f42e4014]: 4 resultados
+              - generic [ref=f42e4017]:
+                - button "Banco de dados para DataPrev (Analista de TI - Análise de Negócios de TI) - Prof. Thiago Cavalcanti Thiago Cavalcanti Pós-Edital PDF e vídeos" [ref=f42e4019] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e4023]: Banco de dados para DataPrev (Analista de TI - Análise de Negócios de TI) - Prof. Thiago Cavalcanti
+                  - generic [ref=f42e4025]:
+                    - img [ref=f42e4028]: 
+                    - generic [ref=f42e4029]: Thiago Cavalcanti
+                  - generic [ref=f42e4033]: Pós-Edital
+                  - generic [ref=f42e4035]:
+                    - button "PDF e vídeos" [ref=f42e4036]:
+                      - generic [ref=f42e4037]:
+                        - img [ref=f42e4038]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e4042]:
+                      - img [ref=f42e4043]: 
+                      - img [ref=f42e4044]: 
+                    - generic [ref=f42e4047]:
+                      - img [ref=f42e4048]: 
+                      - img [ref=f42e4049]: 
+                - button "Engenharia de software para DataPrev (Analista de TI - Análise de Negócios de TI) - Prof. Diego Carvalho 3 professores Pós-Edital PDF e vídeos" [ref=f42e4051] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e4055]: Engenharia de software para DataPrev (Analista de TI - Análise de Negócios de TI) - Prof. Diego Carvalho
+                  - generic [ref=f42e4057]:
+                    - img [ref=f42e4060]: 
+                    - generic [ref=f42e4061]: 3 professores
+                  - generic [ref=f42e4065]: Pós-Edital
+                  - generic [ref=f42e4067]:
+                    - button "PDF e vídeos" [ref=f42e4068]:
+                      - generic [ref=f42e4069]:
+                        - img [ref=f42e4070]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e4074]:
+                      - img [ref=f42e4075]: 
+                      - img [ref=f42e4076]: 
+                    - generic [ref=f42e4079]:
+                      - img [ref=f42e4080]: 
+                      - img [ref=f42e4081]: 
+                - button "Governança de TI para DataPrev (Analista de TI - Análise de Negócios de TI) - Prof. Paolla Ramos Paolla Ramos E Silva Pós-Edital PDF e vídeos" [ref=f42e4083] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e4087]: Governança de TI para DataPrev (Analista de TI - Análise de Negócios de TI) - Prof. Paolla Ramos
+                  - generic [ref=f42e4089]:
+                    - img [ref=f42e4092]: 
+                    - generic [ref=f42e4093]: Paolla Ramos E Silva
+                  - generic [ref=f42e4097]: Pós-Edital
+                  - generic [ref=f42e4099]:
+                    - button "PDF e vídeos" [ref=f42e4100]:
+                      - generic [ref=f42e4101]:
+                        - img [ref=f42e4102]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e4106]:
+                      - img [ref=f42e4107]: 
+                      - img [ref=f42e4108]: 
+                    - generic [ref=f42e4111]:
+                      - img [ref=f42e4112]: 
+                      - img [ref=f42e4113]: 
+                - button "Língua Portuguesa para DataPrev (Analista de TI - Análise de Negócios de TI) - Equipe de Português 3 professores Pós-Edital PDF e vídeos" [ref=f42e4115] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e4119]: Língua Portuguesa para DataPrev (Analista de TI - Análise de Negócios de TI) - Equipe de Português
+                  - generic [ref=f42e4121]:
+                    - img [ref=f42e4124]: 
+                    - generic [ref=f42e4125]: 3 professores
+                  - generic [ref=f42e4129]: Pós-Edital
+                  - generic [ref=f42e4131]:
+                    - button "PDF e vídeos" [ref=f42e4132]:
+                      - generic [ref=f42e4133]:
+                        - img [ref=f42e4134]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e4138]:
+                      - img [ref=f42e4139]: 
+                      - img [ref=f42e4140]: 
+                    - generic [ref=f42e4143]:
+                      - img [ref=f42e4144]: 
+                      - img [ref=f42e4145]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

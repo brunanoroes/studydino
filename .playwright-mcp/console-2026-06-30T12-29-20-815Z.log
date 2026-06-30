@@ -1,0 +1,8 @@
+[     960ms] [WARNING] Max discount product not found, displaying first tab @ https://content.estrategia.com/front-student/2bb3501.js:0
+[     978ms] [LOG] Initializing Beamer. [Update and engage users effortlessly - https://getbeamer.com] @ https://app.getbeamer.com/js/beamer-embed.js:14
+[    1305ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[    1307ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[    1307ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[    1318ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[    1318ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[    1319ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0

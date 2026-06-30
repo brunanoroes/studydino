@@ -1,0 +1,894 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1154]:
+        - generic [ref=f42e1332]:
+          - generic [ref=f42e1333]:
+            - button [ref=f42e1334] [cursor=pointer]:
+              - img [ref=f42e1335]: 
+            - generic [ref=f42e1336]: Todos os Cursos
+          - generic [ref=f42e1337]:
+            - generic [ref=f42e1338]:
+              - button "Concursos" [ref=f42e1341] [cursor=pointer]:
+                - generic [ref=f42e1344]: Concursos
+                - img [ref=f42e1346]
+              - textbox [ref=f42e1348]
+              - button "Buscar" [disabled] [ref=f42e1349]:
+                - generic [ref=f42e1350]:
+                  - img [ref=f42e1351]: 
+                  - generic [ref=f42e1352]: Buscar
+            - generic:      
+          - generic [ref=f42e1353]:
+            - text: 
+            - button [ref=f42e1354] [cursor=pointer]:
+              - img [ref=f42e1355]: 
+            - text: 
+        - generic [ref=f42e1155]:
+          - tablist [ref=f42e1365]:
+            - tab "Concursos" [ref=f42e1366] [cursor=pointer]:
+              - img [ref=f42e1367]: 
+              - generic [ref=f42e1368]: Concursos
+            - tab "Matérias/Disciplinas" [ref=f42e1369] [cursor=pointer]:
+              - img [ref=f42e1370]: 
+              - generic [ref=f42e1371]: Matérias/Disciplinas
+          - generic [ref=f42e1373]:
+            - generic [ref=f42e1375]:
+              - generic [ref=f42e1376]:
+                - button "Filtro" [ref=f42e1377] [cursor=pointer]:
+                  - generic [ref=f42e1378]:
+                    - img [ref=f42e1379]: 
+                    - generic [ref=f42e1380]: Filtro
+                - generic [ref=f42e1381]:
+                  - heading "Concursos" [level=5] [ref=f42e1382]
+                  - heading "10000 resultados encontrados" [level=6] [ref=f42e1383]
+              - generic [ref=f42e1386]:
+                - generic [ref=f42e1387] [cursor=pointer]:
+                  - radio "Todos" [checked] [ref=f42e1390]
+                  - generic [ref=f42e1391]: Todos
+                - generic [ref=f42e1392] [cursor=pointer]:
+                  - radio "Pré-Edital" [ref=f42e1395]
+                  - generic [ref=f42e1396]: Pré-Edital
+                - generic [ref=f42e1397] [cursor=pointer]:
+                  - radio "Pós-Edital" [ref=f42e1400]
+                  - generic [ref=f42e1401]: Pós-Edital
+            - generic [ref=f42e1402]:
+              - complementary [ref=f42e1403]:
+                - generic [ref=f42e1404]:
+                  - heading "Filtro Avançado" [level=5] [ref=f42e1405]
+                  - button "Fechar" [ref=f42e1406] [cursor=pointer]:
+                    - generic [ref=f42e1407]: Fechar
+                - generic [ref=f42e1408]:
+                  - text: 
+                  - generic [ref=f42e1410]:
+                    - generic [ref=f42e1412] [cursor=pointer]:
+                      - paragraph [ref=f42e1413]: Instituição
+                      - img [ref=f42e1414]: 
+                    - generic:
+                      - generic [ref=f42e1416]:
+                        - textbox [ref=f42e1417]:
+                          - /placeholder: Digite sua busca
+                        - img [ref=f42e1418]
+                      - generic [ref=f42e1420]:
+                        - generic "Adicionar filtro Prefeitura Municipal de Franca (SP)" [ref=f42e1421] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Franca (SP)" [ref=f42e1424]
+                          - generic [ref=f42e1425]: Prefeitura Municipal de Franca (SP)
+                        - generic "Adicionar filtro Secretaria de Estado de Educação do Distrito Federal" [ref=f42e1426] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Secretaria de Estado de Educação do Distrito Federal" [ref=f42e1429]
+                          - generic [ref=f42e1430]: Secretaria de Estado de Educação do Distrito Federal
+                        - generic "Adicionar filtro Prefeitura Municipal de Rolim de Moura (RO)" [ref=f42e1431] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Rolim de Moura (RO)" [ref=f42e1434]
+                          - generic [ref=f42e1435]: Prefeitura Municipal de Rolim de Moura (RO)
+                        - generic "Adicionar filtro Prefeitura Municipal de Uberaba (MG)" [ref=f42e1436] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Uberaba (MG)" [ref=f42e1439]
+                          - generic [ref=f42e1440]: Prefeitura Municipal de Uberaba (MG)
+                        - generic "Adicionar filtro Petrobrás Transportes" [ref=f42e1441] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Petrobrás Transportes" [ref=f42e1444]
+                          - generic [ref=f42e1445]: Petrobrás Transportes
+                        - generic "Adicionar filtro Ministério Público da União" [ref=f42e1446] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Ministério Público da União" [ref=f42e1449]
+                          - generic [ref=f42e1450]: Ministério Público da União
+                        - generic "Adicionar filtro Prefeitura Municipal de Santo André (SP)" [ref=f42e1451] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Santo André (SP)" [ref=f42e1454]
+                          - generic [ref=f42e1455]: Prefeitura Municipal de Santo André (SP)
+                        - generic "Adicionar filtro Prefeitura Municipal de Jarinu (SP)" [ref=f42e1456] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Jarinu (SP)" [ref=f42e1459]
+                          - generic [ref=f42e1460]: Prefeitura Municipal de Jarinu (SP)
+                        - generic "Adicionar filtro Empresa Brasileira de Serviços Hospitalares" [ref=f42e1461] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Empresa Brasileira de Serviços Hospitalares" [ref=f42e1464]
+                          - generic [ref=f42e1465]: Empresa Brasileira de Serviços Hospitalares
+                        - generic "Adicionar filtro Prefeitura Municipal de Joinville (SC)" [ref=f42e1466] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Joinville (SC)" [ref=f42e1469]
+                          - generic [ref=f42e1470]: Prefeitura Municipal de Joinville (SC)
+                        - generic "Adicionar filtro Companhia Ambiental do Estado de São Paulo" [ref=f42e1471] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Companhia Ambiental do Estado de São Paulo" [ref=f42e1474]
+                          - generic [ref=f42e1475]: Companhia Ambiental do Estado de São Paulo
+                        - generic "Adicionar filtro Polícia Federal" [ref=f42e1476] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Polícia Federal" [ref=f42e1479]
+                          - generic [ref=f42e1480]: Polícia Federal
+                        - generic "Adicionar filtro Prefeitura Municipal de Tianguá (CE)" [ref=f42e1481] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Tianguá (CE)" [ref=f42e1484]
+                          - generic [ref=f42e1485]: Prefeitura Municipal de Tianguá (CE)
+                        - generic "Adicionar filtro Assembleia Legislativa do Estado de Roraima" [ref=f42e1486] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Assembleia Legislativa do Estado de Roraima" [ref=f42e1489]
+                          - generic [ref=f42e1490]: Assembleia Legislativa do Estado de Roraima
+                        - generic "Adicionar filtro Empresa Brasileira de Hemoderivados e Biotecnologia" [ref=f42e1491] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Empresa Brasileira de Hemoderivados e Biotecnologia" [ref=f42e1494]
+                          - generic [ref=f42e1495]: Empresa Brasileira de Hemoderivados e Biotecnologia
+                        - generic "Adicionar filtro Prefeitura Municipal de Itaituba (PA)" [ref=f42e1496] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Itaituba (PA)" [ref=f42e1499]
+                          - generic [ref=f42e1500]: Prefeitura Municipal de Itaituba (PA)
+                        - generic "Adicionar filtro Petróleo Brasileiro (PETROBRAS)" [ref=f42e1501] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Petróleo Brasileiro (PETROBRAS)" [ref=f42e1504]
+                          - generic [ref=f42e1505]: Petróleo Brasileiro (PETROBRAS)
+                        - generic "Adicionar filtro Prefeitura Municipal de Florianópolis (SC)" [ref=f42e1506] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Florianópolis (SC)" [ref=f42e1509]
+                          - generic [ref=f42e1510]: Prefeitura Municipal de Florianópolis (SC)
+                        - generic "Adicionar filtro Prefeitura Municipal de Araraquara (SP)" [ref=f42e1511] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Araraquara (SP)" [ref=f42e1514]
+                          - generic [ref=f42e1515]: Prefeitura Municipal de Araraquara (SP)
+                        - generic "Adicionar filtro Prefeitura Municipal de Pitangueiras (SP)" [ref=f42e1516] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Pitangueiras (SP)" [ref=f42e1519]
+                          - generic [ref=f42e1520]: Prefeitura Municipal de Pitangueiras (SP)
+                        - generic "Adicionar filtro Universidade Estadual Paulista" [ref=f42e1521] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Universidade Estadual Paulista" [ref=f42e1524]
+                          - generic [ref=f42e1525]: Universidade Estadual Paulista
+                        - generic "Adicionar filtro Fundação Paraibana de Gestão em Saúde" [ref=f42e1526] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Fundação Paraibana de Gestão em Saúde" [ref=f42e1529]
+                          - generic [ref=f42e1530]: Fundação Paraibana de Gestão em Saúde
+                        - generic "Adicionar filtro Prefeitura Municipal de Balneário Piçarras (SC)" [ref=f42e1531] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Balneário Piçarras (SC)" [ref=f42e1534]
+                          - generic [ref=f42e1535]: Prefeitura Municipal de Balneário Piçarras (SC)
+                        - generic "Adicionar filtro Prefeitura Municipal de Cotia (SP)" [ref=f42e1536] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Cotia (SP)" [ref=f42e1539]
+                          - generic [ref=f42e1540]: Prefeitura Municipal de Cotia (SP)
+                        - generic "Adicionar filtro Polícia Civil do Distrito Federal" [ref=f42e1541] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Polícia Civil do Distrito Federal" [ref=f42e1544]
+                          - generic [ref=f42e1545]: Polícia Civil do Distrito Federal
+                        - generic "Adicionar filtro Prefeitura Municipal de Canaã dos Carajás (PA)" [ref=f42e1546] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Canaã dos Carajás (PA)" [ref=f42e1549]
+                          - generic [ref=f42e1550]: Prefeitura Municipal de Canaã dos Carajás (PA)
+                        - generic "Adicionar filtro Fundação InoversaSul (SC)" [ref=f42e1551] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Fundação InoversaSul (SC)" [ref=f42e1554]
+                          - generic [ref=f42e1555]: Fundação InoversaSul (SC)
+                        - generic "Adicionar filtro Tribunal Regional Federal (1ª Região)" [ref=f42e1556] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal Regional Federal (1ª Região)" [ref=f42e1559]
+                          - generic [ref=f42e1560]: Tribunal Regional Federal (1ª Região)
+                        - generic "Adicionar filtro Instituto Técnico-Científico de Perícia do Rio Grande do Norte" [ref=f42e1561] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Instituto Técnico-Científico de Perícia do Rio Grande do Norte" [ref=f42e1564]
+                          - generic [ref=f42e1565]: Instituto Técnico-Científico de Perícia do Rio Grande do Norte
+                        - generic "Adicionar filtro Prefeitura Municipal de Caucaia (CE)" [ref=f42e1566] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Caucaia (CE)" [ref=f42e1569]
+                          - generic [ref=f42e1570]: Prefeitura Municipal de Caucaia (CE)
+                        - generic "Adicionar filtro Companhia Energética de Minas Gerais" [ref=f42e1571] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Companhia Energética de Minas Gerais" [ref=f42e1574]
+                          - generic [ref=f42e1575]: Companhia Energética de Minas Gerais
+                        - generic "Adicionar filtro Prefeitura Municipal de Sabará (MG)" [ref=f42e1576] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Sabará (MG)" [ref=f42e1579]
+                          - generic [ref=f42e1580]: Prefeitura Municipal de Sabará (MG)
+                        - generic "Adicionar filtro Prefeitura Municipal de Serra (ES)" [ref=f42e1581] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Serra (ES)" [ref=f42e1584]
+                          - generic [ref=f42e1585]: Prefeitura Municipal de Serra (ES)
+                        - generic "Adicionar filtro Empresa Brasileira de Pesquisa Agropecuária" [ref=f42e1586] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Empresa Brasileira de Pesquisa Agropecuária" [ref=f42e1589]
+                          - generic [ref=f42e1590]: Empresa Brasileira de Pesquisa Agropecuária
+                        - generic "Adicionar filtro Concurso Público Nacional Unificado" [ref=f42e1591] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Concurso Público Nacional Unificado" [ref=f42e1594]
+                          - generic [ref=f42e1595]: Concurso Público Nacional Unificado
+                        - generic "Adicionar filtro Prefeitura Municipal de Feira de Santana (BA)" [ref=f42e1596] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Feira de Santana (BA)" [ref=f42e1599]
+                          - generic [ref=f42e1600]: Prefeitura Municipal de Feira de Santana (BA)
+                        - generic "Adicionar filtro Prefeitura Municipal de Curvelo (MG)" [ref=f42e1601] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Curvelo (MG)" [ref=f42e1604]
+                          - generic [ref=f42e1605]: Prefeitura Municipal de Curvelo (MG)
+                        - generic "Adicionar filtro Tribunal de Contas do Estado do Acre" [ref=f42e1606] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal de Contas do Estado do Acre" [ref=f42e1609]
+                          - generic [ref=f42e1610]: Tribunal de Contas do Estado do Acre
+                        - generic "Adicionar filtro Prefeitura Municipal de Embu das Artes (SP)" [ref=f42e1611] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Embu das Artes (SP)" [ref=f42e1614]
+                          - generic [ref=f42e1615]: Prefeitura Municipal de Embu das Artes (SP)
+                        - generic "Adicionar filtro Prefeitura Municipal de Varginha (MG)" [ref=f42e1616] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Varginha (MG)" [ref=f42e1619]
+                          - generic [ref=f42e1620]: Prefeitura Municipal de Varginha (MG)
+                        - generic "Adicionar filtro Tribunal de Justiça do Estado de Mato Grosso do Sul" [ref=f42e1621] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal de Justiça do Estado de Mato Grosso do Sul" [ref=f42e1624]
+                          - generic [ref=f42e1625]: Tribunal de Justiça do Estado de Mato Grosso do Sul
+                        - generic "Adicionar filtro Prefeitura Municipal de Bebedouro (SP)" [ref=f42e1626] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Bebedouro (SP)" [ref=f42e1629]
+                          - generic [ref=f42e1630]: Prefeitura Municipal de Bebedouro (SP)
+                        - generic "Adicionar filtro Prefeitura Municipal de Pindoretama (CE)" [ref=f42e1631] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Pindoretama (CE)" [ref=f42e1634]
+                          - generic [ref=f42e1635]: Prefeitura Municipal de Pindoretama (CE)
+                        - generic "Adicionar filtro Agência Nacional de Mineração (ANM)" [ref=f42e1636] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Agência Nacional de Mineração (ANM)" [ref=f42e1639]
+                          - generic [ref=f42e1640]: Agência Nacional de Mineração (ANM)
+                        - generic "Adicionar filtro Empresa Brasileira de Correios e Telégrafos" [ref=f42e1641] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Empresa Brasileira de Correios e Telégrafos" [ref=f42e1644]
+                          - generic [ref=f42e1645]: Empresa Brasileira de Correios e Telégrafos
+                        - generic "Adicionar filtro Universidade Federal do Ceará" [ref=f42e1646] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Universidade Federal do Ceará" [ref=f42e1649]
+                          - generic [ref=f42e1650]: Universidade Federal do Ceará
+                        - generic "Adicionar filtro Assembleia Legislativa do Estado do Mato Grosso do Sul" [ref=f42e1651] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Assembleia Legislativa do Estado do Mato Grosso do Sul" [ref=f42e1654]
+                          - generic [ref=f42e1655]: Assembleia Legislativa do Estado do Mato Grosso do Sul
+                        - generic "Adicionar filtro Prefeitura Municipal de Caxias (MA)" [ref=f42e1656] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Caxias (MA)" [ref=f42e1659]
+                          - generic [ref=f42e1660]: Prefeitura Municipal de Caxias (MA)
+                        - generic "Adicionar filtro Prefeitura Municipal de Inhumas (GO)" [ref=f42e1661] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Inhumas (GO)" [ref=f42e1664]
+                          - generic [ref=f42e1665]: Prefeitura Municipal de Inhumas (GO)
+                        - generic "Adicionar filtro Secretaria de Estado de Educação e Esporte do Acre" [ref=f42e1666] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Secretaria de Estado de Educação e Esporte do Acre" [ref=f42e1669]
+                          - generic [ref=f42e1670]: Secretaria de Estado de Educação e Esporte do Acre
+                        - generic "Adicionar filtro Prefeitura Municipal de Morros (MA)" [ref=f42e1671] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Morros (MA)" [ref=f42e1674]
+                          - generic [ref=f42e1675]: Prefeitura Municipal de Morros (MA)
+                        - generic "Adicionar filtro Câmara Municipal de Goiânia (GO)" [ref=f42e1676] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Câmara Municipal de Goiânia (GO)" [ref=f42e1679]
+                          - generic [ref=f42e1680]: Câmara Municipal de Goiânia (GO)
+                        - generic "Adicionar filtro Amazônia Azul Tecnologias de Defesa S.A." [ref=f42e1681] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Amazônia Azul Tecnologias de Defesa S.A." [ref=f42e1684]
+                          - generic [ref=f42e1685]: Amazônia Azul Tecnologias de Defesa S.A.
+                        - generic "Adicionar filtro Prefeitura Municipal de Vitória da Conquista (BA)" [ref=f42e1686] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Vitória da Conquista (BA)" [ref=f42e1689]
+                          - generic [ref=f42e1690]: Prefeitura Municipal de Vitória da Conquista (BA)
+                        - generic "Adicionar filtro Prefeitura Municipal de Indaiatuba-SP" [ref=f42e1691] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Indaiatuba-SP" [ref=f42e1694]
+                          - generic [ref=f42e1695]: Prefeitura Municipal de Indaiatuba-SP
+                        - generic "Adicionar filtro Companhia de Saneamento Ambiental do Distrito Federal" [ref=f42e1696] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Companhia de Saneamento Ambiental do Distrito Federal" [ref=f42e1699]
+                          - generic [ref=f42e1700]: Companhia de Saneamento Ambiental do Distrito Federal
+                        - generic "Adicionar filtro Prefeitura Municipal de Cajamar (SP)" [ref=f42e1701] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Cajamar (SP)" [ref=f42e1704]
+                          - generic [ref=f42e1705]: Prefeitura Municipal de Cajamar (SP)
+                        - generic "Adicionar filtro Câmara Municipal de Fortaleza (CE)" [ref=f42e1706] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Câmara Municipal de Fortaleza (CE)" [ref=f42e1709]
+                          - generic [ref=f42e1710]: Câmara Municipal de Fortaleza (CE)
+                        - generic "Adicionar filtro Assembleia Legislativa do Estado do Amazonas" [ref=f42e1711] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Assembleia Legislativa do Estado do Amazonas" [ref=f42e1714]
+                          - generic [ref=f42e1715]: Assembleia Legislativa do Estado do Amazonas
+                        - generic "Adicionar filtro Prefeitura Municipal de Rio Branco (AC)" [ref=f42e1716] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Rio Branco (AC)" [ref=f42e1719]
+                          - generic [ref=f42e1720]: Prefeitura Municipal de Rio Branco (AC)
+                        - generic "Adicionar filtro Prefeitura Municipal de Indaiatuba (SP)" [ref=f42e1721] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Indaiatuba (SP)" [ref=f42e1724]
+                          - generic [ref=f42e1725]: Prefeitura Municipal de Indaiatuba (SP)
+                        - generic "Adicionar filtro Ministério Público do Estado de Minas Gerais" [ref=f42e1726] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Ministério Público do Estado de Minas Gerais" [ref=f42e1729]
+                          - generic [ref=f42e1730]: Ministério Público do Estado de Minas Gerais
+                        - generic "Adicionar filtro Prefeitura Municipal de Conselheiro Lafaiete (MG)" [ref=f42e1731] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Conselheiro Lafaiete (MG)" [ref=f42e1734]
+                          - generic [ref=f42e1735]: Prefeitura Municipal de Conselheiro Lafaiete (MG)
+                        - generic "Adicionar filtro Assembleia Legislativa do Estado do Amapá" [ref=f42e1736] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Assembleia Legislativa do Estado do Amapá" [ref=f42e1739]
+                          - generic [ref=f42e1740]: Assembleia Legislativa do Estado do Amapá
+                        - generic "Adicionar filtro Prefeitura Municipal de Venda Nova do Imigrante (ES)" [ref=f42e1741] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Venda Nova do Imigrante (ES)" [ref=f42e1744]
+                          - generic [ref=f42e1745]: Prefeitura Municipal de Venda Nova do Imigrante (ES)
+                        - generic "Adicionar filtro Prefeitura Municipal de Olímpia (SP)" [ref=f42e1746] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Olímpia (SP)" [ref=f42e1749]
+                          - generic [ref=f42e1750]: Prefeitura Municipal de Olímpia (SP)
+                        - generic "Adicionar filtro Tribunal Regional do Trabalho de São Paulo (15ª Região)" [ref=f42e1751] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal Regional do Trabalho de São Paulo (15ª Região)" [ref=f42e1754]
+                          - generic [ref=f42e1755]: Tribunal Regional do Trabalho de São Paulo (15ª Região)
+                        - generic "Adicionar filtro Tribunal Regional Federal (2ª Região)" [ref=f42e1756] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal Regional Federal (2ª Região)" [ref=f42e1759]
+                          - generic [ref=f42e1760]: Tribunal Regional Federal (2ª Região)
+                        - generic "Adicionar filtro Tribunal Regional Federal (4ª Região)" [ref=f42e1761] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal Regional Federal (4ª Região)" [ref=f42e1764]
+                          - generic [ref=f42e1765]: Tribunal Regional Federal (4ª Região)
+                        - generic "Adicionar filtro Prefeitura Municipal de Cachoeiro Itapemirim (ES)" [ref=f42e1766] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Cachoeiro Itapemirim (ES)" [ref=f42e1769]
+                          - generic [ref=f42e1770]: Prefeitura Municipal de Cachoeiro Itapemirim (ES)
+                        - generic "Adicionar filtro Instituto Federal de Educação, Ciência e Tecnologia do Acre" [ref=f42e1771] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Instituto Federal de Educação, Ciência e Tecnologia do Acre" [ref=f42e1774]
+                          - generic [ref=f42e1775]: Instituto Federal de Educação, Ciência e Tecnologia do Acre
+                        - generic "Adicionar filtro Prefeitura Municipal de Pouso Alegre (MG)" [ref=f42e1776] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Pouso Alegre (MG)" [ref=f42e1779]
+                          - generic [ref=f42e1780]: Prefeitura Municipal de Pouso Alegre (MG)
+                        - generic "Adicionar filtro Prefeitura Municipal de Corumbá (MS)" [ref=f42e1781] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Corumbá (MS)" [ref=f42e1784]
+                          - generic [ref=f42e1785]: Prefeitura Municipal de Corumbá (MS)
+                        - generic "Adicionar filtro Prefeitura Municipal de Nova Friburgo (RJ)" [ref=f42e1786] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Nova Friburgo (RJ)" [ref=f42e1789]
+                          - generic [ref=f42e1790]: Prefeitura Municipal de Nova Friburgo (RJ)
+                        - generic "Adicionar filtro Indústria de Material Bélico do Brasil" [ref=f42e1791] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Indústria de Material Bélico do Brasil" [ref=f42e1794]
+                          - generic [ref=f42e1795]: Indústria de Material Bélico do Brasil
+                        - generic "Adicionar filtro Polícia Científica do Estado do Paraná" [ref=f42e1796] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Polícia Científica do Estado do Paraná" [ref=f42e1799]
+                          - generic [ref=f42e1800]: Polícia Científica do Estado do Paraná
+                        - generic "Adicionar filtro Tribunal Superior Eleitoral" [ref=f42e1801] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal Superior Eleitoral" [ref=f42e1804]
+                          - generic [ref=f42e1805]: Tribunal Superior Eleitoral
+                        - generic "Adicionar filtro Secretaria de Estado da Saúde do Mato Grosso" [ref=f42e1806] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Secretaria de Estado da Saúde do Mato Grosso" [ref=f42e1809]
+                          - generic [ref=f42e1810]: Secretaria de Estado da Saúde do Mato Grosso
+                        - generic "Adicionar filtro Ministério Público do Estado do Amazonas" [ref=f42e1811] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Ministério Público do Estado do Amazonas" [ref=f42e1814]
+                          - generic [ref=f42e1815]: Ministério Público do Estado do Amazonas
+                        - generic "Adicionar filtro Prefeitura Municipal de Bagé (RS)" [ref=f42e1816] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Bagé (RS)" [ref=f42e1819]
+                          - generic [ref=f42e1820]: Prefeitura Municipal de Bagé (RS)
+                        - generic "Adicionar filtro Assembleia Legislativa do Estado do Piauí" [ref=f42e1821] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Assembleia Legislativa do Estado do Piauí" [ref=f42e1824]
+                          - generic [ref=f42e1825]: Assembleia Legislativa do Estado do Piauí
+                        - generic "Adicionar filtro Prefeitura Municipal de Eusébio (CE)" [ref=f42e1826] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Eusébio (CE)" [ref=f42e1829]
+                          - generic [ref=f42e1830]: Prefeitura Municipal de Eusébio (CE)
+                        - generic "Adicionar filtro Ministério Público do Estado de Tocantins" [ref=f42e1831] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Ministério Público do Estado de Tocantins" [ref=f42e1834]
+                          - generic [ref=f42e1835]: Ministério Público do Estado de Tocantins
+                        - generic "Adicionar filtro Tribunal de Justiça do Estado da Bahia" [ref=f42e1836] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal de Justiça do Estado da Bahia" [ref=f42e1839]
+                          - generic [ref=f42e1840]: Tribunal de Justiça do Estado da Bahia
+                        - generic "Adicionar filtro Prefeitura Municipal de Salto de Pirapora (SP)" [ref=f42e1841] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Salto de Pirapora (SP)" [ref=f42e1844]
+                          - generic [ref=f42e1845]: Prefeitura Municipal de Salto de Pirapora (SP)
+                        - generic "Adicionar filtro Câmara dos Deputados" [ref=f42e1846] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Câmara dos Deputados" [ref=f42e1849]
+                          - generic [ref=f42e1850]: Câmara dos Deputados
+                        - generic "Adicionar filtro Prefeitura Municipal de Pato Branco (PR)" [ref=f42e1851] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Pato Branco (PR)" [ref=f42e1854]
+                          - generic [ref=f42e1855]: Prefeitura Municipal de Pato Branco (PR)
+                        - generic "Adicionar filtro Prefeitura Municipal de Abaeté (MG)" [ref=f42e1856] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Abaeté (MG)" [ref=f42e1859]
+                          - generic [ref=f42e1860]: Prefeitura Municipal de Abaeté (MG)
+                        - generic "Adicionar filtro Departamento Estadual de Trânsito do Rio Grande do Norte" [ref=f42e1861] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Departamento Estadual de Trânsito do Rio Grande do Norte" [ref=f42e1864]
+                          - generic [ref=f42e1865]: Departamento Estadual de Trânsito do Rio Grande do Norte
+                        - generic "Adicionar filtro Tribunal Regional do Trabalho do Pará e Amapá (8ª Região)" [ref=f42e1866] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal Regional do Trabalho do Pará e Amapá (8ª Região)" [ref=f42e1869]
+                          - generic [ref=f42e1870]: Tribunal Regional do Trabalho do Pará e Amapá (8ª Região)
+                        - generic "Adicionar filtro Senado Federal" [ref=f42e1871] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Senado Federal" [ref=f42e1874]
+                          - generic [ref=f42e1875]: Senado Federal
+                        - generic "Adicionar filtro Centrais Elétricas de Santa Catarina" [ref=f42e1876] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Centrais Elétricas de Santa Catarina" [ref=f42e1879]
+                          - generic [ref=f42e1880]: Centrais Elétricas de Santa Catarina
+                        - generic "Adicionar filtro Tribunal Regional do Trabalho do Ceará (7ª Região)" [ref=f42e1881] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunal Regional do Trabalho do Ceará (7ª Região)" [ref=f42e1884]
+                          - generic [ref=f42e1885]: Tribunal Regional do Trabalho do Ceará (7ª Região)
+                        - generic "Adicionar filtro Câmara Municipal de Porto Velho (RO)" [ref=f42e1886] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Câmara Municipal de Porto Velho (RO)" [ref=f42e1889]
+                          - generic [ref=f42e1890]: Câmara Municipal de Porto Velho (RO)
+                        - generic "Adicionar filtro Defensoria Pública do Estado do Mato Grosso do Sul" [ref=f42e1891] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Defensoria Pública do Estado do Mato Grosso do Sul" [ref=f42e1894]
+                          - generic [ref=f42e1895]: Defensoria Pública do Estado do Mato Grosso do Sul
+                        - generic "Adicionar filtro Prefeitura Municipal de Itapeva (SP)" [ref=f42e1896] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Itapeva (SP)" [ref=f42e1899]
+                          - generic [ref=f42e1900]: Prefeitura Municipal de Itapeva (SP)
+                        - generic "Adicionar filtro Itaipu Binacional" [ref=f42e1901] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Itaipu Binacional" [ref=f42e1904]
+                          - generic [ref=f42e1905]: Itaipu Binacional
+                        - generic "Adicionar filtro Ministério da Agricultura, Pecuária e Abastecimento" [ref=f42e1906] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Ministério da Agricultura, Pecuária e Abastecimento" [ref=f42e1909]
+                          - generic [ref=f42e1910]: Ministério da Agricultura, Pecuária e Abastecimento
+                        - generic "Adicionar filtro Polícia Civil do Estado do Tocantins" [ref=f42e1911] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Polícia Civil do Estado do Tocantins" [ref=f42e1914]
+                          - generic [ref=f42e1915]: Polícia Civil do Estado do Tocantins
+                        - generic "Adicionar filtro Prefeitura Municipal de Cascavel (PR)" [ref=f42e1916] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Prefeitura Municipal de Cascavel (PR)" [ref=f42e1919]
+                          - generic [ref=f42e1920]: Prefeitura Municipal de Cascavel (PR)
+                  - generic [ref=f42e1922]:
+                    - generic [ref=f42e1924] [cursor=pointer]:
+                      - paragraph [ref=f42e1925]: Área
+                      - img [ref=f42e1926]: 
+                    - generic:
+                      - generic [ref=f42e1928]:
+                        - textbox [ref=f42e1929]:
+                          - /placeholder: Digite sua busca
+                        - img [ref=f42e1930]
+                      - generic [ref=f42e1932]:
+                        - generic "Adicionar filtro Executivo (Administrativa/Geral)" [ref=f42e1933] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Executivo (Administrativa/Geral)" [ref=f42e1936]
+                          - generic [ref=f42e1937]: Executivo (Administrativa/Geral)
+                        - generic "Adicionar filtro Legislativo" [ref=f42e1938] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Legislativo" [ref=f42e1941]
+                          - generic [ref=f42e1942]: Legislativo
+                        - generic "Adicionar filtro Educacional (Professores)" [ref=f42e1943] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Educacional (Professores)" [ref=f42e1946]
+                          - generic [ref=f42e1947]: Educacional (Professores)
+                        - generic "Adicionar filtro Saúde (Dentistas, Enfermeiros etc.)" [ref=f42e1948] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Saúde (Dentistas, Enfermeiros etc.)" [ref=f42e1951]
+                          - generic [ref=f42e1952]: Saúde (Dentistas, Enfermeiros etc.)
+                        - generic "Adicionar filtro Conselhos de Fiscalização" [ref=f42e1953] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Conselhos de Fiscalização" [ref=f42e1956]
+                          - generic [ref=f42e1957]: Conselhos de Fiscalização
+                        - generic "Adicionar filtro Tribunais - Ministérios Públicos (MPU, CNMP, MPEs)" [ref=f42e1958] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunais - Ministérios Públicos (MPU, CNMP, MPEs)" [ref=f42e1961]
+                          - generic [ref=f42e1962]: Tribunais - Ministérios Públicos (MPU, CNMP, MPEs)
+                        - generic "Adicionar filtro Tribunais - Justiça Estadual (TJs)" [ref=f42e1963] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunais - Justiça Estadual (TJs)" [ref=f42e1966]
+                          - generic [ref=f42e1967]: Tribunais - Justiça Estadual (TJs)
+                        - generic "Adicionar filtro Policial - Peritos, Papiloscopistas e Auxiliares" [ref=f42e1968] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Policial - Peritos, Papiloscopistas e Auxiliares" [ref=f42e1971]
+                          - generic [ref=f42e1972]: Policial - Peritos, Papiloscopistas e Auxiliares
+                        - generic "Adicionar filtro Controle/Gestão (Tribunais de Contas)" [ref=f42e1973] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Controle/Gestão (Tribunais de Contas)" [ref=f42e1976]
+                          - generic [ref=f42e1977]: Controle/Gestão (Tribunais de Contas)
+                        - generic "Adicionar filtro Tribunais - Justiça Trabalhista (TST, TRTs)" [ref=f42e1978] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunais - Justiça Trabalhista (TST, TRTs)" [ref=f42e1981]
+                          - generic [ref=f42e1982]: Tribunais - Justiça Trabalhista (TST, TRTs)
+                        - generic "Adicionar filtro Previdenciária (INSS e outros)" [ref=f42e1983] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Previdenciária (INSS e outros)" [ref=f42e1986]
+                          - generic [ref=f42e1987]: Previdenciária (INSS e outros)
+                        - generic "Adicionar filtro Universitária" [ref=f42e1988] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Universitária" [ref=f42e1991]
+                          - generic [ref=f42e1992]: Universitária
+                        - generic "Adicionar filtro Tribunais - Justiça Federal (STF, STJ, CNJ, TRFs)" [ref=f42e1993] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunais - Justiça Federal (STF, STJ, CNJ, TRFs)" [ref=f42e1996]
+                          - generic [ref=f42e1997]: Tribunais - Justiça Federal (STF, STJ, CNJ, TRFs)
+                        - generic "Adicionar filtro Controle/Gestão (Controladorias e Gestão)" [ref=f42e1998] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Controle/Gestão (Controladorias e Gestão)" [ref=f42e2001]
+                          - generic [ref=f42e2002]: Controle/Gestão (Controladorias e Gestão)
+                        - generic "Adicionar filtro Tribunais - Defensorias (DPU, DPEs)" [ref=f42e2003] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunais - Defensorias (DPU, DPEs)" [ref=f42e2006]
+                          - generic [ref=f42e2007]: Tribunais - Defensorias (DPU, DPEs)
+                        - generic "Adicionar filtro Fiscal - Municipal (ISSs)" [ref=f42e2008] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Fiscal - Municipal (ISSs)" [ref=f42e2011]
+                          - generic [ref=f42e2012]: Fiscal - Municipal (ISSs)
+                        - generic "Adicionar filtro Fiscal - Estadual (ICMSs)" [ref=f42e2013] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Fiscal - Estadual (ICMSs)" [ref=f42e2016]
+                          - generic [ref=f42e2017]: Fiscal - Estadual (ICMSs)
+                        - generic "Adicionar filtro Policial - PMs e BMs (Oficiais)" [ref=f42e2018] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Policial - PMs e BMs (Oficiais)" [ref=f42e2021]
+                          - generic [ref=f42e2022]: Policial - PMs e BMs (Oficiais)
+                        - generic "Adicionar filtro Policial - Agente, Escrivães e Investigadores" [ref=f42e2023] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Policial - Agente, Escrivães e Investigadores" [ref=f42e2026]
+                          - generic [ref=f42e2027]: Policial - Agente, Escrivães e Investigadores
+                        - generic "Adicionar filtro Policial - PMs e BMs (Praças)" [ref=f42e2028] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Policial - PMs e BMs (Praças)" [ref=f42e2031]
+                          - generic [ref=f42e2032]: Policial - PMs e BMs (Praças)
+                        - generic "Adicionar filtro Policial (Administrativa)" [ref=f42e2033] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Policial (Administrativa)" [ref=f42e2036]
+                          - generic [ref=f42e2037]: Policial (Administrativa)
+                        - generic "Adicionar filtro Bancária" [ref=f42e2038] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Bancária" [ref=f42e2041]
+                          - generic [ref=f42e2042]: Bancária
+                        - generic "Adicionar filtro Tribunais - Procuradorias (AGU, PGEs, PGMs)" [ref=f42e2043] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunais - Procuradorias (AGU, PGEs, PGMs)" [ref=f42e2046]
+                          - generic [ref=f42e2047]: Tribunais - Procuradorias (AGU, PGEs, PGMs)
+                        - generic "Adicionar filtro Policial - Guardas Civis" [ref=f42e2048] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Policial - Guardas Civis" [ref=f42e2051]
+                          - generic [ref=f42e2052]: Policial - Guardas Civis
+                        - generic "Adicionar filtro Financeira" [ref=f42e2053] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Financeira" [ref=f42e2056]
+                          - generic [ref=f42e2057]: Financeira
+                        - generic "Adicionar filtro Tribunais - Justiça Eleitoral (TSE, TREs)" [ref=f42e2058] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunais - Justiça Eleitoral (TSE, TREs)" [ref=f42e2061]
+                          - generic [ref=f42e2062]: Tribunais - Justiça Eleitoral (TSE, TREs)
+                        - generic "Adicionar filtro Policial - Agentes Penitenciários" [ref=f42e2063] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Policial - Agentes Penitenciários" [ref=f42e2066]
+                          - generic [ref=f42e2067]: Policial - Agentes Penitenciários
+                        - generic "Adicionar filtro Forças Armadas (Oficiais)" [ref=f42e2068] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Forças Armadas (Oficiais)" [ref=f42e2071]
+                          - generic [ref=f42e2072]: Forças Armadas (Oficiais)
+                        - generic "Adicionar filtro Tribunais - Justiça Militar (STM, TJMs)" [ref=f42e2073] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Tribunais - Justiça Militar (STM, TJMs)" [ref=f42e2076]
+                          - generic [ref=f42e2077]: Tribunais - Justiça Militar (STM, TJMs)
+                        - generic "Adicionar filtro Fiscal - Federal (AFRFB, AFT)" [ref=f42e2078] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Fiscal - Federal (AFRFB, AFT)" [ref=f42e2081]
+                          - generic [ref=f42e2082]: Fiscal - Federal (AFRFB, AFT)
+                        - generic "Adicionar filtro Diplomacia" [ref=f42e2083] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Diplomacia" [ref=f42e2086]
+                          - generic [ref=f42e2087]: Diplomacia
+                        - generic "Adicionar filtro Outros" [ref=f42e2088] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Outros" [ref=f42e2091]
+                          - generic [ref=f42e2092]: Outros
+                  - generic [ref=f42e2094]:
+                    - generic [ref=f42e2096] [cursor=pointer]:
+                      - paragraph [ref=f42e2097]: Cargo
+                      - img [ref=f42e2098]: 
+                    - generic:
+                      - generic [ref=f42e2100]:
+                        - textbox [ref=f42e2101]:
+                          - /placeholder: Digite sua busca
+                        - img [ref=f42e2102]
+                      - generic [ref=f42e2104]:
+                        - generic "Adicionar filtro Técnico Judiciário - Área Administrativa - Sem Especialidade (Poder Judiciário da União)" [ref=f42e2105] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Administrativa - Sem Especialidade (Poder Judiciário da União)" [ref=f42e2108]
+                          - generic [ref=f42e2109]: Técnico Judiciário - Área Administrativa - Sem Especialidade (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Administrativa - Sem Especialidade (Poder Judiciário da União)" [ref=f42e2110] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Administrativa - Sem Especialidade (Poder Judiciário da União)" [ref=f42e2113]
+                          - generic [ref=f42e2114]: Analista Judiciário - Área Administrativa - Sem Especialidade (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Judiciária - Sem Especialidade (Poder Judiciário da União)" [ref=f42e2115] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Judiciária - Sem Especialidade (Poder Judiciário da União)" [ref=f42e2118]
+                          - generic [ref=f42e2119]: Analista Judiciário - Área Judiciária - Sem Especialidade (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Judiciária - Especialidade Oficial de Justiça Avaliador Federal (Poder Judiciário da União)" [ref=f42e2120] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Judiciária - Especialidade Oficial de Justiça Avaliador Federal (Poder Judiciário da União)" [ref=f42e2123]
+                          - generic [ref=f42e2124]: Analista Judiciário - Área Judiciária - Especialidade Oficial de Justiça Avaliador Federal (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Civil (Poder Judiciário da União)" [ref=f42e2125] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Civil (Poder Judiciário da União)" [ref=f42e2128]
+                          - generic [ref=f42e2129]: Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Civil (Poder Judiciário da União)
+                        - 'generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade: Tecnologia da Informação (Poder Judiciário da União)" [ref=f42e2130] [cursor=pointer]':
+                          - 'checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade: Tecnologia da Informação (Poder Judiciário da União)" [ref=f42e2133]'
+                          - generic [ref=f42e2134]: "Analista Judiciário - Área Apoio Especializado - Especialidade: Tecnologia da Informação (Poder Judiciário da União)"
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Elétrica (Poder Judiciário da União)" [ref=f42e2135] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Elétrica (Poder Judiciário da União)" [ref=f42e2138]
+                          - generic [ref=f42e2139]: Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Elétrica (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Estatística (Poder Judiciário da União)" [ref=f42e2140] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Estatística (Poder Judiciário da União)" [ref=f42e2143]
+                          - generic [ref=f42e2144]: Analista Judiciário - Área Apoio Especializado - Especialidade Estatística (Poder Judiciário da União)
+                        - generic "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Agente da Polícia Judicial (Poder Judiciário da União)" [ref=f42e2145] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Agente da Polícia Judicial (Poder Judiciário da União)" [ref=f42e2148]
+                          - generic [ref=f42e2149]: Técnico Judiciário - Área Administrativa - Especialidade Agente da Polícia Judicial (Poder Judiciário da União)
+                        - 'generic "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade: Tecnologia da Informação (Poder Judiciário da União)" [ref=f42e2150] [cursor=pointer]':
+                          - 'checkbox "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade: Tecnologia da Informação (Poder Judiciário da União)" [ref=f42e2153]'
+                          - generic [ref=f42e2154]: "Técnico Judiciário - Área Apoio Especializado - Especialidade: Tecnologia da Informação (Poder Judiciário da União)"
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Serviço Social (Poder Judiciário da União)" [ref=f42e2155] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Serviço Social (Poder Judiciário da União)" [ref=f42e2158]
+                          - generic [ref=f42e2159]: Analista Judiciário - Área Apoio Especializado - Especialidade Serviço Social (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Arquivologia (Poder Judiciário da União)" [ref=f42e2160] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Arquivologia (Poder Judiciário da União)" [ref=f42e2163]
+                          - generic [ref=f42e2164]: Analista Judiciário - Área Apoio Especializado - Especialidade Arquivologia (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Biblioteconomia (Poder Judiciário da União)" [ref=f42e2165] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Biblioteconomia (Poder Judiciário da União)" [ref=f42e2168]
+                          - generic [ref=f42e2169]: Analista Judiciário - Área Apoio Especializado - Especialidade Biblioteconomia (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Administrativa - Contabilidade (Poder Judiciário da União)" [ref=f42e2170] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Administrativa - Contabilidade (Poder Judiciário da União)" [ref=f42e2173]
+                          - generic [ref=f42e2174]: Analista Judiciário - Área Administrativa - Contabilidade (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Arquitetura (Poder Judiciário da União)" [ref=f42e2175] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Arquitetura (Poder Judiciário da União)" [ref=f42e2178]
+                          - generic [ref=f42e2179]: Analista Judiciário - Área Apoio Especializado - Especialidade Arquitetura (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Odontologia (Poder Judiciário da União)" [ref=f42e2180] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Odontologia (Poder Judiciário da União)" [ref=f42e2183]
+                          - generic [ref=f42e2184]: Analista Judiciário - Área Apoio Especializado - Especialidade Odontologia (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Contabilidade (Poder Judiciário da União)" [ref=f42e2185] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Contabilidade (Poder Judiciário da União)" [ref=f42e2188]
+                          - generic [ref=f42e2189]: Analista Judiciário - Área Apoio Especializado - Especialidade Contabilidade (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Psicologia (Poder Judiciário da União)" [ref=f42e2190] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Psicologia (Poder Judiciário da União)" [ref=f42e2193]
+                          - generic [ref=f42e2194]: Analista Judiciário - Área Apoio Especializado - Especialidade Psicologia (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Enfermagem (Poder Judiciário da União)" [ref=f42e2195] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Enfermagem (Poder Judiciário da União)" [ref=f42e2198]
+                          - generic [ref=f42e2199]: Analista Judiciário - Área Apoio Especializado - Especialidade Enfermagem (Poder Judiciário da União)
+                        - 'generic "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade: Tecnologia da Informação (Poder Judiciário da União)" [ref=f42e2200] [cursor=pointer]':
+                          - 'checkbox "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade: Tecnologia da Informação (Poder Judiciário da União)" [ref=f42e2203]'
+                          - generic [ref=f42e2204]: "Técnico Judiciário - Área Administrativa - Especialidade: Tecnologia da Informação (Poder Judiciário da União)"
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Mecânica (Poder Judiciário da União)" [ref=f42e2205] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Mecânica (Poder Judiciário da União)" [ref=f42e2208]
+                          - generic [ref=f42e2209]: Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Mecânica (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Comunicação Social (Poder Judiciário da União)" [ref=f42e2210] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Comunicação Social (Poder Judiciário da União)" [ref=f42e2213]
+                          - generic [ref=f42e2214]: Analista Judiciário - Área Apoio Especializado - Especialidade Comunicação Social (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Governança e Gestão de Tecnologia da Informação (Poder Judiciário da União)" [ref=f42e2215] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Governança e Gestão de Tecnologia da Informação (Poder Judiciário da União)" [ref=f42e2218]
+                          - generic [ref=f42e2219]: Analista Judiciário - Área Apoio Especializado - Especialidade Governança e Gestão de Tecnologia da Informação (Poder Judiciário da União)
+                        - generic "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade Enfermagem (Poder Judiciário da União)" [ref=f42e2220] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade Enfermagem (Poder Judiciário da União)" [ref=f42e2223]
+                          - generic [ref=f42e2224]: Técnico Judiciário - Área Apoio Especializado - Especialidade Enfermagem (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Segurança do Trabalho (Poder Judiciário da União)" [ref=f42e2225] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Segurança do Trabalho (Poder Judiciário da União)" [ref=f42e2228]
+                          - generic [ref=f42e2229]: Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Segurança do Trabalho (Poder Judiciário da União)
+                        - generic "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade Enfermagem do Trabalho (Poder Judiciário da União)" [ref=f42e2230] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade Enfermagem do Trabalho (Poder Judiciário da União)" [ref=f42e2233]
+                          - generic [ref=f42e2234]: Técnico Judiciário - Área Apoio Especializado - Especialidade Enfermagem do Trabalho (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista de Suporte (CM Macapá/AP)" [ref=f42e2235] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista de Suporte (CM Macapá/AP)" [ref=f42e2238]
+                          - generic [ref=f42e2239]: Analista de Suporte (CM Macapá/AP)
+                        - generic "Adicionar filtro Analista Administrativo - Suporte e Infraestrutura de Tecnologia da Informação (ANATEL)" [ref=f42e2240] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Administrativo - Suporte e Infraestrutura de Tecnologia da Informação (ANATEL)" [ref=f42e2243]
+                          - generic [ref=f42e2244]: Analista Administrativo - Suporte e Infraestrutura de Tecnologia da Informação (ANATEL)
+                        - generic "Adicionar filtro Analista Administrativo - Administração (ANATEL)" [ref=f42e2245] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Administrativo - Administração (ANATEL)" [ref=f42e2248]
+                          - generic [ref=f42e2249]: Analista Administrativo - Administração (ANATEL)
+                        - generic "Adicionar filtro Analista Administrativo - Área 1 (ANAC)" [ref=f42e2250] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Administrativo - Área 1 (ANAC)" [ref=f42e2253]
+                          - generic [ref=f42e2254]: Analista Administrativo - Área 1 (ANAC)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Análise de Dados (Poder Judiciário da União)" [ref=f42e2255] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Análise de Dados (Poder Judiciário da União)" [ref=f42e2258]
+                          - generic [ref=f42e2259]: Analista Judiciário - Área Apoio Especializado - Especialidade Análise de Dados (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Medicina (Poder Judiciário da União)" [ref=f42e2260] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Medicina (Poder Judiciário da União)" [ref=f42e2263]
+                          - generic [ref=f42e2264]: Analista Judiciário - Área Apoio Especializado - Especialidade Medicina (Poder Judiciário da União)
+                        - generic "Adicionar filtro Especialista em Regulação de Serviços Públicos de Telecomunicações - Ciências Contábeis (ANATEL)" [ref=f42e2265] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Especialista em Regulação de Serviços Públicos de Telecomunicações - Ciências Contábeis (ANATEL)" [ref=f42e2268]
+                          - generic [ref=f42e2269]: Especialista em Regulação de Serviços Públicos de Telecomunicações - Ciências Contábeis (ANATEL)
+                        - generic "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Contabilidade (Poder Judiciário da União)" [ref=f42e2270] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Contabilidade (Poder Judiciário da União)" [ref=f42e2273]
+                          - generic [ref=f42e2274]: Técnico Judiciário - Área Administrativa - Especialidade Contabilidade (Poder Judiciário da União)
+                        - generic "Adicionar filtro Aluno Oficial (PM AP)" [ref=f42e2275] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Aluno Oficial (PM AP)" [ref=f42e2278]
+                          - generic [ref=f42e2279]: Aluno Oficial (PM AP)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Segurança da Informação (Poder Judiciário da União)" [ref=f42e2280] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Segurança da Informação (Poder Judiciário da União)" [ref=f42e2283]
+                          - generic [ref=f42e2284]: Analista Judiciário - Área Apoio Especializado - Especialidade Segurança da Informação (Poder Judiciário da União)
+                        - generic "Adicionar filtro Técnico Administrativo (ANAC)" [ref=f42e2285] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Administrativo (ANAC)" [ref=f42e2288]
+                          - generic [ref=f42e2289]: Técnico Administrativo (ANAC)
+                        - generic "Adicionar filtro Agente Administrativo (PF)" [ref=f42e2290] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Agente Administrativo (PF)" [ref=f42e2293]
+                          - generic [ref=f42e2294]: Agente Administrativo (PF)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Eletrônica (Poder Judiciário da União)" [ref=f42e2295] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Eletrônica (Poder Judiciário da União)" [ref=f42e2298]
+                          - generic [ref=f42e2299]: Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia Eletrônica (Poder Judiciário da União)
+                        - generic "Adicionar filtro Admissão à Carreira de Diplomata - Primeira Fase (IRBR)" [ref=f42e2300] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Admissão à Carreira de Diplomata - Primeira Fase (IRBR)" [ref=f42e2303]
+                          - generic [ref=f42e2304]: Admissão à Carreira de Diplomata - Primeira Fase (IRBR)
+                        - generic "Adicionar filtro Especialista em Regulação de Serviços Públicos de Telecomunicações - Direito (ANATEL)" [ref=f42e2305] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Especialista em Regulação de Serviços Públicos de Telecomunicações - Direito (ANATEL)" [ref=f42e2308]
+                          - generic [ref=f42e2309]: Especialista em Regulação de Serviços Públicos de Telecomunicações - Direito (ANATEL)
+                        - generic "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Agente da Polícia Judicial (Poder Judiciário da União)" [ref=f42e2310] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Agente da Polícia Judicial (Poder Judiciário da União)" [ref=f42e2313]
+                          - generic [ref=f42e2314]: Técnico Judiciário - Área Administrativa - Especialidade Agente da Polícia Judicial (Poder Judiciário da União)
+                        - generic "Adicionar filtro Técnico Administrativo - Administrativo (ANATEL)" [ref=f42e2315] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Administrativo - Administrativo (ANATEL)" [ref=f42e2318]
+                          - generic [ref=f42e2319]: Técnico Administrativo - Administrativo (ANATEL)
+                        - generic "Adicionar filtro Especialista em Regulação de Serviços Públicos de Telecomunicações - Métodos Quantitativos - Pacote Básico (ANATEL)" [ref=f42e2320] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Especialista em Regulação de Serviços Públicos de Telecomunicações - Métodos Quantitativos - Pacote Básico (ANATEL)" [ref=f42e2323]
+                          - generic [ref=f42e2324]: Especialista em Regulação de Serviços Públicos de Telecomunicações - Métodos Quantitativos - Pacote Básico (ANATEL)
+                        - generic "Adicionar filtro Técnico em Regulação de Aviação Civil (ANAC)" [ref=f42e2325] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico em Regulação de Aviação Civil (ANAC)" [ref=f42e2328]
+                          - generic [ref=f42e2329]: Técnico em Regulação de Aviação Civil (ANAC)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia (Poder Judiciário da União)" [ref=f42e2330] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia (Poder Judiciário da União)" [ref=f42e2333]
+                          - generic [ref=f42e2334]: Analista Judiciário - Área Apoio Especializado - Especialidade Engenharia (Poder Judiciário da União)
+                        - generic "Adicionar filtro Engenheiro de Segurança do Trabalho (CEF)" [ref=f42e2335] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Engenheiro de Segurança do Trabalho (CEF)" [ref=f42e2338]
+                          - generic [ref=f42e2339]: Engenheiro de Segurança do Trabalho (CEF)
+                        - generic "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade Informática - Programação de Sistemas (Poder Judiciário da União)" [ref=f42e2340] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade Informática - Programação de Sistemas (Poder Judiciário da União)" [ref=f42e2343]
+                          - generic [ref=f42e2344]: Técnico Judiciário - Área Apoio Especializado - Especialidade Informática - Programação de Sistemas (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista de Redes e Infraestrutura (CM Macapá/AP)" [ref=f42e2345] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista de Redes e Infraestrutura (CM Macapá/AP)" [ref=f42e2348]
+                          - generic [ref=f42e2349]: Analista de Redes e Infraestrutura (CM Macapá/AP)
+                        - generic "Adicionar filtro Analista Administrativo - Engenharia Civil (ANATEL)" [ref=f42e2350] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Administrativo - Engenharia Civil (ANATEL)" [ref=f42e2353]
+                          - generic [ref=f42e2354]: Analista Administrativo - Engenharia Civil (ANATEL)
+                        - generic "Adicionar filtro Assistente Administrativo (CM Macapá/AP)" [ref=f42e2355] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Assistente Administrativo (CM Macapá/AP)" [ref=f42e2358]
+                          - generic [ref=f42e2359]: Assistente Administrativo (CM Macapá/AP)
+                        - generic "Adicionar filtro Contador (CM Macapá/AP)" [ref=f42e2360] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Contador (CM Macapá/AP)" [ref=f42e2363]
+                          - generic [ref=f42e2364]: Contador (CM Macapá/AP)
+                        - generic "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade Suporte Técnico (Poder Judiciário da União)" [ref=f42e2365] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Apoio Especializado - Especialidade Suporte Técnico (Poder Judiciário da União)" [ref=f42e2368]
+                          - generic [ref=f42e2369]: Técnico Judiciário - Área Apoio Especializado - Especialidade Suporte Técnico (Poder Judiciário da União)
+                        - generic "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Programação de Sistemas (Poder Judiciário da União)" [ref=f42e2370] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Programação de Sistemas (Poder Judiciário da União)" [ref=f42e2373]
+                          - generic [ref=f42e2374]: Técnico Judiciário - Área Administrativa - Especialidade Programação de Sistemas (Poder Judiciário da União)
+                        - generic "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Enfermagem (Poder Judiciário da União)" [ref=f42e2375] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Judiciário - Área Administrativa - Especialidade Enfermagem (Poder Judiciário da União)" [ref=f42e2378]
+                          - generic [ref=f42e2379]: Técnico Judiciário - Área Administrativa - Especialidade Enfermagem (Poder Judiciário da União)
+                        - generic "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Fisioterapia (Poder Judiciário da União)" [ref=f42e2380] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Área Apoio Especializado - Especialidade Fisioterapia (Poder Judiciário da União)" [ref=f42e2383]
+                          - generic [ref=f42e2384]: Analista Judiciário - Área Apoio Especializado - Especialidade Fisioterapia (Poder Judiciário da União)
+                        - generic "Adicionar filtro Administrador (CM Macapá/AP)" [ref=f42e2385] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Administrador (CM Macapá/AP)" [ref=f42e2388]
+                          - generic [ref=f42e2389]: Administrador (CM Macapá/AP)
+                        - generic "Adicionar filtro Analista Administrativo - Direito (ANATEL)" [ref=f42e2390] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Administrativo - Direito (ANATEL)" [ref=f42e2393]
+                          - generic [ref=f42e2394]: Analista Administrativo - Direito (ANATEL)
+                        - generic "Adicionar filtro Admissão à Carreira de Diplomata - Todas as Fases (IRBR)" [ref=f42e2395] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Admissão à Carreira de Diplomata - Todas as Fases (IRBR)" [ref=f42e2398]
+                          - generic [ref=f42e2399]: Admissão à Carreira de Diplomata - Todas as Fases (IRBR)
+                        - generic "Adicionar filtro Oficial (PM RJ)" [ref=f42e2400] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Oficial (PM RJ)" [ref=f42e2403]
+                          - generic [ref=f42e2404]: Oficial (PM RJ)
+                        - generic "Adicionar filtro Técnico Bancário - Tecnologia da Informação (CEF)" [ref=f42e2405] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Bancário - Tecnologia da Informação (CEF)" [ref=f42e2408]
+                          - generic [ref=f42e2409]: Técnico Bancário - Tecnologia da Informação (CEF)
+                        - generic "Adicionar filtro Técnico Bancário - Administrativo (CEF)" [ref=f42e2410] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Bancário - Administrativo (CEF)" [ref=f42e2413]
+                          - generic [ref=f42e2414]: Técnico Bancário - Administrativo (CEF)
+                        - generic "Adicionar filtro Economista (CM Macapá/AP)" [ref=f42e2415] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Economista (CM Macapá/AP)" [ref=f42e2418]
+                          - generic [ref=f42e2419]: Economista (CM Macapá/AP)
+                        - generic "Adicionar filtro Analista Administrativo - Área 2 (ANAC)" [ref=f42e2420] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Administrativo - Área 2 (ANAC)" [ref=f42e2423]
+                          - generic [ref=f42e2424]: Analista Administrativo - Área 2 (ANAC)
+                        - generic "Adicionar filtro Analista Contábil (CM Bezerros/PE)" [ref=f42e2425] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Contábil (CM Bezerros/PE)" [ref=f42e2428]
+                          - generic [ref=f42e2429]: Analista Contábil (CM Bezerros/PE)
+                        - generic "Adicionar filtro Inspetor (PC CE)" [ref=f42e2430] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Inspetor (PC CE)" [ref=f42e2433]
+                          - generic [ref=f42e2434]: Inspetor (PC CE)
+                        - generic "Adicionar filtro Professor de Geografia (Pref Jaguaruana/CE)" [ref=f42e2435] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Professor de Geografia (Pref Jaguaruana/CE)" [ref=f42e2438]
+                          - generic [ref=f42e2439]: Professor de Geografia (Pref Jaguaruana/CE)
+                        - generic "Adicionar filtro Analista Legislativo - Ciências Contábeis (ALCE)" [ref=f42e2440] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Legislativo - Ciências Contábeis (ALCE)" [ref=f42e2443]
+                          - generic [ref=f42e2444]: Analista Legislativo - Ciências Contábeis (ALCE)
+                        - generic "Adicionar filtro Auditor (CREA PB)" [ref=f42e2445] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Auditor (CREA PB)" [ref=f42e2448]
+                          - generic [ref=f42e2449]: Auditor (CREA PB)
+                        - generic "Adicionar filtro Especialista em Regulação e Vigilância Sanitária - Área 2 (ANVISA)" [ref=f42e2450] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Especialista em Regulação e Vigilância Sanitária - Área 2 (ANVISA)" [ref=f42e2453]
+                          - generic [ref=f42e2454]: Especialista em Regulação e Vigilância Sanitária - Área 2 (ANVISA)
+                        - generic "Adicionar filtro Contabilista (Pref Sumaré/SP)" [ref=f42e2455] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Contabilista (Pref Sumaré/SP)" [ref=f42e2458]
+                          - generic [ref=f42e2459]: Contabilista (Pref Sumaré/SP)
+                        - generic "Adicionar filtro Secretário Escolar (Pref Caxias/MA)" [ref=f42e2460] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Secretário Escolar (Pref Caxias/MA)" [ref=f42e2463]
+                          - generic [ref=f42e2464]: Secretário Escolar (Pref Caxias/MA)
+                        - generic "Adicionar filtro Analista de Sistemas de Informática (Pref Sumaré/SP)" [ref=f42e2465] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista de Sistemas de Informática (Pref Sumaré/SP)" [ref=f42e2468]
+                          - generic [ref=f42e2469]: Analista de Sistemas de Informática (Pref Sumaré/SP)
+                        - generic "Adicionar filtro Auditor de Controle Externo - Área Administrativa - Especialidade Gestão de Pessoas (TCE PA)" [ref=f42e2470] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Auditor de Controle Externo - Área Administrativa - Especialidade Gestão de Pessoas (TCE PA)" [ref=f42e2473]
+                          - generic [ref=f42e2474]: Auditor de Controle Externo - Área Administrativa - Especialidade Gestão de Pessoas (TCE PA)
+                        - generic "Adicionar filtro Odonto Legista (PC RR)" [ref=f42e2475] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Odonto Legista (PC RR)" [ref=f42e2478]
+                          - generic [ref=f42e2479]: Odonto Legista (PC RR)
+                        - generic "Adicionar filtro Técnico em Farmácia - Área Biologia (UFTM)" [ref=f42e2480] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico em Farmácia - Área Biologia (UFTM)" [ref=f42e2483]
+                          - generic [ref=f42e2484]: Técnico em Farmácia - Área Biologia (UFTM)
+                        - generic "Adicionar filtro Pedagogo (SME Santarém/PA)" [ref=f42e2485] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Pedagogo (SME Santarém/PA)" [ref=f42e2488]
+                          - generic [ref=f42e2489]: Pedagogo (SME Santarém/PA)
+                        - generic "Adicionar filtro Professor - Língua Portuguesa (SEMEC Teresina/PI)" [ref=f42e2490] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Professor - Língua Portuguesa (SEMEC Teresina/PI)" [ref=f42e2493]
+                          - generic [ref=f42e2494]: Professor - Língua Portuguesa (SEMEC Teresina/PI)
+                        - generic "Adicionar filtro Nível Fundamental Completo (Pref Jussara/GO)" [ref=f42e2495] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Nível Fundamental Completo (Pref Jussara/GO)" [ref=f42e2498]
+                          - generic [ref=f42e2499]: Nível Fundamental Completo (Pref Jussara/GO)
+                        - generic "Adicionar filtro Biomédico - Fisiologia do Esporte e da Prática do Exercício Físico (PM RN)" [ref=f42e2500] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Biomédico - Fisiologia do Esporte e da Prática do Exercício Físico (PM RN)" [ref=f42e2503]
+                          - generic [ref=f42e2504]: Biomédico - Fisiologia do Esporte e da Prática do Exercício Físico (PM RN)
+                        - generic "Adicionar filtro Analista de TI Pleno - ERP/Projetos/Portais - Presidência (CIJUN SP)" [ref=f42e2505] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista de TI Pleno - ERP/Projetos/Portais - Presidência (CIJUN SP)" [ref=f42e2508]
+                          - generic [ref=f42e2509]: Analista de TI Pleno - ERP/Projetos/Portais - Presidência (CIJUN SP)
+                        - generic "Adicionar filtro Professor de Ensino Regular - História (SEDUC AC)" [ref=f42e2510] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Professor de Ensino Regular - História (SEDUC AC)" [ref=f42e2513]
+                          - generic [ref=f42e2514]: Professor de Ensino Regular - História (SEDUC AC)
+                        - generic "Adicionar filtro Analista Judiciário - Contabilidade (CNJ)" [ref=f42e2515] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista Judiciário - Contabilidade (CNJ)" [ref=f42e2518]
+                          - generic [ref=f42e2519]: Analista Judiciário - Contabilidade (CNJ)
+                        - generic "Adicionar filtro Agente de Segurança Legislativo (CM Vitória/ES)" [ref=f42e2520] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Agente de Segurança Legislativo (CM Vitória/ES)" [ref=f42e2523]
+                          - generic [ref=f42e2524]: Agente de Segurança Legislativo (CM Vitória/ES)
+                        - generic "Adicionar filtro Assistente Social (HEMOMINAS)" [ref=f42e2525] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Assistente Social (HEMOMINAS)" [ref=f42e2528]
+                          - generic [ref=f42e2529]: Assistente Social (HEMOMINAS)
+                        - 'generic "Adicionar filtro Analista de Controle Externo - Especialidade: Contabilidade (TCE GO)" [ref=f42e2530] [cursor=pointer]':
+                          - 'checkbox "Adicionar filtro Analista de Controle Externo - Especialidade: Contabilidade (TCE GO)" [ref=f42e2533]'
+                          - generic [ref=f42e2534]: "Analista de Controle Externo - Especialidade: Contabilidade (TCE GO)"
+                        - generic "Adicionar filtro Analista de Defensoria - Serviço Social (DPE MS)" [ref=f42e2535] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista de Defensoria - Serviço Social (DPE MS)" [ref=f42e2538]
+                          - generic [ref=f42e2539]: Analista de Defensoria - Serviço Social (DPE MS)
+                        - generic "Adicionar filtro Analista de Tecnologia da Informação - Desenvolvimento de Software (CM Belo Horizonte/MG)" [ref=f42e2540] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista de Tecnologia da Informação - Desenvolvimento de Software (CM Belo Horizonte/MG)" [ref=f42e2543]
+                          - generic [ref=f42e2544]: Analista de Tecnologia da Informação - Desenvolvimento de Software (CM Belo Horizonte/MG)
+                        - generic "Adicionar filtro Auditor Municipal de Controle Interno - Controladoria (Pref Niterói/RJ)" [ref=f42e2545] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Auditor Municipal de Controle Interno - Controladoria (Pref Niterói/RJ)" [ref=f42e2548]
+                          - generic [ref=f42e2549]: Auditor Municipal de Controle Interno - Controladoria (Pref Niterói/RJ)
+                        - generic "Adicionar filtro Contador (Pref Sinop/MT)" [ref=f42e2550] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Contador (Pref Sinop/MT)" [ref=f42e2553]
+                          - generic [ref=f42e2554]: Contador (Pref Sinop/MT)
+                        - generic "Adicionar filtro Analista de Desenvolvimento (CFBio)" [ref=f42e2555] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Analista de Desenvolvimento (CFBio)" [ref=f42e2558]
+                          - generic [ref=f42e2559]: Analista de Desenvolvimento (CFBio)
+                        - generic "Adicionar filtro Oficial de Patrimônio (CM Barra Mansa/RJ)" [ref=f42e2560] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Oficial de Patrimônio (CM Barra Mansa/RJ)" [ref=f42e2563]
+                          - generic [ref=f42e2564]: Oficial de Patrimônio (CM Barra Mansa/RJ)
+                        - generic "Adicionar filtro Técnico Ministerial (MP AC)" [ref=f42e2565] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico Ministerial (MP AC)" [ref=f42e2568]
+                          - generic [ref=f42e2569]: Técnico Ministerial (MP AC)
+                        - generic "Adicionar filtro Agente Administrativo e Recepcionista (CM Mário Campos/MG)" [ref=f42e2570] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Agente Administrativo e Recepcionista (CM Mário Campos/MG)" [ref=f42e2573]
+                          - generic [ref=f42e2574]: Agente Administrativo e Recepcionista (CM Mário Campos/MG)
+                        - generic "Adicionar filtro Professor do Centro de Estudo de Línguas e Ensino Regular - Língua Inglesa (SEDUC AC)" [ref=f42e2575] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Professor do Centro de Estudo de Línguas e Ensino Regular - Língua Inglesa (SEDUC AC)" [ref=f42e2578]
+                          - generic [ref=f42e2579]: Professor do Centro de Estudo de Línguas e Ensino Regular - Língua Inglesa (SEDUC AC)
+                        - generic "Adicionar filtro Técnico em Contabilidade (CODERN)" [ref=f42e2580] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico em Contabilidade (CODERN)" [ref=f42e2583]
+                          - generic [ref=f42e2584]: Técnico em Contabilidade (CODERN)
+                        - generic "Adicionar filtro Assistente Social - Especialista em Educação C (Pref Rolim de Moura/RO)" [ref=f42e2585] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Assistente Social - Especialista em Educação C (Pref Rolim de Moura/RO)" [ref=f42e2588]
+                          - generic [ref=f42e2589]: Assistente Social - Especialista em Educação C (Pref Rolim de Moura/RO)
+                        - generic "Adicionar filtro Técnico em Recursos Humanos (CM Juazeiro/BA)" [ref=f42e2590] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Técnico em Recursos Humanos (CM Juazeiro/BA)" [ref=f42e2593]
+                          - generic [ref=f42e2594]: Técnico em Recursos Humanos (CM Juazeiro/BA)
+                        - generic "Adicionar filtro Profissional Nível Universitário Jr - Engenharia Civil (ITAIPU)" [ref=f42e2595] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Profissional Nível Universitário Jr - Engenharia Civil (ITAIPU)" [ref=f42e2598]
+                          - generic [ref=f42e2599]: Profissional Nível Universitário Jr - Engenharia Civil (ITAIPU)
+                        - generic "Adicionar filtro Perito Criminal - Engenharia Civil (ITEP RN)" [ref=f42e2600] [cursor=pointer]:
+                          - checkbox "Adicionar filtro Perito Criminal - Engenharia Civil (ITEP RN)" [ref=f42e2603]
+                          - generic [ref=f42e2604]: Perito Criminal - Engenharia Civil (ITEP RN)
+              - generic [ref=f42e2605]:
+                - generic [ref=f42e2609]:
+                  - generic [ref=f42e2610]:
+                    - heading "Concursos" [level=6] [ref=f42e2611]
+                    - paragraph [ref=f42e2612]: 10000 resultados
+                  - generic [ref=f42e2613]:
+                    - button "CNU - Concurso Nacional Unificado Ver objetivos relacionados Pós-Edital / Pré-Edital" [ref=f42e2614] [cursor=pointer]:
+                      - generic [ref=f42e2617]:
+                        - img [ref=f42e2620]: 
+                        - generic [ref=f42e2621]: CNU - Concurso Nacional Unificado
+                      - generic [ref=f42e2623]:
+                        - img [ref=f42e2626]: 
+                        - generic [ref=f42e2627]: Ver objetivos relacionados
+                      - generic [ref=f42e2631]: Pós-Edital / Pré-Edital
+                      - generic [ref=f42e2637]:
+                        - img [ref=f42e2638]: 
+                        - img [ref=f42e2639]: 
+                    - button "Auditor Fiscal da Receita Federal do Brasil (RFB) Pós-Edital / Pré-Edital" [ref=f42e2640] [cursor=pointer]:
+                      - generic [ref=f42e2643]:
+                        - img [ref=f42e2646]: 
+                        - generic [ref=f42e2647]: Auditor Fiscal da Receita Federal do Brasil (RFB)
+                      - generic [ref=f42e2651]: Pós-Edital / Pré-Edital
+                      - generic [ref=f42e2657]:
+                        - img [ref=f42e2658]: 
+                        - img [ref=f42e2659]: 
+                    - button "Policial Rodoviário Federal (PRF) Pré-Edital" [ref=f42e2660] [cursor=pointer]:
+                      - generic [ref=f42e2663]:
+                        - img [ref=f42e2666]: 
+                        - generic [ref=f42e2667]: Policial Rodoviário Federal (PRF)
+                      - generic [ref=f42e2671]: Pré-Edital
+                      - generic [ref=f42e2677]:
+                        - img [ref=f42e2678]: 
+                        - img [ref=f42e2679]: 
+                    - button "Agente (PF) Pré-Edital" [ref=f42e2680] [cursor=pointer]:
+                      - generic [ref=f42e2683]:
+                        - img [ref=f42e2686]: 
+                        - generic [ref=f42e2687]: Agente (PF)
+                      - generic [ref=f42e2691]: Pré-Edital
+                      - generic [ref=f42e2697]:
+                        - img [ref=f42e2698]: 
+                        - img [ref=f42e2699]: 
+                    - button "Técnico do Seguro Social (INSS)" [ref=f42e2700] [cursor=pointer]:
+                      - generic [ref=f42e2703]:
+                        - img [ref=f42e2706]: 
+                        - generic [ref=f42e2707]: Técnico do Seguro Social (INSS)
+                      - generic [ref=f42e2713]:
+                        - img [ref=f42e2714]: 
+                        - img [ref=f42e2715]: 
+                    - button "Escriturário - Agente Comercial (BB) Pré-Edital" [ref=f42e2716] [cursor=pointer]:
+                      - generic [ref=f42e2719]:
+                        - img [ref=f42e2722]: 
+                        - generic [ref=f42e2723]: Escriturário - Agente Comercial (BB)
+                      - generic [ref=f42e2727]: Pré-Edital
+                      - generic [ref=f42e2733]:
+                        - img [ref=f42e2734]: 
+                        - img [ref=f42e2735]: 
+                    - button "Técnico Judiciário - Área Administrativa (TSE) Pré-Edital" [ref=f42e2736] [cursor=pointer]:
+                      - generic [ref=f42e2739]:
+                        - img [ref=f42e2742]: 
+                        - generic [ref=f42e2743]: Técnico Judiciário - Área Administrativa (TSE)
+                      - generic [ref=f42e2747]: Pré-Edital
+                      - generic [ref=f42e2753]:
+                        - img [ref=f42e2754]: 
+                        - img [ref=f42e2755]: 
+                    - button "Auditor Fiscal da Receita Estadual (SEFAZ-GO) Pós-Edital / Pré-Edital" [ref=f42e2756] [cursor=pointer]:
+                      - generic [ref=f42e2759]:
+                        - img [ref=f42e2762]: 
+                        - generic [ref=f42e2763]: Auditor Fiscal da Receita Estadual (SEFAZ-GO)
+                      - generic [ref=f42e2767]: Pós-Edital / Pré-Edital
+                      - generic [ref=f42e2773]:
+                        - img [ref=f42e2774]: 
+                        - img [ref=f42e2775]: 
+                    - button "Escrevente Técnico Judiciário (TJ-SP) Pós-Edital / Pré-Edital" [ref=f42e2776] [cursor=pointer]:
+                      - generic [ref=f42e2779]:
+                        - img [ref=f42e2782]: 
+                        - generic [ref=f42e2783]: Escrevente Técnico Judiciário (TJ-SP)
+                      - generic [ref=f42e2787]: Pós-Edital / Pré-Edital
+                      - generic [ref=f42e2793]:
+                        - img [ref=f42e2794]: 
+                        - img [ref=f42e2795]: 
+                    - button "Polícia Federal Pós-Edital / Pré-Edital" [ref=f42e2796] [cursor=pointer]:
+                      - generic [ref=f42e2799]:
+                        - img [ref=f42e2802]: 
+                        - generic [ref=f42e2803]: Polícia Federal
+                      - generic [ref=f42e2807]: Pós-Edital / Pré-Edital
+                      - generic [ref=f42e2813]:
+                        - img [ref=f42e2814]: 
+                        - img [ref=f42e2815]: 
+                  - button "Veja mais" [ref=f42e2816] [cursor=pointer]:
+                    - generic [ref=f42e2817]: Veja mais
+                - generic [ref=f42e2818]:
+                  - img [ref=f42e2819]: 
+                  - link "Adicionar mais concursos" [ref=f42e2820] [cursor=pointer]:
+                    - /url: /objetivos/novo-objetivo
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

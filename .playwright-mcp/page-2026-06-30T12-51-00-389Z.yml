@@ -1,0 +1,261 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e8085]:
+          - listitem [ref=f42e8086]:
+            - button "Todos os Cursos" [ref=f42e8087] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e8088]:
+            - button "Profissional Básico - Análise de Sistemas/Suporte (BNDES)" [ref=f42e8089] [cursor=pointer]
+        - generic [ref=f42e8090]:
+          - generic [ref=f42e8091]:
+            - generic [ref=f42e8094]:
+              - generic [ref=f42e8097]: Profissional Básico - Análise de Sistemas/Suporte (BNDES)
+              - img [ref=f42e8100] [cursor=pointer]: 
+            - generic [ref=f42e8102]:
+              - button "Filtro Avançado" [ref=f42e8104] [cursor=pointer]:
+                - generic [ref=f42e8105]:
+                  - img [ref=f42e8106]: 
+                  - generic [ref=f42e8107]: Filtro Avançado
+              - generic [ref=f42e8111] [cursor=pointer]:
+                - img [ref=f42e8112]: 
+                - generic [ref=f42e8113]: Autor
+          - generic [ref=f42e8114]:
+            - complementary [ref=f42e8115]:
+              - generic [ref=f42e8116]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e8117]
+                - button "Fechar" [ref=f42e8118] [cursor=pointer]:
+                  - generic [ref=f42e8119]: Fechar
+              - generic [ref=f42e8122]:
+                - textbox [ref=f42e8123]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e8124]
+              - generic [ref=f42e8126]:
+                - generic [ref=f42e8127]:
+                  - generic [ref=f42e8129] [cursor=pointer]:
+                    - paragraph [ref=f42e8130]: Filtros selecionados
+                    - img [ref=f42e8131]: 
+                  - generic [ref=f42e8132]:
+                    - generic [ref=f42e8134] [cursor=pointer]:
+                      - generic [ref=f42e8135]: Somente meus conteúdos
+                      - button [ref=f42e8136]:
+                        - img [ref=f42e8137]
+                    - generic [ref=f42e8139]: Limpar filtros
+                - generic [ref=f42e8141]:
+                  - generic [ref=f42e8143] [cursor=pointer]:
+                    - paragraph [ref=f42e8144]: Tipo de Conteúdo
+                    - img [ref=f42e8145]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e8147] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e8150]
+                    - generic [ref=f42e8151]: LDIs
+            - generic [ref=f42e8155]:
+              - generic [ref=f42e8156]:
+                - heading "LDIs" [level=6] [ref=f42e8157]
+                - paragraph [ref=f42e8158]: 11 resultados
+              - generic [ref=f42e8161]:
+                - button "Arquitetura de Computadores para BNDES (Profissional Básico - Análise de Sistemas - Suporte) Evandro Vecchia PDF e vídeos" [ref=f42e8163] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8167]: Arquitetura de Computadores para BNDES (Profissional Básico - Análise de Sistemas - Suporte)
+                  - generic [ref=f42e8169]:
+                    - img [ref=f42e8172]: 
+                    - generic [ref=f42e8173]: Evandro Vecchia
+                  - generic [ref=f42e8175]:
+                    - button "PDF e vídeos" [ref=f42e8176]:
+                      - generic [ref=f42e8177]:
+                        - img [ref=f42e8178]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8182]:
+                      - img [ref=f42e8183]: 
+                      - img [ref=f42e8184]: 
+                    - generic [ref=f42e8187]:
+                      - img [ref=f42e8188]: 
+                      - img [ref=f42e8189]: 
+                - button "Banco de Dados para BNDES (Profissional Básico - Análise de Sistemas - Suporte) Thiago Cavalcanti PDF e vídeos" [ref=f42e8191] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8195]: Banco de Dados para BNDES (Profissional Básico - Análise de Sistemas - Suporte)
+                  - generic [ref=f42e8197]:
+                    - img [ref=f42e8200]: 
+                    - generic [ref=f42e8201]: Thiago Cavalcanti
+                  - generic [ref=f42e8203]:
+                    - button "PDF e vídeos" [ref=f42e8204]:
+                      - generic [ref=f42e8205]:
+                        - img [ref=f42e8206]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8210]:
+                      - img [ref=f42e8211]: 
+                      - img [ref=f42e8212]: 
+                    - generic [ref=f42e8215]:
+                      - img [ref=f42e8216]: 
+                      - img [ref=f42e8217]: 
+                - button "Engenharia de Software para BNDES (Analista - Análise de Sistemas - Suporte) 3 professores Pós-Edital PDF e vídeos" [ref=f42e8219] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8223]: Engenharia de Software para BNDES (Analista - Análise de Sistemas - Suporte)
+                  - generic [ref=f42e8225]:
+                    - img [ref=f42e8228]: 
+                    - generic [ref=f42e8229]: 3 professores
+                  - generic [ref=f42e8233]: Pós-Edital
+                  - generic [ref=f42e8235]:
+                    - button "PDF e vídeos" [ref=f42e8236]:
+                      - generic [ref=f42e8237]:
+                        - img [ref=f42e8238]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8242]:
+                      - img [ref=f42e8243]: 
+                      - img [ref=f42e8244]: 
+                    - generic [ref=f42e8247]:
+                      - img [ref=f42e8248]: 
+                      - img [ref=f42e8249]: 
+                - button "Governança de TI para BNDES (Analista - Análise de Sistemas - Suporte) Paolla Ramos E Silva Pós-Edital PDF e vídeos" [ref=f42e8251] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8255]: Governança de TI para BNDES (Analista - Análise de Sistemas - Suporte)
+                  - generic [ref=f42e8257]:
+                    - img [ref=f42e8260]: 
+                    - generic [ref=f42e8261]: Paolla Ramos E Silva
+                  - generic [ref=f42e8265]: Pós-Edital
+                  - generic [ref=f42e8267]:
+                    - button "PDF e vídeos" [ref=f42e8268]:
+                      - generic [ref=f42e8269]:
+                        - img [ref=f42e8270]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8274]:
+                      - img [ref=f42e8275]: 
+                      - img [ref=f42e8276]: 
+                    - generic [ref=f42e8279]:
+                      - img [ref=f42e8280]: 
+                      - img [ref=f42e8281]: 
+                - button "Governança de TI para BNDES (Profissional Básico - Análise de Sistemas - Suporte) Paolla Ramos E Silva PDF e vídeos" [ref=f42e8283] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8287]: Governança de TI para BNDES (Profissional Básico - Análise de Sistemas - Suporte)
+                  - generic [ref=f42e8289]:
+                    - img [ref=f42e8292]: 
+                    - generic [ref=f42e8293]: Paolla Ramos E Silva
+                  - generic [ref=f42e8295]:
+                    - button "PDF e vídeos" [ref=f42e8296]:
+                      - generic [ref=f42e8297]:
+                        - img [ref=f42e8298]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8302]:
+                      - img [ref=f42e8303]: 
+                      - img [ref=f42e8304]: 
+                    - generic [ref=f42e8307]:
+                      - img [ref=f42e8308]: 
+                      - img [ref=f42e8309]: 
+                - button "Inglês para BNDES (Profissional Básico - Análise de Sistemas - Suporte) Ena Smith PDF e vídeos" [ref=f42e8311] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8315]: Inglês para BNDES (Profissional Básico - Análise de Sistemas - Suporte)
+                  - generic [ref=f42e8317]:
+                    - img [ref=f42e8320]: 
+                    - generic [ref=f42e8321]: Ena Smith
+                  - generic [ref=f42e8323]:
+                    - button "PDF e vídeos" [ref=f42e8324]:
+                      - generic [ref=f42e8325]:
+                        - img [ref=f42e8326]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8330]:
+                      - img [ref=f42e8331]: 
+                      - img [ref=f42e8332]: 
+                    - generic [ref=f42e8335]:
+                      - img [ref=f42e8336]: 
+                      - img [ref=f42e8337]: 
+                - button "Língua Inglesa para BNDES (Analista - Análise de Sistemas - Suporte) - Prof. Andrea Belo Andrea Belo Pós-Edital PDF e vídeos" [ref=f42e8339] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8343]: Língua Inglesa para BNDES (Analista - Análise de Sistemas - Suporte) - Prof. Andrea Belo
+                  - generic [ref=f42e8345]:
+                    - img [ref=f42e8348]: 
+                    - generic [ref=f42e8349]: Andrea Belo
+                  - generic [ref=f42e8353]: Pós-Edital
+                  - generic [ref=f42e8355]:
+                    - button "PDF e vídeos" [ref=f42e8356]:
+                      - generic [ref=f42e8357]:
+                        - img [ref=f42e8358]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8362]:
+                      - img [ref=f42e8363]: 
+                      - img [ref=f42e8364]: 
+                    - generic [ref=f42e8367]:
+                      - img [ref=f42e8368]: 
+                      - img [ref=f42e8369]: 
+                - button "Português para BNDES (Analista - Análise de Sistemas - Suporte) - Prof. Felipe Luccas 3 professores Pós-Edital PDF e vídeos" [ref=f42e8371] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8375]: Português para BNDES (Analista - Análise de Sistemas - Suporte) - Prof. Felipe Luccas
+                  - generic [ref=f42e8377]:
+                    - img [ref=f42e8380]: 
+                    - generic [ref=f42e8381]: 3 professores
+                  - generic [ref=f42e8385]: Pós-Edital
+                  - generic [ref=f42e8387]:
+                    - button "PDF e vídeos" [ref=f42e8388]:
+                      - generic [ref=f42e8389]:
+                        - img [ref=f42e8390]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8394]:
+                      - img [ref=f42e8395]: 
+                      - img [ref=f42e8396]: 
+                    - generic [ref=f42e8399]:
+                      - img [ref=f42e8400]: 
+                      - img [ref=f42e8401]: 
+                - button "Português para BNDES (Profissional Básico - Análise de Sistemas - Suporte) - Prof. Felipe Luccas 3 professores PDF e vídeos" [ref=f42e8403] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8407]: Português para BNDES (Profissional Básico - Análise de Sistemas - Suporte) - Prof. Felipe Luccas
+                  - generic [ref=f42e8409]:
+                    - img [ref=f42e8412]: 
+                    - generic [ref=f42e8413]: 3 professores
+                  - generic [ref=f42e8415]:
+                    - button "PDF e vídeos" [ref=f42e8416]:
+                      - generic [ref=f42e8417]:
+                        - img [ref=f42e8418]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8422]:
+                      - img [ref=f42e8423]: 
+                      - img [ref=f42e8424]: 
+                    - generic [ref=f42e8427]:
+                      - img [ref=f42e8428]: 
+                      - img [ref=f42e8429]: 
+                - button "Redes e Segurança para BNDES (Analista - Análise de Sistemas - Suporte) André Castro Pós-Edital PDF e vídeos" [ref=f42e8431] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8435]: Redes e Segurança para BNDES (Analista - Análise de Sistemas - Suporte)
+                  - generic [ref=f42e8437]:
+                    - img [ref=f42e8440]: 
+                    - generic [ref=f42e8441]: André Castro
+                  - generic [ref=f42e8445]: Pós-Edital
+                  - generic [ref=f42e8447]:
+                    - button "PDF e vídeos" [ref=f42e8448]:
+                      - generic [ref=f42e8449]:
+                        - img [ref=f42e8450]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8454]:
+                      - img [ref=f42e8455]: 
+                      - img [ref=f42e8456]: 
+                    - generic [ref=f42e8459]:
+                      - img [ref=f42e8460]: 
+                      - img [ref=f42e8461]: 
+                - button "Redes e Segurança para BNDES (Profissional Básico - Análise de Sistemas - Suporte) André Castro PDF e vídeos" [ref=f42e8463] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8467]: Redes e Segurança para BNDES (Profissional Básico - Análise de Sistemas - Suporte)
+                  - generic [ref=f42e8469]:
+                    - img [ref=f42e8472]: 
+                    - generic [ref=f42e8473]: André Castro
+                  - generic [ref=f42e8475]:
+                    - button "PDF e vídeos" [ref=f42e8476]:
+                      - generic [ref=f42e8477]:
+                        - img [ref=f42e8478]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8482]:
+                      - img [ref=f42e8483]: 
+                      - img [ref=f42e8484]: 
+                    - generic [ref=f42e8487]:
+                      - img [ref=f42e8488]: 
+                      - img [ref=f42e8489]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

@@ -1,0 +1,62 @@
+- generic [ref=f113e3]:
+  - banner [ref=f113e4]:
+    - generic [ref=f113e5]:
+      - img [ref=f113e7]
+      - generic [ref=f113e10]: StudyDino
+  - main [ref=f113e11]:
+    - generic [ref=f113e13]:
+      - generic [ref=f113e14]:
+        - combobox [ref=f113e15] [cursor=pointer]:
+          - option "Selecione uma matéria" [selected]
+          - option "Arquitetura de Computadores"
+          - option "Banco de Dados"
+          - option "Ciência de Dados"
+          - option "Desenvolvimento de Software"
+          - option "Engenharia de Software"
+          - option "Estatística e Probabilidade"
+          - option "Governança de TI"
+          - option "Inglês"
+          - option "LGPD e Privacidade"
+          - option "Legislação Institucional"
+          - option "Linguagens de Programação"
+          - option "Língua Portuguesa"
+          - option "Matemática"
+          - option "Raciocínio Lógico"
+          - option "Redes e Segurança"
+          - option "Segurança da Informação"
+          - option "Servidores e Infraestrutura"
+          - option "Sistemas Operacionais"
+        - img
+      - generic [ref=f113e16]:
+        - generic [ref=f113e17]:
+          - generic [ref=f113e18]:
+            - generic [ref=f113e19]: "00"
+            - generic [ref=f113e21]: H
+          - generic [ref=f113e22]: ":"
+        - generic [ref=f113e23]:
+          - generic [ref=f113e24]:
+            - generic [ref=f113e25]: "00"
+            - generic [ref=f113e27]: M
+          - generic [ref=f113e28]: ":"
+        - generic [ref=f113e30]:
+          - generic [ref=f113e31]: "00"
+          - generic [ref=f113e33]: S
+      - button "Iniciar" [disabled] [ref=f113e35] [cursor=pointer]:
+        - img [ref=f113e36]
+        - text: Iniciar
+  - navigation [ref=f113e38]:
+    - button "Cronômetro" [ref=f113e39] [cursor=pointer]:
+      - img [ref=f113e40]
+      - generic [ref=f113e43]: Cronômetro
+    - button "Matérias" [ref=f113e44] [cursor=pointer]:
+      - img [ref=f113e45]
+      - generic [ref=f113e47]: Matérias
+    - button "Trilhas" [ref=f113e48] [cursor=pointer]:
+      - img [ref=f113e49]
+      - generic [ref=f113e53]: Trilhas
+    - button "Dashboard" [ref=f113e54] [cursor=pointer]:
+      - img [ref=f113e55]
+      - generic [ref=f113e56]: Dashboard
+    - button "Histórico" [ref=f113e57] [cursor=pointer]:
+      - img [ref=f113e58]
+      - generic [ref=f113e61]: Histórico

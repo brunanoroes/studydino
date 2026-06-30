@@ -1,0 +1,123 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e1157]:
+          - listitem [ref=f42e1158]:
+            - button "Todos os Cursos" [ref=f42e1159] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e1160]:
+            - button "Analista de Tecnologia da Informação - Inteligência da Informação (DATAPREV)" [ref=f42e1161] [cursor=pointer]
+        - generic [ref=f42e1163]:
+          - generic [ref=f42e1164]:
+            - generic [ref=f42e1167]:
+              - generic [ref=f42e1170]: Analista de Tecnologia da Informação - Inteligência da Informação (DATAPREV)
+              - img [ref=f42e1173] [cursor=pointer]: 
+            - generic [ref=f42e1175]:
+              - button "Filtro Avançado" [ref=f42e1177] [cursor=pointer]:
+                - generic [ref=f42e1178]:
+                  - img [ref=f42e1179]: 
+                  - generic [ref=f42e1180]: Filtro Avançado
+              - generic [ref=f42e1184] [cursor=pointer]:
+                - img [ref=f42e1185]: 
+                - generic [ref=f42e1186]: Autor
+          - generic [ref=f42e1187]:
+            - complementary [ref=f42e1188]:
+              - generic [ref=f42e1189]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e1190]
+                - button "Fechar" [ref=f42e1191] [cursor=pointer]:
+                  - generic [ref=f42e1192]: Fechar
+              - generic [ref=f42e1195]:
+                - textbox [ref=f42e1196]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e1197]
+              - generic [ref=f42e1199]:
+                - generic [ref=f42e1200]:
+                  - generic [ref=f42e1202] [cursor=pointer]:
+                    - paragraph [ref=f42e1203]: Filtros selecionados
+                    - img [ref=f42e1204]: 
+                  - generic [ref=f42e1205]:
+                    - generic [ref=f42e1207] [cursor=pointer]:
+                      - generic [ref=f42e1208]: Somente meus conteúdos
+                      - button [ref=f42e1209]:
+                        - img [ref=f42e1210]
+                    - generic [ref=f42e1212]: Limpar filtros
+                - generic [ref=f42e1214]:
+                  - generic [ref=f42e1216] [cursor=pointer]:
+                    - paragraph [ref=f42e1217]: Tipo de Conteúdo
+                    - img [ref=f42e1218]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e1220] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e1223]
+                    - generic [ref=f42e1224]: LDIs
+            - generic [ref=f42e1228]:
+              - generic [ref=f42e1229]:
+                - heading "LDIs" [level=6] [ref=f42e1230]
+                - paragraph [ref=f42e1231]: 3 resultados
+              - generic [ref=f42e1234]:
+                - button "Banco de dados para DataPrev (Analista de TI - Inteligência da Informação) - Prof. Thiago Cavalcanti Thiago Cavalcanti Pós-Edital PDF e vídeos" [ref=f42e1236] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e1240]: Banco de dados para DataPrev (Analista de TI - Inteligência da Informação) - Prof. Thiago Cavalcanti
+                  - generic [ref=f42e1242]:
+                    - img [ref=f42e1245]: 
+                    - generic [ref=f42e1246]: Thiago Cavalcanti
+                  - generic [ref=f42e1250]: Pós-Edital
+                  - generic [ref=f42e1252]:
+                    - button "PDF e vídeos" [ref=f42e1253]:
+                      - generic [ref=f42e1254]:
+                        - img [ref=f42e1255]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e1259]:
+                      - img [ref=f42e1260]: 
+                      - img [ref=f42e1261]: 
+                    - generic [ref=f42e1264]:
+                      - img [ref=f42e1265]: 
+                      - img [ref=f42e1266]: 
+                - button "Desenvolvimento de software para DataPrev (Analista de TI - Inteligência da Informação) - Prof. Paolla Ramos Paolla Ramos E Silva Pós-Edital PDF e vídeos" [ref=f42e1268] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e1272]: Desenvolvimento de software para DataPrev (Analista de TI - Inteligência da Informação) - Prof. Paolla Ramos
+                  - generic [ref=f42e1274]:
+                    - img [ref=f42e1277]: 
+                    - generic [ref=f42e1278]: Paolla Ramos E Silva
+                  - generic [ref=f42e1282]: Pós-Edital
+                  - generic [ref=f42e1284]:
+                    - button "PDF e vídeos" [ref=f42e1285]:
+                      - generic [ref=f42e1286]:
+                        - img [ref=f42e1287]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e1291]:
+                      - img [ref=f42e1292]: 
+                      - img [ref=f42e1293]: 
+                    - generic [ref=f42e1296]:
+                      - img [ref=f42e1297]: 
+                      - img [ref=f42e1298]: 
+                - button "Língua Portuguesa para DataPrev (Analista de TI - Inteligência da Informação) - Equipe de Português 3 professores Pós-Edital PDF e vídeos" [ref=f42e1300] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e1304]: Língua Portuguesa para DataPrev (Analista de TI - Inteligência da Informação) - Equipe de Português
+                  - generic [ref=f42e1306]:
+                    - img [ref=f42e1309]: 
+                    - generic [ref=f42e1310]: 3 professores
+                  - generic [ref=f42e1314]: Pós-Edital
+                  - generic [ref=f42e1316]:
+                    - button "PDF e vídeos" [ref=f42e1317]:
+                      - generic [ref=f42e1318]:
+                        - img [ref=f42e1319]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e1323]:
+                      - img [ref=f42e1324]: 
+                      - img [ref=f42e1325]: 
+                    - generic [ref=f42e1328]:
+                      - img [ref=f42e1329]: 
+                      - img [ref=f42e1330]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

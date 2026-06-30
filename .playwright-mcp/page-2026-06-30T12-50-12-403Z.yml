@@ -1,0 +1,195 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e5897]:
+          - listitem [ref=f42e5898]:
+            - button "Todos os Cursos" [ref=f42e5899] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e5900]:
+            - button "Analista - Ciências de Dados - Conhecimentos Básicos (SERPRO)" [ref=f42e5901] [cursor=pointer]
+        - generic [ref=f42e5902]:
+          - generic [ref=f42e5903]:
+            - generic [ref=f42e5906]:
+              - generic [ref=f42e5909]: Analista - Ciências de Dados - Conhecimentos Básicos (SERPRO)
+              - img [ref=f42e5912] [cursor=pointer]: 
+            - generic [ref=f42e5914]:
+              - button "Filtro Avançado" [ref=f42e5916] [cursor=pointer]:
+                - generic [ref=f42e5917]:
+                  - img [ref=f42e5918]: 
+                  - generic [ref=f42e5919]: Filtro Avançado
+              - generic [ref=f42e5923] [cursor=pointer]:
+                - img [ref=f42e5924]: 
+                - generic [ref=f42e5925]: Autor
+          - generic [ref=f42e5926]:
+            - complementary [ref=f42e5927]:
+              - generic [ref=f42e5928]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e5929]
+                - button "Fechar" [ref=f42e5930] [cursor=pointer]:
+                  - generic [ref=f42e5931]: Fechar
+              - generic [ref=f42e5934]:
+                - textbox [ref=f42e5935]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e5936]
+              - generic [ref=f42e5938]:
+                - generic [ref=f42e5939]:
+                  - generic [ref=f42e5941] [cursor=pointer]:
+                    - paragraph [ref=f42e5942]: Filtros selecionados
+                    - img [ref=f42e5943]: 
+                  - generic [ref=f42e5944]:
+                    - generic [ref=f42e5946] [cursor=pointer]:
+                      - generic [ref=f42e5947]: Somente meus conteúdos
+                      - button [ref=f42e5948]:
+                        - img [ref=f42e5949]
+                    - generic [ref=f42e5951]: Limpar filtros
+                - generic [ref=f42e5953]:
+                  - generic [ref=f42e5955] [cursor=pointer]:
+                    - paragraph [ref=f42e5956]: Tipo de Conteúdo
+                    - img [ref=f42e5957]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e5959] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e5962]
+                    - generic [ref=f42e5963]: LDIs
+            - generic [ref=f42e5967]:
+              - generic [ref=f42e5968]:
+                - heading "LDIs" [level=6] [ref=f42e5969]
+                - paragraph [ref=f42e5970]: 7 resultados
+              - generic [ref=f42e5973]:
+                - button "Legislação Acerca da Privacidade de Proteção de Dados para SERPRO (Analista - Ciência de Dados) - Profs. Paulo Sousa e Antonio Daud 2 professores Pré-Edital PDF e vídeos" [ref=f42e5975] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5979]: Legislação Acerca da Privacidade de Proteção de Dados para SERPRO (Analista - Ciência de Dados) - Profs. Paulo Sousa e Antonio Daud
+                  - generic [ref=f42e5981]:
+                    - img [ref=f42e5984]: 
+                    - generic [ref=f42e5985]: 2 professores
+                  - generic [ref=f42e5989]: Pré-Edital
+                  - generic [ref=f42e5991]:
+                    - button "PDF e vídeos" [ref=f42e5992]:
+                      - generic [ref=f42e5993]:
+                        - img [ref=f42e5994]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5998]:
+                      - img [ref=f42e5999]: 
+                      - img [ref=f42e6000]: 
+                    - generic [ref=f42e6003]:
+                      - img [ref=f42e6004]: 
+                      - img [ref=f42e6005]: 
+                - button "Ciência de Dados para SERPRO (Analista - Ciência de Dados) - Prof. Thiago Cavalcanti Thiago Cavalcanti Pré-Edital PDF e vídeos" [ref=f42e6007] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6011]: Ciência de Dados para SERPRO (Analista - Ciência de Dados) - Prof. Thiago Cavalcanti
+                  - generic [ref=f42e6013]:
+                    - img [ref=f42e6016]: 
+                    - generic [ref=f42e6017]: Thiago Cavalcanti
+                  - generic [ref=f42e6021]: Pré-Edital
+                  - generic [ref=f42e6023]:
+                    - button "PDF e vídeos" [ref=f42e6024]:
+                      - generic [ref=f42e6025]:
+                        - img [ref=f42e6026]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6030]:
+                      - img [ref=f42e6031]: 
+                      - img [ref=f42e6032]: 
+                    - generic [ref=f42e6035]:
+                      - img [ref=f42e6036]: 
+                      - img [ref=f42e6037]: 
+                - button "Estatuto Social do SERPRO para SERPRO (Analista - Ciência de Dados) Equipe Legislação Pré-Edital PDF e vídeos" [ref=f42e6039] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6043]: Estatuto Social do SERPRO para SERPRO (Analista - Ciência de Dados)
+                  - generic [ref=f42e6045]:
+                    - img [ref=f42e6048]: 
+                    - generic [ref=f42e6049]: Equipe Legislação
+                  - generic [ref=f42e6053]: Pré-Edital
+                  - generic [ref=f42e6055]:
+                    - button "PDF e vídeos" [ref=f42e6056]:
+                      - generic [ref=f42e6057]:
+                        - img [ref=f42e6058]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6062]:
+                      - img [ref=f42e6063]: 
+                      - img [ref=f42e6064]: 
+                    - generic [ref=f42e6067]:
+                      - img [ref=f42e6068]: 
+                      - img [ref=f42e6069]: 
+                - button "Inglês para SERPRO (Analista - Ciência de Dados) - Prof. Ena Smith Ena Smith Pré-Edital PDF e vídeos" [ref=f42e6071] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6075]: Inglês para SERPRO (Analista - Ciência de Dados) - Prof. Ena Smith
+                  - generic [ref=f42e6077]:
+                    - img [ref=f42e6080]: 
+                    - generic [ref=f42e6081]: Ena Smith
+                  - generic [ref=f42e6085]: Pré-Edital
+                  - generic [ref=f42e6087]:
+                    - button "PDF e vídeos" [ref=f42e6088]:
+                      - generic [ref=f42e6089]:
+                        - img [ref=f42e6090]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6094]:
+                      - img [ref=f42e6095]: 
+                      - img [ref=f42e6096]: 
+                    - generic [ref=f42e6099]:
+                      - img [ref=f42e6100]: 
+                      - img [ref=f42e6101]: 
+                - button "Linguagens de Programação para SERPRO (Analista - Ciência de Dados) Paolla Ramos E Silva Pré-Edital PDF e vídeos" [ref=f42e6103] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6107]: Linguagens de Programação para SERPRO (Analista - Ciência de Dados)
+                  - generic [ref=f42e6109]:
+                    - img [ref=f42e6112]: 
+                    - generic [ref=f42e6113]: Paolla Ramos E Silva
+                  - generic [ref=f42e6117]: Pré-Edital
+                  - generic [ref=f42e6119]:
+                    - button "PDF e vídeos" [ref=f42e6120]:
+                      - generic [ref=f42e6121]:
+                        - img [ref=f42e6122]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6126]:
+                      - img [ref=f42e6127]: 
+                      - img [ref=f42e6128]: 
+                    - generic [ref=f42e6131]:
+                      - img [ref=f42e6132]: 
+                      - img [ref=f42e6133]: 
+                - button "Português para SERPRO (Analista - Ciência de Dados) - Prof. Felipe Luccas 3 professores Pré-Edital PDF e vídeos" [ref=f42e6135] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6139]: Português para SERPRO (Analista - Ciência de Dados) - Prof. Felipe Luccas
+                  - generic [ref=f42e6141]:
+                    - img [ref=f42e6144]: 
+                    - generic [ref=f42e6145]: 3 professores
+                  - generic [ref=f42e6149]: Pré-Edital
+                  - generic [ref=f42e6151]:
+                    - button "PDF e vídeos" [ref=f42e6152]:
+                      - generic [ref=f42e6153]:
+                        - img [ref=f42e6154]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6158]:
+                      - img [ref=f42e6159]: 
+                      - img [ref=f42e6160]: 
+                    - generic [ref=f42e6163]:
+                      - img [ref=f42e6164]: 
+                      - img [ref=f42e6165]: 
+                - button "Raciocínio Lógico para SERPRO (Analista - Ciência de Dados) - Equipe Exatas Equipe Exatas Academy Pré-Edital PDF e vídeos" [ref=f42e6167] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6171]: Raciocínio Lógico para SERPRO (Analista - Ciência de Dados) - Equipe Exatas
+                  - generic [ref=f42e6173]:
+                    - img [ref=f42e6176]: 
+                    - generic [ref=f42e6177]: Equipe Exatas Academy
+                  - generic [ref=f42e6181]: Pré-Edital
+                  - generic [ref=f42e6183]:
+                    - button "PDF e vídeos" [ref=f42e6184]:
+                      - generic [ref=f42e6185]:
+                        - img [ref=f42e6186]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6190]:
+                      - img [ref=f42e6191]: 
+                      - img [ref=f42e6192]: 
+                    - generic [ref=f42e6195]:
+                      - img [ref=f42e6196]: 
+                      - img [ref=f42e6197]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

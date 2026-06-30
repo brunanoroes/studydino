@@ -1,0 +1,159 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e8865]:
+          - listitem [ref=f42e8866]:
+            - button "Todos os Cursos" [ref=f42e8867] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e8868]:
+            - button "Profissional Básico - Análise de Sistemas - Cibersegurança (BNDES)" [ref=f42e8869] [cursor=pointer]
+        - generic [ref=f42e8870]:
+          - generic [ref=f42e8871]:
+            - generic [ref=f42e8874]:
+              - generic [ref=f42e8877]: Profissional Básico - Análise de Sistemas - Cibersegurança (BNDES)
+              - img [ref=f42e8880] [cursor=pointer]: 
+            - generic [ref=f42e8882]:
+              - button "Filtro Avançado" [ref=f42e8884] [cursor=pointer]:
+                - generic [ref=f42e8885]:
+                  - img [ref=f42e8886]: 
+                  - generic [ref=f42e8887]: Filtro Avançado
+              - generic [ref=f42e8891] [cursor=pointer]:
+                - img [ref=f42e8892]: 
+                - generic [ref=f42e8893]: Autor
+          - generic [ref=f42e8894]:
+            - complementary [ref=f42e8895]:
+              - generic [ref=f42e8896]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e8897]
+                - button "Fechar" [ref=f42e8898] [cursor=pointer]:
+                  - generic [ref=f42e8899]: Fechar
+              - generic [ref=f42e8902]:
+                - textbox [ref=f42e8903]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e8904]
+              - generic [ref=f42e8906]:
+                - generic [ref=f42e8907]:
+                  - generic [ref=f42e8909] [cursor=pointer]:
+                    - paragraph [ref=f42e8910]: Filtros selecionados
+                    - img [ref=f42e8911]: 
+                  - generic [ref=f42e8912]:
+                    - generic [ref=f42e8914] [cursor=pointer]:
+                      - generic [ref=f42e8915]: Somente meus conteúdos
+                      - button [ref=f42e8916]:
+                        - img [ref=f42e8917]
+                    - generic [ref=f42e8919]: Limpar filtros
+                - generic [ref=f42e8921]:
+                  - generic [ref=f42e8923] [cursor=pointer]:
+                    - paragraph [ref=f42e8924]: Tipo de Conteúdo
+                    - img [ref=f42e8925]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e8927] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e8930]
+                    - generic [ref=f42e8931]: LDIs
+            - generic [ref=f42e8935]:
+              - generic [ref=f42e8936]:
+                - heading "LDIs" [level=6] [ref=f42e8937]
+                - paragraph [ref=f42e8938]: 5 resultados
+              - generic [ref=f42e8941]:
+                - button "Desenvolvimento de Software para BNDES (Analista - Análise de Sistemas - Cibersegurança) Paolla Ramos E Silva Pós-Edital PDF e vídeos" [ref=f42e8943] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8947]: Desenvolvimento de Software para BNDES (Analista - Análise de Sistemas - Cibersegurança)
+                  - generic [ref=f42e8949]:
+                    - img [ref=f42e8952]: 
+                    - generic [ref=f42e8953]: Paolla Ramos E Silva
+                  - generic [ref=f42e8957]: Pós-Edital
+                  - generic [ref=f42e8959]:
+                    - button "PDF e vídeos" [ref=f42e8960]:
+                      - generic [ref=f42e8961]:
+                        - img [ref=f42e8962]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8966]:
+                      - img [ref=f42e8967]: 
+                      - img [ref=f42e8968]: 
+                    - generic [ref=f42e8971]:
+                      - img [ref=f42e8972]: 
+                      - img [ref=f42e8973]: 
+                - button "Língua Inglesa para BNDES (Analista - Análise de Sistemas - Cibersegurança) - Prof. Andrea Belo Andrea Belo Pós-Edital PDF e vídeos" [ref=f42e8975] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e8979]: Língua Inglesa para BNDES (Analista - Análise de Sistemas - Cibersegurança) - Prof. Andrea Belo
+                  - generic [ref=f42e8981]:
+                    - img [ref=f42e8984]: 
+                    - generic [ref=f42e8985]: Andrea Belo
+                  - generic [ref=f42e8989]: Pós-Edital
+                  - generic [ref=f42e8991]:
+                    - button "PDF e vídeos" [ref=f42e8992]:
+                      - generic [ref=f42e8993]:
+                        - img [ref=f42e8994]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e8998]:
+                      - img [ref=f42e8999]: 
+                      - img [ref=f42e9000]: 
+                    - generic [ref=f42e9003]:
+                      - img [ref=f42e9004]: 
+                      - img [ref=f42e9005]: 
+                - button "Português para BNDES (Analista - Análise de Sistemas - Cibersegurança) - Prof. Felipe Luccas 3 professores Pós-Edital PDF e vídeos" [ref=f42e9007] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9011]: Português para BNDES (Analista - Análise de Sistemas - Cibersegurança) - Prof. Felipe Luccas
+                  - generic [ref=f42e9013]:
+                    - img [ref=f42e9016]: 
+                    - generic [ref=f42e9017]: 3 professores
+                  - generic [ref=f42e9021]: Pós-Edital
+                  - generic [ref=f42e9023]:
+                    - button "PDF e vídeos" [ref=f42e9024]:
+                      - generic [ref=f42e9025]:
+                        - img [ref=f42e9026]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9030]:
+                      - img [ref=f42e9031]: 
+                      - img [ref=f42e9032]: 
+                    - generic [ref=f42e9035]:
+                      - img [ref=f42e9036]: 
+                      - img [ref=f42e9037]: 
+                - button "Segurança da Informação para BNDES (Analista - Análise de Sistemas - Cibersegurança) André Castro Pós-Edital PDF e vídeos" [ref=f42e9039] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9043]: Segurança da Informação para BNDES (Analista - Análise de Sistemas - Cibersegurança)
+                  - generic [ref=f42e9045]:
+                    - img [ref=f42e9048]: 
+                    - generic [ref=f42e9049]: André Castro
+                  - generic [ref=f42e9053]: Pós-Edital
+                  - generic [ref=f42e9055]:
+                    - button "PDF e vídeos" [ref=f42e9056]:
+                      - generic [ref=f42e9057]:
+                        - img [ref=f42e9058]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9062]:
+                      - img [ref=f42e9063]: 
+                      - img [ref=f42e9064]: 
+                    - generic [ref=f42e9067]:
+                      - img [ref=f42e9068]: 
+                      - img [ref=f42e9069]: 
+                - button "Sistemas Operacionais para BNDES (Analista - Análise de Sistemas - Cibersegurança) Evandro Vecchia Pós-Edital PDF e vídeos" [ref=f42e9071] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9075]: Sistemas Operacionais para BNDES (Analista - Análise de Sistemas - Cibersegurança)
+                  - generic [ref=f42e9077]:
+                    - img [ref=f42e9080]: 
+                    - generic [ref=f42e9081]: Evandro Vecchia
+                  - generic [ref=f42e9085]: Pós-Edital
+                  - generic [ref=f42e9087]:
+                    - button "PDF e vídeos" [ref=f42e9088]:
+                      - generic [ref=f42e9089]:
+                        - img [ref=f42e9090]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9094]:
+                      - img [ref=f42e9095]: 
+                      - img [ref=f42e9096]: 
+                    - generic [ref=f42e9099]:
+                      - img [ref=f42e9100]: 
+                      - img [ref=f42e9101]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

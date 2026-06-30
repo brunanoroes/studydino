@@ -1,0 +1,141 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e9102]:
+          - listitem [ref=f42e9103]:
+            - button "Todos os Cursos" [ref=f42e9104] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e9105]:
+            - button "Ciência de Dados (PETROBRAS)" [ref=f42e9106] [cursor=pointer]
+        - generic [ref=f42e9107]:
+          - generic [ref=f42e9108]:
+            - generic [ref=f42e9111]:
+              - generic [ref=f42e9114]: Ciência de Dados (PETROBRAS)
+              - img [ref=f42e9117] [cursor=pointer]: 
+            - generic [ref=f42e9119]:
+              - button "Filtro Avançado" [ref=f42e9121] [cursor=pointer]:
+                - generic [ref=f42e9122]:
+                  - img [ref=f42e9123]: 
+                  - generic [ref=f42e9124]: Filtro Avançado
+              - generic [ref=f42e9128] [cursor=pointer]:
+                - img [ref=f42e9129]: 
+                - generic [ref=f42e9130]: Autor
+          - generic [ref=f42e9131]:
+            - complementary [ref=f42e9132]:
+              - generic [ref=f42e9133]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e9134]
+                - button "Fechar" [ref=f42e9135] [cursor=pointer]:
+                  - generic [ref=f42e9136]: Fechar
+              - generic [ref=f42e9139]:
+                - textbox [ref=f42e9140]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e9141]
+              - generic [ref=f42e9143]:
+                - generic [ref=f42e9144]:
+                  - generic [ref=f42e9146] [cursor=pointer]:
+                    - paragraph [ref=f42e9147]: Filtros selecionados
+                    - img [ref=f42e9148]: 
+                  - generic [ref=f42e9149]:
+                    - generic [ref=f42e9151] [cursor=pointer]:
+                      - generic [ref=f42e9152]: Somente meus conteúdos
+                      - button [ref=f42e9153]:
+                        - img [ref=f42e9154]
+                    - generic [ref=f42e9156]: Limpar filtros
+                - generic [ref=f42e9158]:
+                  - generic [ref=f42e9160] [cursor=pointer]:
+                    - paragraph [ref=f42e9161]: Tipo de Conteúdo
+                    - img [ref=f42e9162]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e9164] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e9167]
+                    - generic [ref=f42e9168]: LDIs
+            - generic [ref=f42e9172]:
+              - generic [ref=f42e9173]:
+                - heading "LDIs" [level=6] [ref=f42e9174]
+                - paragraph [ref=f42e9175]: 4 resultados
+              - generic [ref=f42e9178]:
+                - button "Conhecimentos Específicos para PETROBRAS (Ciência de Dados) Thiago Cavalcanti Pré-Edital PDF e vídeos" [ref=f42e9180] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9184]: Conhecimentos Específicos para PETROBRAS (Ciência de Dados)
+                  - generic [ref=f42e9186]:
+                    - img [ref=f42e9189]: 
+                    - generic [ref=f42e9190]: Thiago Cavalcanti
+                  - generic [ref=f42e9194]: Pré-Edital
+                  - generic [ref=f42e9196]:
+                    - button "PDF e vídeos" [ref=f42e9197]:
+                      - generic [ref=f42e9198]:
+                        - img [ref=f42e9199]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9203]:
+                      - img [ref=f42e9204]: 
+                      - img [ref=f42e9205]: 
+                    - generic [ref=f42e9208]:
+                      - img [ref=f42e9209]: 
+                      - img [ref=f42e9210]: 
+                - button "Estatística e Probabilidade para PETROBRAS (Ciência de Dados) Equipe Exatas Academy Pré-Edital PDF e vídeos" [ref=f42e9212] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9216]: Estatística e Probabilidade para PETROBRAS (Ciência de Dados)
+                  - generic [ref=f42e9218]:
+                    - img [ref=f42e9221]: 
+                    - generic [ref=f42e9222]: Equipe Exatas Academy
+                  - generic [ref=f42e9226]: Pré-Edital
+                  - generic [ref=f42e9228]:
+                    - button "PDF e vídeos" [ref=f42e9229]:
+                      - generic [ref=f42e9230]:
+                        - img [ref=f42e9231]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9235]:
+                      - img [ref=f42e9236]: 
+                      - img [ref=f42e9237]: 
+                    - generic [ref=f42e9240]:
+                      - img [ref=f42e9241]: 
+                      - img [ref=f42e9242]: 
+                - button "Inglês para PETROBRAS (Ciência de Dados) - Prof. Ena Smith Ena Smith Pré-Edital PDF e vídeos" [ref=f42e9244] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9248]: Inglês para PETROBRAS (Ciência de Dados) - Prof. Ena Smith
+                  - generic [ref=f42e9250]:
+                    - img [ref=f42e9253]: 
+                    - generic [ref=f42e9254]: Ena Smith
+                  - generic [ref=f42e9258]: Pré-Edital
+                  - generic [ref=f42e9260]:
+                    - button "PDF e vídeos" [ref=f42e9261]:
+                      - generic [ref=f42e9262]:
+                        - img [ref=f42e9263]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9267]:
+                      - img [ref=f42e9268]: 
+                      - img [ref=f42e9269]: 
+                    - generic [ref=f42e9272]:
+                      - img [ref=f42e9273]: 
+                      - img [ref=f42e9274]: 
+                - button "Português para PETROBRAS (Ciência de Dados) - Prof. Felipe Luccas 3 professores Pré-Edital PDF e vídeos" [ref=f42e9276] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9280]: Português para PETROBRAS (Ciência de Dados) - Prof. Felipe Luccas
+                  - generic [ref=f42e9282]:
+                    - img [ref=f42e9285]: 
+                    - generic [ref=f42e9286]: 3 professores
+                  - generic [ref=f42e9290]: Pré-Edital
+                  - generic [ref=f42e9292]:
+                    - button "PDF e vídeos" [ref=f42e9293]:
+                      - generic [ref=f42e9294]:
+                        - img [ref=f42e9295]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9299]:
+                      - img [ref=f42e9300]: 
+                      - img [ref=f42e9301]: 
+                    - generic [ref=f42e9304]:
+                      - img [ref=f42e9305]: 
+                      - img [ref=f42e9306]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

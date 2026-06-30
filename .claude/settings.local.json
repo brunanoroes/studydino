@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($pkg = Get-Content \"D:\\\\Concurso\\\\gerenciamento-estudos\\\\backend\\\\package.json\" | ConvertFrom-Json; $pkg.scripts.start = \"node index.js\"; $pkg | ConvertTo-Json -Depth 10 | Set-Content \"D:\\\\Concurso\\\\gerenciamento-estudos\\\\backend\\\\package.json\" -Encoding utf8)",
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell(Invoke-RestMethod \"http://localhost:3001/api/materias\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"cd 'D:\\\\Concurso\\\\gerenciamento-estudos\\\\backend'; node index.js\" -WindowStyle Normal)",
+      "Bash(curl -s http://localhost:3001/api/trilhas)",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_navigate_back",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_wait_for"
+    ]
+  }
+}

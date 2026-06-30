@@ -1,0 +1,38 @@
+- generic [active] [ref=f29e1]:
+  - generic [ref=f29e10]:
+    - text:           
+    - main [ref=f29e14]:
+      - generic [ref=f29e15]:
+        - generic [ref=f29e17]:
+          - generic [ref=f29e18]:
+            - button [ref=f29e19] [cursor=pointer]:
+              - img [ref=f29e20]: 
+            - generic [ref=f29e21]: Estudos em andamento
+          - generic [ref=f29e22]:
+            - generic [ref=f29e23]:
+              - button "Concursos" [ref=f29e26] [cursor=pointer]:
+                - generic [ref=f29e29]: Concursos
+                - img [ref=f29e31]
+              - textbox [ref=f29e33]
+              - button "Buscar" [disabled] [ref=f29e34]:
+                - generic [ref=f29e35]:
+                  - img [ref=f29e36]: 
+                  - generic [ref=f29e37]: Buscar
+            - generic:      
+          - generic [ref=f29e38]:
+            - text: 
+            - button [ref=f29e39] [cursor=pointer]:
+              - img [ref=f29e40]: 
+            - text: 
+        - img [ref=f29e51]
+  - generic:
+    - generic:
+      - generic [ref=f29e60]:
+        - iframe [ref=f29e61]:
+          - button "Fechar mensagem da empresa" [ref=f35e4] [cursor=pointer]:
+            - img [ref=f35e5]
+        - iframe
+      - iframe [ref=f29e62]:
+        - button "Abrir janela de mensagens" [ref=f37e5] [cursor=pointer]:
+          - img [ref=f37e7]
+          - img [ref=f37e10]

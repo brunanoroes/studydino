@@ -1,0 +1,159 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e9682]:
+          - listitem [ref=f42e9683]:
+            - button "Todos os Cursos" [ref=f42e9684] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e9685]:
+            - button "Analista de Sistemas - Processos de negócio (PETROBRAS)" [ref=f42e9686] [cursor=pointer]
+        - generic [ref=f42e9687]:
+          - generic [ref=f42e9688]:
+            - generic [ref=f42e9691]:
+              - generic [ref=f42e9694]: Analista de Sistemas - Processos de negócio (PETROBRAS)
+              - img [ref=f42e9697] [cursor=pointer]: 
+            - generic [ref=f42e9699]:
+              - button "Filtro Avançado" [ref=f42e9701] [cursor=pointer]:
+                - generic [ref=f42e9702]:
+                  - img [ref=f42e9703]: 
+                  - generic [ref=f42e9704]: Filtro Avançado
+              - generic [ref=f42e9708] [cursor=pointer]:
+                - img [ref=f42e9709]: 
+                - generic [ref=f42e9710]: Autor
+          - generic [ref=f42e9711]:
+            - complementary [ref=f42e9712]:
+              - generic [ref=f42e9713]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e9714]
+                - button "Fechar" [ref=f42e9715] [cursor=pointer]:
+                  - generic [ref=f42e9716]: Fechar
+              - generic [ref=f42e9719]:
+                - textbox [ref=f42e9720]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e9721]
+              - generic [ref=f42e9723]:
+                - generic [ref=f42e9724]:
+                  - generic [ref=f42e9726] [cursor=pointer]:
+                    - paragraph [ref=f42e9727]: Filtros selecionados
+                    - img [ref=f42e9728]: 
+                  - generic [ref=f42e9729]:
+                    - generic [ref=f42e9731] [cursor=pointer]:
+                      - generic [ref=f42e9732]: Somente meus conteúdos
+                      - button [ref=f42e9733]:
+                        - img [ref=f42e9734]
+                    - generic [ref=f42e9736]: Limpar filtros
+                - generic [ref=f42e9738]:
+                  - generic [ref=f42e9740] [cursor=pointer]:
+                    - paragraph [ref=f42e9741]: Tipo de Conteúdo
+                    - img [ref=f42e9742]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e9744] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e9747]
+                    - generic [ref=f42e9748]: LDIs
+            - generic [ref=f42e9752]:
+              - generic [ref=f42e9753]:
+                - heading "LDIs" [level=6] [ref=f42e9754]
+                - paragraph [ref=f42e9755]: 5 resultados
+              - generic [ref=f42e9758]:
+                - button "Banco de Dados para PETROBRAS (Analista de Sistemas - Processos de Negócios) Thiago Cavalcanti Pré-Edital PDF e vídeos" [ref=f42e9760] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9764]: Banco de Dados para PETROBRAS (Analista de Sistemas - Processos de Negócios)
+                  - generic [ref=f42e9766]:
+                    - img [ref=f42e9769]: 
+                    - generic [ref=f42e9770]: Thiago Cavalcanti
+                  - generic [ref=f42e9774]: Pré-Edital
+                  - generic [ref=f42e9776]:
+                    - button "PDF e vídeos" [ref=f42e9777]:
+                      - generic [ref=f42e9778]:
+                        - img [ref=f42e9779]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9783]:
+                      - img [ref=f42e9784]: 
+                      - img [ref=f42e9785]: 
+                    - generic [ref=f42e9788]:
+                      - img [ref=f42e9789]: 
+                      - img [ref=f42e9790]: 
+                - button "Engenharia de Software para PETROBRAS (Analista de Sistemas - Processos de Negócios) 3 professores Pré-Edital PDF e vídeos" [ref=f42e9792] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9796]: Engenharia de Software para PETROBRAS (Analista de Sistemas - Processos de Negócios)
+                  - generic [ref=f42e9798]:
+                    - img [ref=f42e9801]: 
+                    - generic [ref=f42e9802]: 3 professores
+                  - generic [ref=f42e9806]: Pré-Edital
+                  - generic [ref=f42e9808]:
+                    - button "PDF e vídeos" [ref=f42e9809]:
+                      - generic [ref=f42e9810]:
+                        - img [ref=f42e9811]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9815]:
+                      - img [ref=f42e9816]: 
+                      - img [ref=f42e9817]: 
+                    - generic [ref=f42e9820]:
+                      - img [ref=f42e9821]: 
+                      - img [ref=f42e9822]: 
+                - button "Inglês para PETROBRAS (Analista de Sistemas - Processos de Negócios) - Prof. Ena Smith Ena Smith Pré-Edital PDF e vídeos" [ref=f42e9824] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9828]: Inglês para PETROBRAS (Analista de Sistemas - Processos de Negócios) - Prof. Ena Smith
+                  - generic [ref=f42e9830]:
+                    - img [ref=f42e9833]: 
+                    - generic [ref=f42e9834]: Ena Smith
+                  - generic [ref=f42e9838]: Pré-Edital
+                  - generic [ref=f42e9840]:
+                    - button "PDF e vídeos" [ref=f42e9841]:
+                      - generic [ref=f42e9842]:
+                        - img [ref=f42e9843]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9847]:
+                      - img [ref=f42e9848]: 
+                      - img [ref=f42e9849]: 
+                    - generic [ref=f42e9852]:
+                      - img [ref=f42e9853]: 
+                      - img [ref=f42e9854]: 
+                - button "Português para PETROBRAS (Analista de Sistemas - Processos de Negócios) - Prof. Felipe Luccas 3 professores Pré-Edital PDF e vídeos" [ref=f42e9856] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9860]: Português para PETROBRAS (Analista de Sistemas - Processos de Negócios) - Prof. Felipe Luccas
+                  - generic [ref=f42e9862]:
+                    - img [ref=f42e9865]: 
+                    - generic [ref=f42e9866]: 3 professores
+                  - generic [ref=f42e9870]: Pré-Edital
+                  - generic [ref=f42e9872]:
+                    - button "PDF e vídeos" [ref=f42e9873]:
+                      - generic [ref=f42e9874]:
+                        - img [ref=f42e9875]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9879]:
+                      - img [ref=f42e9880]: 
+                      - img [ref=f42e9881]: 
+                    - generic [ref=f42e9884]:
+                      - img [ref=f42e9885]: 
+                      - img [ref=f42e9886]: 
+                - button "Raciocínio Lógico para PETROBRAS (Analista de Sistemas - Processos de Negócios) Equipe Exatas Academy Pré-Edital PDF e vídeos" [ref=f42e9888] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e9892]: Raciocínio Lógico para PETROBRAS (Analista de Sistemas - Processos de Negócios)
+                  - generic [ref=f42e9894]:
+                    - img [ref=f42e9897]: 
+                    - generic [ref=f42e9898]: Equipe Exatas Academy
+                  - generic [ref=f42e9902]: Pré-Edital
+                  - generic [ref=f42e9904]:
+                    - button "PDF e vídeos" [ref=f42e9905]:
+                      - generic [ref=f42e9906]:
+                        - img [ref=f42e9907]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e9911]:
+                      - img [ref=f42e9912]: 
+                      - img [ref=f42e9913]: 
+                    - generic [ref=f42e9916]:
+                      - img [ref=f42e9917]: 
+                      - img [ref=f42e9918]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

@@ -1,0 +1,13 @@
+- generic [active]:
+  - generic:
+    - generic:
+      - generic [ref=e2]:
+        - iframe [ref=e3]:
+          - button "Fechar mensagem da empresa" [ref=f5e4] [cursor=pointer]:
+            - img [ref=f5e5]
+        - iframe [ref=e4]:
+          - button "Olá. Precisa de ajuda?" [ref=f6e5] [cursor=pointer]
+      - iframe [ref=e5]:
+        - button "Abrir janela de mensagens" [ref=f7e5] [cursor=pointer]:
+          - img [ref=f7e7]
+          - img [ref=f7e10]

@@ -1,0 +1,240 @@
+[    7685ms] [WARNING] Max discount product not found, displaying first tab @ https://content.estrategia.com/front-student/2bb3501.js:0
+[    7988ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[    7990ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[    7990ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[    7991ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[    7992ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[    7992ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[   13347ms] [LOG] Initializing Beamer. [Update and engage users effortlessly - https://getbeamer.com] @ https://app.getbeamer.com/js/beamer-embed.js:14
+[   24638ms] [WARNING] Max discount product not found, displaying first tab @ https://content.estrategia.com/front-student/2bb3501.js:0
+[   24981ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[   24982ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[   24982ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[   24983ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[   24983ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[   24984ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[   28392ms] [WARNING] Max discount product not found, displaying first tab @ https://content.estrategia.com/front-student/2bb3501.js:0
+[   28718ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[   28719ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[   28719ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[   28720ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[   28720ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[   28721ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[   96572ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  120191ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  122142ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  122144ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  122145ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  122159ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  122160ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  122160ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  189353ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  191368ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  191369ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  191369ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  191374ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  191375ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  191375ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  210479ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  212462ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  212463ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  212463ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  212464ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  212464ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  212465ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  228570ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  230535ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  230536ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  230536ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  230537ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  230538ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  230538ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  246706ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  248835ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  248836ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  248836ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  248837ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  248837ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  248838ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  285095ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  287086ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  287087ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  287088ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  287089ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  287090ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  287090ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  302930ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  304925ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  304927ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  304927ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  304929ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  304931ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  304931ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  320757ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  322758ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  322759ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  322759ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  322766ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  322767ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  322767ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  333082ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  335084ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  335085ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  335086ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  335086ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  335087ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  335087ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  347187ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  349193ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  349195ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  349195ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  349195ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  349196ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  349196ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  373617ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  375664ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  375665ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  375666ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  375667ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  375668ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  375668ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  395529ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  397553ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  397554ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  397555ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  397555ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  397556ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  397556ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  414138ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'find')
+    at https://content.estrategia.com/front-student/c416b91.js:1:206372
+    at Array.map (<anonymous>)
+    at https://content.estrategia.com/front-student/c416b91.js:1:206342
+    at v (https://content.estrategia.com/front-student/d43da35.js:2:858035)
+    at Generator._invoke (https://content.estrategia.com/front-student/d43da35.js:2:857823)
+    at Generator.next (https://content.estrategia.com/front-student/d43da35.js:2:858460)
+    at r (https://content.estrategia.com/front-student/52aa859.js:2:128)
+    at f (https://content.estrategia.com/front-student/52aa859.js:2:331)
+    at nrWrapper (https://concursos.estrategia.com/newrelic.js:10:17761) @ https://content.estrategia.com/front-student/c416b91.js:0
+[  416129ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/tutorings/my-tutorings:0
+[  416130ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  416130ms] [ERROR] Erro ao buscar favoritos do tipo tutorings: o @ https://content.estrategia.com/front-student/da56a06.js:0
+[  416131ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://api.estrategia.com/v3/vip-rooms/my-rooms:0
+[  416131ms] [DIR] o @ https://content.estrategia.com/front-student/2bb3501.js:0
+[  416132ms] [ERROR] Erro ao buscar favoritos do tipo vip_rooms: o @ https://content.estrategia.com/front-student/da56a06.js:0

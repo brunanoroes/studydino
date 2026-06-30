@@ -1,0 +1,195 @@
+- generic [active] [ref=f29e1]:
+  - generic [ref=f29e10]:
+    - text:           
+    - main [ref=f29e14]:
+      - generic [ref=f29e400]:
+        - list [ref=f29e402]:
+          - listitem [ref=f29e403]:
+            - button "Todos os Cursos" [ref=f29e404] [cursor=pointer]
+            - text: /
+          - listitem [ref=f29e405]:
+            - button "Analista de Tecnologia da Informação - Desenvolvimento de Software (DATAPREV)" [ref=f29e406] [cursor=pointer]
+        - generic [ref=f29e408]:
+          - generic [ref=f29e409]:
+            - generic [ref=f29e412]:
+              - generic [ref=f29e415]: Analista de Tecnologia da Informação - Desenvolvimento de Software (DATAPREV)
+              - img [ref=f29e418] [cursor=pointer]: 
+            - generic [ref=f29e420]:
+              - button "Filtro Avançado" [ref=f29e422] [cursor=pointer]:
+                - generic [ref=f29e423]:
+                  - img [ref=f29e424]: 
+                  - generic [ref=f29e425]: Filtro Avançado
+              - generic [ref=f29e429] [cursor=pointer]:
+                - img [ref=f29e430]: 
+                - generic [ref=f29e431]: Autor
+          - generic [ref=f29e432]:
+            - complementary [ref=f29e433]:
+              - generic [ref=f29e434]:
+                - heading "Filtro Avançado" [level=5] [ref=f29e435]
+                - button "Fechar" [ref=f29e436] [cursor=pointer]:
+                  - generic [ref=f29e437]: Fechar
+              - generic [ref=f29e440]:
+                - textbox [ref=f29e441]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f29e442]
+              - generic [ref=f29e444]:
+                - generic [ref=f29e445]:
+                  - generic [ref=f29e447] [cursor=pointer]:
+                    - paragraph [ref=f29e448]: Filtros selecionados
+                    - img [ref=f29e449]: 
+                  - generic [ref=f29e450]:
+                    - generic [ref=f29e452] [cursor=pointer]:
+                      - generic [ref=f29e453]: Somente meus conteúdos
+                      - button [ref=f29e454]:
+                        - img [ref=f29e455]
+                    - generic [ref=f29e457]: Limpar filtros
+                - generic [ref=f29e459]:
+                  - generic [ref=f29e461] [cursor=pointer]:
+                    - paragraph [ref=f29e462]: Tipo de Conteúdo
+                    - img [ref=f29e463]: 
+                  - generic "Adicionar filtro LDIs" [ref=f29e465] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f29e468]
+                    - generic [ref=f29e469]: LDIs
+            - generic [ref=f29e473]:
+              - generic [ref=f29e474]:
+                - heading "LDIs" [level=6] [ref=f29e475]
+                - paragraph [ref=f29e476]: 7 resultados
+              - generic [ref=f29e479]:
+                - button "Banco de dados para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Thiago Cavalcanti Thiago Cavalcanti Pós-Edital PDF e vídeos" [ref=f29e481] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f29e485]: Banco de dados para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Thiago Cavalcanti
+                  - generic [ref=f29e487]:
+                    - img [ref=f29e490]: 
+                    - generic [ref=f29e491]: Thiago Cavalcanti
+                  - generic [ref=f29e495]: Pós-Edital
+                  - generic [ref=f29e497]:
+                    - button "PDF e vídeos" [ref=f29e498]:
+                      - generic [ref=f29e499]:
+                        - img [ref=f29e500]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f29e504]:
+                      - img [ref=f29e505]: 
+                      - img [ref=f29e506]: 
+                    - generic [ref=f29e509]:
+                      - img [ref=f29e510]: 
+                      - img [ref=f29e511]: 
+                - button "Desenvolvimento de software para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Paolla Ramos Paolla Ramos E Silva Pós-Edital PDF e vídeos" [ref=f29e513] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f29e517]: Desenvolvimento de software para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Paolla Ramos
+                  - generic [ref=f29e519]:
+                    - img [ref=f29e522]: 
+                    - generic [ref=f29e523]: Paolla Ramos E Silva
+                  - generic [ref=f29e527]: Pós-Edital
+                  - generic [ref=f29e529]:
+                    - button "PDF e vídeos" [ref=f29e530]:
+                      - generic [ref=f29e531]:
+                        - img [ref=f29e532]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f29e536]:
+                      - img [ref=f29e537]: 
+                      - img [ref=f29e538]: 
+                    - generic [ref=f29e541]:
+                      - img [ref=f29e542]: 
+                      - img [ref=f29e543]: 
+                - button "Engenharia de software para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Diego Carvalho 3 professores Pós-Edital PDF e vídeos" [ref=f29e545] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f29e549]: Engenharia de software para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Diego Carvalho
+                  - generic [ref=f29e551]:
+                    - img [ref=f29e554]: 
+                    - generic [ref=f29e555]: 3 professores
+                  - generic [ref=f29e559]: Pós-Edital
+                  - generic [ref=f29e561]:
+                    - button "PDF e vídeos" [ref=f29e562]:
+                      - generic [ref=f29e563]:
+                        - img [ref=f29e564]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f29e568]:
+                      - img [ref=f29e569]: 
+                      - img [ref=f29e570]: 
+                    - generic [ref=f29e573]:
+                      - img [ref=f29e574]: 
+                      - img [ref=f29e575]: 
+                - button "Governança de TI para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Paolla Ramos Paolla Ramos E Silva Pós-Edital PDF e vídeos" [ref=f29e577] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f29e581]: Governança de TI para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Paolla Ramos
+                  - generic [ref=f29e583]:
+                    - img [ref=f29e586]: 
+                    - generic [ref=f29e587]: Paolla Ramos E Silva
+                  - generic [ref=f29e591]: Pós-Edital
+                  - generic [ref=f29e593]:
+                    - button "PDF e vídeos" [ref=f29e594]:
+                      - generic [ref=f29e595]:
+                        - img [ref=f29e596]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f29e600]:
+                      - img [ref=f29e601]: 
+                      - img [ref=f29e602]: 
+                    - generic [ref=f29e605]:
+                      - img [ref=f29e606]: 
+                      - img [ref=f29e607]: 
+                - button "Língua Portuguesa para DataPrev (Analista de TI - Desenvolvimento de Software) - Equipe de Português 3 professores Pós-Edital PDF e vídeos" [ref=f29e609] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f29e613]: Língua Portuguesa para DataPrev (Analista de TI - Desenvolvimento de Software) - Equipe de Português
+                  - generic [ref=f29e615]:
+                    - img [ref=f29e618]: 
+                    - generic [ref=f29e619]: 3 professores
+                  - generic [ref=f29e623]: Pós-Edital
+                  - generic [ref=f29e625]:
+                    - button "PDF e vídeos" [ref=f29e626]:
+                      - generic [ref=f29e627]:
+                        - img [ref=f29e628]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f29e632]:
+                      - img [ref=f29e633]: 
+                      - img [ref=f29e634]: 
+                    - generic [ref=f29e637]:
+                      - img [ref=f29e638]: 
+                      - img [ref=f29e639]: 
+                - button "Segurança da Informação para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. André Castro André Castro Pós-Edital PDF e vídeos" [ref=f29e641] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f29e645]: Segurança da Informação para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. André Castro
+                  - generic [ref=f29e647]:
+                    - img [ref=f29e650]: 
+                    - generic [ref=f29e651]: André Castro
+                  - generic [ref=f29e655]: Pós-Edital
+                  - generic [ref=f29e657]:
+                    - button "PDF e vídeos" [ref=f29e658]:
+                      - generic [ref=f29e659]:
+                        - img [ref=f29e660]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f29e664]:
+                      - img [ref=f29e665]: 
+                      - img [ref=f29e666]: 
+                    - generic [ref=f29e669]:
+                      - img [ref=f29e670]: 
+                      - img [ref=f29e671]: 
+                - button "Servidores de Aplicação para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Evandro Dalla Vecchia Evandro Vecchia Pós-Edital PDF e vídeos" [ref=f29e673] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f29e677]: Servidores de Aplicação para DataPrev (Analista de TI - Desenvolvimento de Software) - Prof. Evandro Dalla Vecchia
+                  - generic [ref=f29e679]:
+                    - img [ref=f29e682]: 
+                    - generic [ref=f29e683]: Evandro Vecchia
+                  - generic [ref=f29e687]: Pós-Edital
+                  - generic [ref=f29e689]:
+                    - button "PDF e vídeos" [ref=f29e690]:
+                      - generic [ref=f29e691]:
+                        - img [ref=f29e692]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f29e696]:
+                      - img [ref=f29e697]: 
+                      - img [ref=f29e698]: 
+                    - generic [ref=f29e701]:
+                      - img [ref=f29e702]: 
+                      - img [ref=f29e703]: 
+  - generic:
+    - generic:
+      - generic [ref=f29e60]:
+        - iframe [ref=f29e61]:
+          - button "Fechar mensagem da empresa" [ref=f35e4] [cursor=pointer]:
+            - img [ref=f35e5]
+        - iframe [ref=f29e398]:
+          - button "Olá. Precisa de ajuda?" [ref=f36e5] [cursor=pointer]
+      - iframe [ref=f29e62]:
+        - button "Abrir janela de mensagens" [ref=f37e5] [cursor=pointer]:
+          - img [ref=f37e7]
+          - img [ref=f37e10]

@@ -1,0 +1,141 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e10294]:
+          - listitem [ref=f42e10295]:
+            - button "Todos os Cursos" [ref=f42e10296] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e10297]:
+            - button "Analista de Sistemas - Engenharia de Software (PETROBRAS)" [ref=f42e10298] [cursor=pointer]
+        - generic [ref=f42e10299]:
+          - generic [ref=f42e10300]:
+            - generic [ref=f42e10303]:
+              - generic [ref=f42e10306]: Analista de Sistemas - Engenharia de Software (PETROBRAS)
+              - img [ref=f42e10309] [cursor=pointer]: 
+            - generic [ref=f42e10311]:
+              - button "Filtro Avançado" [ref=f42e10313] [cursor=pointer]:
+                - generic [ref=f42e10314]:
+                  - img [ref=f42e10315]: 
+                  - generic [ref=f42e10316]: Filtro Avançado
+              - generic [ref=f42e10320] [cursor=pointer]:
+                - img [ref=f42e10321]: 
+                - generic [ref=f42e10322]: Autor
+          - generic [ref=f42e10323]:
+            - complementary [ref=f42e10324]:
+              - generic [ref=f42e10325]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e10326]
+                - button "Fechar" [ref=f42e10327] [cursor=pointer]:
+                  - generic [ref=f42e10328]: Fechar
+              - generic [ref=f42e10331]:
+                - textbox [ref=f42e10332]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e10333]
+              - generic [ref=f42e10335]:
+                - generic [ref=f42e10336]:
+                  - generic [ref=f42e10338] [cursor=pointer]:
+                    - paragraph [ref=f42e10339]: Filtros selecionados
+                    - img [ref=f42e10340]: 
+                  - generic [ref=f42e10341]:
+                    - generic [ref=f42e10343] [cursor=pointer]:
+                      - generic [ref=f42e10344]: Somente meus conteúdos
+                      - button [ref=f42e10345]:
+                        - img [ref=f42e10346]
+                    - generic [ref=f42e10348]: Limpar filtros
+                - generic [ref=f42e10350]:
+                  - generic [ref=f42e10352] [cursor=pointer]:
+                    - paragraph [ref=f42e10353]: Tipo de Conteúdo
+                    - img [ref=f42e10354]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e10356] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e10359]
+                    - generic [ref=f42e10360]: LDIs
+            - generic [ref=f42e10364]:
+              - generic [ref=f42e10365]:
+                - heading "LDIs" [level=6] [ref=f42e10366]
+                - paragraph [ref=f42e10367]: 4 resultados
+              - generic [ref=f42e10370]:
+                - button "Banco de Dados para PETROBRAS (Analista de Sistemas - Engenharia de Software) Thiago Cavalcanti Pré-Edital PDF e vídeos" [ref=f42e10372] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e10376]: Banco de Dados para PETROBRAS (Analista de Sistemas - Engenharia de Software)
+                  - generic [ref=f42e10378]:
+                    - img [ref=f42e10381]: 
+                    - generic [ref=f42e10382]: Thiago Cavalcanti
+                  - generic [ref=f42e10386]: Pré-Edital
+                  - generic [ref=f42e10388]:
+                    - button "PDF e vídeos" [ref=f42e10389]:
+                      - generic [ref=f42e10390]:
+                        - img [ref=f42e10391]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e10395]:
+                      - img [ref=f42e10396]: 
+                      - img [ref=f42e10397]: 
+                    - generic [ref=f42e10400]:
+                      - img [ref=f42e10401]: 
+                      - img [ref=f42e10402]: 
+                - button "Engenharia de Software para PETROBRAS (Analista de Sistemas - Engenharia de Software) 3 professores Pré-Edital PDF e vídeos" [ref=f42e10404] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e10408]: Engenharia de Software para PETROBRAS (Analista de Sistemas - Engenharia de Software)
+                  - generic [ref=f42e10410]:
+                    - img [ref=f42e10413]: 
+                    - generic [ref=f42e10414]: 3 professores
+                  - generic [ref=f42e10418]: Pré-Edital
+                  - generic [ref=f42e10420]:
+                    - button "PDF e vídeos" [ref=f42e10421]:
+                      - generic [ref=f42e10422]:
+                        - img [ref=f42e10423]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e10427]:
+                      - img [ref=f42e10428]: 
+                      - img [ref=f42e10429]: 
+                    - generic [ref=f42e10432]:
+                      - img [ref=f42e10433]: 
+                      - img [ref=f42e10434]: 
+                - button "Inglês para PETROBRAS (Analista de Sistemas - Engenharia de Software) - Prof. Ena Smith Ena Smith Pré-Edital PDF e vídeos" [ref=f42e10436] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e10440]: Inglês para PETROBRAS (Analista de Sistemas - Engenharia de Software) - Prof. Ena Smith
+                  - generic [ref=f42e10442]:
+                    - img [ref=f42e10445]: 
+                    - generic [ref=f42e10446]: Ena Smith
+                  - generic [ref=f42e10450]: Pré-Edital
+                  - generic [ref=f42e10452]:
+                    - button "PDF e vídeos" [ref=f42e10453]:
+                      - generic [ref=f42e10454]:
+                        - img [ref=f42e10455]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e10459]:
+                      - img [ref=f42e10460]: 
+                      - img [ref=f42e10461]: 
+                    - generic [ref=f42e10464]:
+                      - img [ref=f42e10465]: 
+                      - img [ref=f42e10466]: 
+                - button "Português para PETROBRAS (Analista de Sistemas - Engenharia de Software) - Prof. Felipe Luccas 3 professores Pré-Edital PDF e vídeos" [ref=f42e10468] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e10472]: Português para PETROBRAS (Analista de Sistemas - Engenharia de Software) - Prof. Felipe Luccas
+                  - generic [ref=f42e10474]:
+                    - img [ref=f42e10477]: 
+                    - generic [ref=f42e10478]: 3 professores
+                  - generic [ref=f42e10482]: Pré-Edital
+                  - generic [ref=f42e10484]:
+                    - button "PDF e vídeos" [ref=f42e10485]:
+                      - generic [ref=f42e10486]:
+                        - img [ref=f42e10487]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e10491]:
+                      - img [ref=f42e10492]: 
+                      - img [ref=f42e10493]: 
+                    - generic [ref=f42e10496]:
+                      - img [ref=f42e10497]: 
+                      - img [ref=f42e10498]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

@@ -1,0 +1,213 @@
+- generic [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e7710]:
+        - generic [ref=f42e7712]:
+          - generic [ref=f42e7713]:
+            - button [ref=f42e7714] [cursor=pointer]:
+              - img [ref=f42e7715]: 
+            - generic [ref=f42e7716]: Estudos em andamento
+          - generic [ref=f42e7717]:
+            - generic [ref=f42e7718]:
+              - button "Concursos" [ref=f42e7721] [cursor=pointer]:
+                - generic [ref=f42e7724]: Concursos
+                - img [ref=f42e7726]
+              - textbox [ref=f42e7728]
+              - button "Buscar" [disabled] [ref=f42e7729]:
+                - generic [ref=f42e7730]:
+                  - img [ref=f42e7731]: 
+                  - generic [ref=f42e7732]: Buscar
+            - generic:      
+          - generic [ref=f42e7733]:
+            - text: 
+            - button [ref=f42e7734] [cursor=pointer]:
+              - img [ref=f42e7735]: 
+            - text: 
+        - generic [ref=f42e7745]:
+          - generic [ref=f42e7746]:
+            - tablist [ref=f42e7747]:
+              - tab "Últimas atividades" [ref=f42e7748] [cursor=pointer]:
+                - img [ref=f42e7749]: 
+                - generic [ref=f42e7750]: Últimas atividades
+              - tab "Favoritos" [ref=f42e7751] [cursor=pointer]:
+                - img [ref=f42e7752]: 
+                - generic [ref=f42e7753]: Favoritos
+              - tab "Meus concursos" [ref=f42e7754] [cursor=pointer]:
+                - img [ref=f42e7755]: 
+                - generic [ref=f42e7756]: Meus concursos
+            - link "Adicionar concursos" [ref=f42e7757] [cursor=pointer]:
+              - /url: /objetivos/novo-objetivo
+              - button "Adicionar concursos" [ref=f42e7758]:
+                - generic [ref=f42e7759]: Adicionar concursos
+          - generic [ref=f42e7761]:
+            - generic [ref=f42e7762]:
+              - heading "Meus concursos" [level=6] [ref=f42e7763]
+              - paragraph [ref=f42e7764]: 15 resultados
+            - generic [ref=f42e7765]:
+              - button "Analista de Tecnologia da Informação - Desenvolvimento de Software (DATAPREV) Time Estratégia" [ref=f42e7766] [cursor=pointer]:
+                - generic [ref=f42e7770]:
+                  - img [ref=f42e7773]: 
+                  - generic [ref=f42e7774]: Analista de Tecnologia da Informação - Desenvolvimento de Software (DATAPREV)
+                - generic [ref=f42e7776]:
+                  - img [ref=f42e7779]: 
+                  - generic [ref=f42e7780]: Time Estratégia
+                - generic [ref=f42e7784]:
+                  - img [ref=f42e7785]: 
+                  - img [ref=f42e7786]: 
+              - button "Analista de Tecnologia da Informação - Inteligência da Informação (DATAPREV) Time Estratégia" [ref=f42e7787] [cursor=pointer]:
+                - generic [ref=f42e7791]:
+                  - img [ref=f42e7794]: 
+                  - generic [ref=f42e7795]: Analista de Tecnologia da Informação - Inteligência da Informação (DATAPREV)
+                - generic [ref=f42e7797]:
+                  - img [ref=f42e7800]: 
+                  - generic [ref=f42e7801]: Time Estratégia
+                - generic [ref=f42e7805]:
+                  - img [ref=f42e7806]: 
+                  - img [ref=f42e7807]: 
+              - button "Analista de Tecnologia da Informação - Sustentação Tecnológica (DATAPREV) Time Estratégia" [ref=f42e7808] [cursor=pointer]:
+                - generic [ref=f42e7812]:
+                  - img [ref=f42e7815]: 
+                  - generic [ref=f42e7816]: Analista de Tecnologia da Informação - Sustentação Tecnológica (DATAPREV)
+                - generic [ref=f42e7818]:
+                  - img [ref=f42e7821]: 
+                  - generic [ref=f42e7822]: Time Estratégia
+                - generic [ref=f42e7826]:
+                  - img [ref=f42e7827]: 
+                  - img [ref=f42e7828]: 
+              - button "Analista Tecnologia da Informação - Análise de Negócios (DATAPREV) Time Estratégia" [ref=f42e7829] [cursor=pointer]:
+                - generic [ref=f42e7833]:
+                  - img [ref=f42e7836]: 
+                  - generic [ref=f42e7837]: Analista Tecnologia da Informação - Análise de Negócios (DATAPREV)
+                - generic [ref=f42e7839]:
+                  - img [ref=f42e7842]: 
+                  - generic [ref=f42e7843]: Time Estratégia
+                - generic [ref=f42e7847]:
+                  - img [ref=f42e7848]: 
+                  - img [ref=f42e7849]: 
+              - button "Analista de Tecnologia da Informação - Segurança Cibernética e Proteção de Dados (DATAPREV) Time Estratégia" [ref=f42e7850] [cursor=pointer]:
+                - generic [ref=f42e7854]:
+                  - img [ref=f42e7857]: 
+                  - generic [ref=f42e7858]: Analista de Tecnologia da Informação - Segurança Cibernética e Proteção de Dados (DATAPREV)
+                - generic [ref=f42e7860]:
+                  - img [ref=f42e7863]: 
+                  - generic [ref=f42e7864]: Time Estratégia
+                - generic [ref=f42e7868]:
+                  - img [ref=f42e7869]: 
+                  - img [ref=f42e7870]: 
+              - button "Analista - Desenvolvimento de Sistemas (SERPRO) Time Estratégia" [ref=f42e7871] [cursor=pointer]:
+                - generic [ref=f42e7875]:
+                  - img [ref=f42e7878]: 
+                  - generic [ref=f42e7879]: Analista - Desenvolvimento de Sistemas (SERPRO)
+                - generic [ref=f42e7881]:
+                  - img [ref=f42e7884]: 
+                  - generic [ref=f42e7885]: Time Estratégia
+                - generic [ref=f42e7889]:
+                  - img [ref=f42e7890]: 
+                  - img [ref=f42e7891]: 
+              - button "Analista - Ciências de Dados - Conhecimentos Básicos (SERPRO) Time Estratégia" [ref=f42e7892] [cursor=pointer]:
+                - generic [ref=f42e7896]:
+                  - img [ref=f42e7899]: 
+                  - generic [ref=f42e7900]: Analista - Ciências de Dados - Conhecimentos Básicos (SERPRO)
+                - generic [ref=f42e7902]:
+                  - img [ref=f42e7905]: 
+                  - generic [ref=f42e7906]: Time Estratégia
+                - generic [ref=f42e7910]:
+                  - img [ref=f42e7911]: 
+                  - img [ref=f42e7912]: 
+              - button "Profissional Básico - Ciência de Dados (BNDES) Time Estratégia" [ref=f42e7913] [cursor=pointer]:
+                - generic [ref=f42e7917]:
+                  - img [ref=f42e7920]: 
+                  - generic [ref=f42e7921]: Profissional Básico - Ciência de Dados (BNDES)
+                - generic [ref=f42e7923]:
+                  - img [ref=f42e7926]: 
+                  - generic [ref=f42e7927]: Time Estratégia
+                - generic [ref=f42e7931]:
+                  - img [ref=f42e7932]: 
+                  - img [ref=f42e7933]: 
+              - button "Profissional Básico - Análise de Sistemas/Desenvolvimento (BNDES) Time Estratégia" [ref=f42e7934] [cursor=pointer]:
+                - generic [ref=f42e7938]:
+                  - img [ref=f42e7941]: 
+                  - generic [ref=f42e7942]: Profissional Básico - Análise de Sistemas/Desenvolvimento (BNDES)
+                - generic [ref=f42e7944]:
+                  - img [ref=f42e7947]: 
+                  - generic [ref=f42e7948]: Time Estratégia
+                - generic [ref=f42e7952]:
+                  - img [ref=f42e7953]: 
+                  - img [ref=f42e7954]: 
+              - button "Profissional Básico - Análise de Sistemas/Suporte (BNDES) Time Estratégia" [active] [ref=f42e7955] [cursor=pointer]:
+                - generic [ref=f42e7959]:
+                  - img [ref=f42e7962]: 
+                  - generic [ref=f42e7963]: Profissional Básico - Análise de Sistemas/Suporte (BNDES)
+                - generic [ref=f42e7965]:
+                  - img [ref=f42e7968]: 
+                  - generic [ref=f42e7969]: Time Estratégia
+                - generic [ref=f42e7973]:
+                  - img [ref=f42e7974]: 
+                  - img [ref=f42e7975]: 
+              - button "Profissional Básico - Análise de Sistemas - Cibersegurança (BNDES) Time Estratégia" [ref=f42e7976] [cursor=pointer]:
+                - generic [ref=f42e7980]:
+                  - img [ref=f42e7983]: 
+                  - generic [ref=f42e7984]: Profissional Básico - Análise de Sistemas - Cibersegurança (BNDES)
+                - generic [ref=f42e7986]:
+                  - img [ref=f42e7989]: 
+                  - generic [ref=f42e7990]: Time Estratégia
+                - generic [ref=f42e7994]:
+                  - img [ref=f42e7995]: 
+                  - img [ref=f42e7996]: 
+              - button "Ciência de Dados (PETROBRAS) Time Estratégia" [ref=f42e7997] [cursor=pointer]:
+                - generic [ref=f42e8001]:
+                  - img [ref=f42e8004]: 
+                  - generic [ref=f42e8005]: Ciência de Dados (PETROBRAS)
+                - generic [ref=f42e8007]:
+                  - img [ref=f42e8010]: 
+                  - generic [ref=f42e8011]: Time Estratégia
+                - generic [ref=f42e8015]:
+                  - img [ref=f42e8016]: 
+                  - img [ref=f42e8017]: 
+              - button "Analista de Sistemas - Processos de negócio (PETROBRAS) Time Estratégia" [ref=f42e8018] [cursor=pointer]:
+                - generic [ref=f42e8022]:
+                  - img [ref=f42e8025]: 
+                  - generic [ref=f42e8026]: Analista de Sistemas - Processos de negócio (PETROBRAS)
+                - generic [ref=f42e8028]:
+                  - img [ref=f42e8031]: 
+                  - generic [ref=f42e8032]: Time Estratégia
+                - generic [ref=f42e8036]:
+                  - img [ref=f42e8037]: 
+                  - img [ref=f42e8038]: 
+              - button "Analista de Sistemas - Engenharia de Software (PETROBRAS) Time Estratégia" [ref=f42e8039] [cursor=pointer]:
+                - generic [ref=f42e8043]:
+                  - img [ref=f42e8046]: 
+                  - generic [ref=f42e8047]: Analista de Sistemas - Engenharia de Software (PETROBRAS)
+                - generic [ref=f42e8049]:
+                  - img [ref=f42e8052]: 
+                  - generic [ref=f42e8053]: Time Estratégia
+                - generic [ref=f42e8057]:
+                  - img [ref=f42e8058]: 
+                  - img [ref=f42e8059]: 
+              - button "Analista de Sistemas - Infraestrutura (PETROBRAS) Time Estratégia" [ref=f42e8060] [cursor=pointer]:
+                - generic [ref=f42e8064]:
+                  - img [ref=f42e8067]: 
+                  - generic [ref=f42e8068]: Analista de Sistemas - Infraestrutura (PETROBRAS)
+                - generic [ref=f42e8070]:
+                  - img [ref=f42e8073]: 
+                  - generic [ref=f42e8074]: Time Estratégia
+                - generic [ref=f42e8078]:
+                  - img [ref=f42e8079]: 
+                  - img [ref=f42e8080]: 
+        - button "Como foi sua experiência com os Estudos em Andamento?" [ref=f42e8081] [cursor=pointer]:
+          - generic [ref=f42e8082]: Como foi sua experiência com os Estudos em Andamento?
+          - button [ref=f42e8083]:
+            - img [ref=f42e8084]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

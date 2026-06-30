@@ -1,0 +1,177 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e6573]:
+          - listitem [ref=f42e6574]:
+            - button "Todos os Cursos" [ref=f42e6575] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e6576]:
+            - button "Profissional Básico - Ciência de Dados (BNDES)" [ref=f42e6577] [cursor=pointer]
+        - generic [ref=f42e6578]:
+          - generic [ref=f42e6579]:
+            - generic [ref=f42e6582]:
+              - generic [ref=f42e6585]: Profissional Básico - Ciência de Dados (BNDES)
+              - img [ref=f42e6588] [cursor=pointer]: 
+            - generic [ref=f42e6590]:
+              - button "Filtro Avançado" [ref=f42e6592] [cursor=pointer]:
+                - generic [ref=f42e6593]:
+                  - img [ref=f42e6594]: 
+                  - generic [ref=f42e6595]: Filtro Avançado
+              - generic [ref=f42e6599] [cursor=pointer]:
+                - img [ref=f42e6600]: 
+                - generic [ref=f42e6601]: Autor
+          - generic [ref=f42e6602]:
+            - complementary [ref=f42e6603]:
+              - generic [ref=f42e6604]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e6605]
+                - button "Fechar" [ref=f42e6606] [cursor=pointer]:
+                  - generic [ref=f42e6607]: Fechar
+              - generic [ref=f42e6610]:
+                - textbox [ref=f42e6611]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e6612]
+              - generic [ref=f42e6614]:
+                - generic [ref=f42e6615]:
+                  - generic [ref=f42e6617] [cursor=pointer]:
+                    - paragraph [ref=f42e6618]: Filtros selecionados
+                    - img [ref=f42e6619]: 
+                  - generic [ref=f42e6620]:
+                    - generic [ref=f42e6622] [cursor=pointer]:
+                      - generic [ref=f42e6623]: Somente meus conteúdos
+                      - button [ref=f42e6624]:
+                        - img [ref=f42e6625]
+                    - generic [ref=f42e6627]: Limpar filtros
+                - generic [ref=f42e6629]:
+                  - generic [ref=f42e6631] [cursor=pointer]:
+                    - paragraph [ref=f42e6632]: Tipo de Conteúdo
+                    - img [ref=f42e6633]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e6635] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e6638]
+                    - generic [ref=f42e6639]: LDIs
+            - generic [ref=f42e6643]:
+              - generic [ref=f42e6644]:
+                - heading "LDIs" [level=6] [ref=f42e6645]
+                - paragraph [ref=f42e6646]: 6 resultados
+              - generic [ref=f42e6649]:
+                - button "Engenharia de Software para BNDES (Analista - Profissional Básico - Ciência de Dados) 3 professores Pós-Edital PDF e vídeos" [ref=f42e6651] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6655]: Engenharia de Software para BNDES (Analista - Profissional Básico - Ciência de Dados)
+                  - generic [ref=f42e6657]:
+                    - img [ref=f42e6660]: 
+                    - generic [ref=f42e6661]: 3 professores
+                  - generic [ref=f42e6665]: Pós-Edital
+                  - generic [ref=f42e6667]:
+                    - button "PDF e vídeos" [ref=f42e6668]:
+                      - generic [ref=f42e6669]:
+                        - img [ref=f42e6670]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6674]:
+                      - img [ref=f42e6675]: 
+                      - img [ref=f42e6676]: 
+                    - generic [ref=f42e6679]:
+                      - img [ref=f42e6680]: 
+                      - img [ref=f42e6681]: 
+                - button "Língua Inglesa para BNDES (Analista - Profissional Básico - Ciência de Dados) - Prof. Andrea Belo Andrea Belo Pós-Edital PDF e vídeos" [ref=f42e6683] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6687]: Língua Inglesa para BNDES (Analista - Profissional Básico - Ciência de Dados) - Prof. Andrea Belo
+                  - generic [ref=f42e6689]:
+                    - img [ref=f42e6692]: 
+                    - generic [ref=f42e6693]: Andrea Belo
+                  - generic [ref=f42e6697]: Pós-Edital
+                  - generic [ref=f42e6699]:
+                    - button "PDF e vídeos" [ref=f42e6700]:
+                      - generic [ref=f42e6701]:
+                        - img [ref=f42e6702]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6706]:
+                      - img [ref=f42e6707]: 
+                      - img [ref=f42e6708]: 
+                    - generic [ref=f42e6711]:
+                      - img [ref=f42e6712]: 
+                      - img [ref=f42e6713]: 
+                - button "Matemática para BNDES (Analista - Profissional Básico - Ciência de Dados) Equipe Exatas Academy Pós-Edital PDF e vídeos" [ref=f42e6715] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6719]: Matemática para BNDES (Analista - Profissional Básico - Ciência de Dados)
+                  - generic [ref=f42e6721]:
+                    - img [ref=f42e6724]: 
+                    - generic [ref=f42e6725]: Equipe Exatas Academy
+                  - generic [ref=f42e6729]: Pós-Edital
+                  - generic [ref=f42e6731]:
+                    - button "PDF e vídeos" [ref=f42e6732]:
+                      - generic [ref=f42e6733]:
+                        - img [ref=f42e6734]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6738]:
+                      - img [ref=f42e6739]: 
+                      - img [ref=f42e6740]: 
+                    - generic [ref=f42e6743]:
+                      - img [ref=f42e6744]: 
+                      - img [ref=f42e6745]: 
+                - button "Português para BNDES (Analista - Profissional Básico - Ciência de Dados) - Prof. Felipe Luccas 3 professores Pós-Edital PDF e vídeos" [ref=f42e6747] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6751]: Português para BNDES (Analista - Profissional Básico - Ciência de Dados) - Prof. Felipe Luccas
+                  - generic [ref=f42e6753]:
+                    - img [ref=f42e6756]: 
+                    - generic [ref=f42e6757]: 3 professores
+                  - generic [ref=f42e6761]: Pós-Edital
+                  - generic [ref=f42e6763]:
+                    - button "PDF e vídeos" [ref=f42e6764]:
+                      - generic [ref=f42e6765]:
+                        - img [ref=f42e6766]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6770]:
+                      - img [ref=f42e6771]: 
+                      - img [ref=f42e6772]: 
+                    - generic [ref=f42e6775]:
+                      - img [ref=f42e6776]: 
+                      - img [ref=f42e6777]: 
+                - button "Probabilidade e Estatística para BNDES (Analista - Profissional Básico - Ciência de Dados) Equipe Exatas Academy Pós-Edital PDF e vídeos" [ref=f42e6779] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6783]: Probabilidade e Estatística para BNDES (Analista - Profissional Básico - Ciência de Dados)
+                  - generic [ref=f42e6785]:
+                    - img [ref=f42e6788]: 
+                    - generic [ref=f42e6789]: Equipe Exatas Academy
+                  - generic [ref=f42e6793]: Pós-Edital
+                  - generic [ref=f42e6795]:
+                    - button "PDF e vídeos" [ref=f42e6796]:
+                      - generic [ref=f42e6797]:
+                        - img [ref=f42e6798]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6802]:
+                      - img [ref=f42e6803]: 
+                      - img [ref=f42e6804]: 
+                    - generic [ref=f42e6807]:
+                      - img [ref=f42e6808]: 
+                      - img [ref=f42e6809]: 
+                - button "Redes e Segurança para BNDES (Analista - Profissional Básico - Ciência de Dados) André Castro Pós-Edital PDF e vídeos" [ref=f42e6811] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e6815]: Redes e Segurança para BNDES (Analista - Profissional Básico - Ciência de Dados)
+                  - generic [ref=f42e6817]:
+                    - img [ref=f42e6820]: 
+                    - generic [ref=f42e6821]: André Castro
+                  - generic [ref=f42e6825]: Pós-Edital
+                  - generic [ref=f42e6827]:
+                    - button "PDF e vídeos" [ref=f42e6828]:
+                      - generic [ref=f42e6829]:
+                        - img [ref=f42e6830]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e6834]:
+                      - img [ref=f42e6835]: 
+                      - img [ref=f42e6836]: 
+                    - generic [ref=f42e6839]:
+                      - img [ref=f42e6840]: 
+                      - img [ref=f42e6841]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

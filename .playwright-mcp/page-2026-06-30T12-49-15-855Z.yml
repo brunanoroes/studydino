@@ -1,0 +1,159 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e4517]:
+          - listitem [ref=f42e4518]:
+            - button "Todos os Cursos" [ref=f42e4519] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e4520]:
+            - button "Analista de Tecnologia da Informação - Segurança Cibernética e Proteção de Dados (DATAPREV)" [ref=f42e4521] [cursor=pointer]
+        - generic [ref=f42e4522]:
+          - generic [ref=f42e4523]:
+            - generic [ref=f42e4526]:
+              - generic [ref=f42e4529]: Analista de Tecnologia da Informação - Segurança Cibernética e Proteção de Dados (DATAPREV)
+              - img [ref=f42e4532] [cursor=pointer]: 
+            - generic [ref=f42e4534]:
+              - button "Filtro Avançado" [ref=f42e4536] [cursor=pointer]:
+                - generic [ref=f42e4537]:
+                  - img [ref=f42e4538]: 
+                  - generic [ref=f42e4539]: Filtro Avançado
+              - generic [ref=f42e4543] [cursor=pointer]:
+                - img [ref=f42e4544]: 
+                - generic [ref=f42e4545]: Autor
+          - generic [ref=f42e4546]:
+            - complementary [ref=f42e4547]:
+              - generic [ref=f42e4548]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e4549]
+                - button "Fechar" [ref=f42e4550] [cursor=pointer]:
+                  - generic [ref=f42e4551]: Fechar
+              - generic [ref=f42e4554]:
+                - textbox [ref=f42e4555]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e4556]
+              - generic [ref=f42e4558]:
+                - generic [ref=f42e4559]:
+                  - generic [ref=f42e4561] [cursor=pointer]:
+                    - paragraph [ref=f42e4562]: Filtros selecionados
+                    - img [ref=f42e4563]: 
+                  - generic [ref=f42e4564]:
+                    - generic [ref=f42e4566] [cursor=pointer]:
+                      - generic [ref=f42e4567]: Somente meus conteúdos
+                      - button [ref=f42e4568]:
+                        - img [ref=f42e4569]
+                    - generic [ref=f42e4571]: Limpar filtros
+                - generic [ref=f42e4573]:
+                  - generic [ref=f42e4575] [cursor=pointer]:
+                    - paragraph [ref=f42e4576]: Tipo de Conteúdo
+                    - img [ref=f42e4577]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e4579] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e4582]
+                    - generic [ref=f42e4583]: LDIs
+            - generic [ref=f42e4587]:
+              - generic [ref=f42e4588]:
+                - heading "LDIs" [level=6] [ref=f42e4589]
+                - paragraph [ref=f42e4590]: 5 resultados
+              - generic [ref=f42e4593]:
+                - button "Desenvolvimento de software DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Prof. Paolla Ramos Paolla Ramos E Silva Pós-Edital PDF e vídeos" [ref=f42e4595] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e4599]: Desenvolvimento de software DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Prof. Paolla Ramos
+                  - generic [ref=f42e4601]:
+                    - img [ref=f42e4604]: 
+                    - generic [ref=f42e4605]: Paolla Ramos E Silva
+                  - generic [ref=f42e4609]: Pós-Edital
+                  - generic [ref=f42e4611]:
+                    - button "PDF e vídeos" [ref=f42e4612]:
+                      - generic [ref=f42e4613]:
+                        - img [ref=f42e4614]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e4618]:
+                      - img [ref=f42e4619]: 
+                      - img [ref=f42e4620]: 
+                    - generic [ref=f42e4623]:
+                      - img [ref=f42e4624]: 
+                      - img [ref=f42e4625]: 
+                - button "Governança de TI para DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Prof. Paolla Ramos Paolla Ramos E Silva Pós-Edital PDF e vídeos" [ref=f42e4627] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e4631]: Governança de TI para DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Prof. Paolla Ramos
+                  - generic [ref=f42e4633]:
+                    - img [ref=f42e4636]: 
+                    - generic [ref=f42e4637]: Paolla Ramos E Silva
+                  - generic [ref=f42e4641]: Pós-Edital
+                  - generic [ref=f42e4643]:
+                    - button "PDF e vídeos" [ref=f42e4644]:
+                      - generic [ref=f42e4645]:
+                        - img [ref=f42e4646]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e4650]:
+                      - img [ref=f42e4651]: 
+                      - img [ref=f42e4652]: 
+                    - generic [ref=f42e4655]:
+                      - img [ref=f42e4656]: 
+                      - img [ref=f42e4657]: 
+                - button "Língua Portuguesa para DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Equipe de Português 3 professores Pós-Edital PDF e vídeos" [ref=f42e4659] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e4663]: Língua Portuguesa para DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Equipe de Português
+                  - generic [ref=f42e4665]:
+                    - img [ref=f42e4668]: 
+                    - generic [ref=f42e4669]: 3 professores
+                  - generic [ref=f42e4673]: Pós-Edital
+                  - generic [ref=f42e4675]:
+                    - button "PDF e vídeos" [ref=f42e4676]:
+                      - generic [ref=f42e4677]:
+                        - img [ref=f42e4678]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e4682]:
+                      - img [ref=f42e4683]: 
+                      - img [ref=f42e4684]: 
+                    - generic [ref=f42e4687]:
+                      - img [ref=f42e4688]: 
+                      - img [ref=f42e4689]: 
+                - button "Redes e Segurança para DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Prof. André Castro André Castro Pós-Edital PDF e vídeos" [ref=f42e4691] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e4695]: Redes e Segurança para DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Prof. André Castro
+                  - generic [ref=f42e4697]:
+                    - img [ref=f42e4700]: 
+                    - generic [ref=f42e4701]: André Castro
+                  - generic [ref=f42e4705]: Pós-Edital
+                  - generic [ref=f42e4707]:
+                    - button "PDF e vídeos" [ref=f42e4708]:
+                      - generic [ref=f42e4709]:
+                        - img [ref=f42e4710]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e4714]:
+                      - img [ref=f42e4715]: 
+                      - img [ref=f42e4716]: 
+                    - generic [ref=f42e4719]:
+                      - img [ref=f42e4720]: 
+                      - img [ref=f42e4721]: 
+                - button "Sistemas Operacionais para DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Prof. Evandro Dalla Vecchia Evandro Vecchia Pós-Edital PDF e vídeos" [ref=f42e4723] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e4727]: Sistemas Operacionais para DataPrev (Analista de TI - Segurança Cibernética e Proteção de Dados) - Prof. Evandro Dalla Vecchia
+                  - generic [ref=f42e4729]:
+                    - img [ref=f42e4732]: 
+                    - generic [ref=f42e4733]: Evandro Vecchia
+                  - generic [ref=f42e4737]: Pós-Edital
+                  - generic [ref=f42e4739]:
+                    - button "PDF e vídeos" [ref=f42e4740]:
+                      - generic [ref=f42e4741]:
+                        - img [ref=f42e4742]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e4746]:
+                      - img [ref=f42e4747]: 
+                      - img [ref=f42e4748]: 
+                    - generic [ref=f42e4751]:
+                      - img [ref=f42e4752]: 
+                      - img [ref=f42e4753]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]

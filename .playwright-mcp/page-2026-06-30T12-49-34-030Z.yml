@@ -1,0 +1,249 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e778]:
+    - text:           
+    - main [ref=f42e782]:
+      - generic [ref=f42e1155]:
+        - list [ref=f42e5125]:
+          - listitem [ref=f42e5126]:
+            - button "Todos os Cursos" [ref=f42e5127] [cursor=pointer]
+            - text: /
+          - listitem [ref=f42e5128]:
+            - button "Analista - Desenvolvimento de Sistemas (SERPRO)" [ref=f42e5129] [cursor=pointer]
+        - generic [ref=f42e5130]:
+          - generic [ref=f42e5131]:
+            - generic [ref=f42e5134]:
+              - generic [ref=f42e5137]: Analista - Desenvolvimento de Sistemas (SERPRO)
+              - img [ref=f42e5140] [cursor=pointer]: 
+            - generic [ref=f42e5142]:
+              - button "Filtro Avançado" [ref=f42e5144] [cursor=pointer]:
+                - generic [ref=f42e5145]:
+                  - img [ref=f42e5146]: 
+                  - generic [ref=f42e5147]: Filtro Avançado
+              - generic [ref=f42e5151] [cursor=pointer]:
+                - img [ref=f42e5152]: 
+                - generic [ref=f42e5153]: Autor
+          - generic [ref=f42e5154]:
+            - complementary [ref=f42e5155]:
+              - generic [ref=f42e5156]:
+                - heading "Filtro Avançado" [level=5] [ref=f42e5157]
+                - button "Fechar" [ref=f42e5158] [cursor=pointer]:
+                  - generic [ref=f42e5159]: Fechar
+              - generic [ref=f42e5162]:
+                - textbox [ref=f42e5163]:
+                  - /placeholder: Buscar neste concurso
+                - img [ref=f42e5164]
+              - generic [ref=f42e5166]:
+                - generic [ref=f42e5167]:
+                  - generic [ref=f42e5169] [cursor=pointer]:
+                    - paragraph [ref=f42e5170]: Filtros selecionados
+                    - img [ref=f42e5171]: 
+                  - generic [ref=f42e5172]:
+                    - generic [ref=f42e5174] [cursor=pointer]:
+                      - generic [ref=f42e5175]: Somente meus conteúdos
+                      - button [ref=f42e5176]:
+                        - img [ref=f42e5177]
+                    - generic [ref=f42e5179]: Limpar filtros
+                - generic [ref=f42e5181]:
+                  - generic [ref=f42e5183] [cursor=pointer]:
+                    - paragraph [ref=f42e5184]: Tipo de Conteúdo
+                    - img [ref=f42e5185]: 
+                  - generic "Adicionar filtro LDIs" [ref=f42e5187] [cursor=pointer]:
+                    - checkbox "Adicionar filtro LDIs" [ref=f42e5190]
+                    - generic [ref=f42e5191]: LDIs
+            - generic [ref=f42e5195]:
+              - generic [ref=f42e5196]:
+                - heading "LDIs" [level=6] [ref=f42e5197]
+                - paragraph [ref=f42e5198]: 10 resultados
+              - generic [ref=f42e5201]:
+                - button "Banco de Dados para SERPRO (Analista - Desenvolvimento de Sistemas) - Prof. Thiago Cavalcanti Thiago Cavalcanti Pré-Edital PDF e vídeos" [ref=f42e5203] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5207]: Banco de Dados para SERPRO (Analista - Desenvolvimento de Sistemas) - Prof. Thiago Cavalcanti
+                  - generic [ref=f42e5209]:
+                    - img [ref=f42e5212]: 
+                    - generic [ref=f42e5213]: Thiago Cavalcanti
+                  - generic [ref=f42e5217]: Pré-Edital
+                  - generic [ref=f42e5219]:
+                    - button "PDF e vídeos" [ref=f42e5220]:
+                      - generic [ref=f42e5221]:
+                        - img [ref=f42e5222]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5226]:
+                      - img [ref=f42e5227]: 
+                      - img [ref=f42e5228]: 
+                    - generic [ref=f42e5231]:
+                      - img [ref=f42e5232]: 
+                      - img [ref=f42e5233]: 
+                - button "Desenvolvimento de Software para SERPRO (Analista - Desenvolvimento de Sistemas) Paolla Ramos E Silva Pré-Edital PDF e vídeos" [ref=f42e5235] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5239]: Desenvolvimento de Software para SERPRO (Analista - Desenvolvimento de Sistemas)
+                  - generic [ref=f42e5241]:
+                    - img [ref=f42e5244]: 
+                    - generic [ref=f42e5245]: Paolla Ramos E Silva
+                  - generic [ref=f42e5249]: Pré-Edital
+                  - generic [ref=f42e5251]:
+                    - button "PDF e vídeos" [ref=f42e5252]:
+                      - generic [ref=f42e5253]:
+                        - img [ref=f42e5254]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5258]:
+                      - img [ref=f42e5259]: 
+                      - img [ref=f42e5260]: 
+                    - generic [ref=f42e5263]:
+                      - img [ref=f42e5264]: 
+                      - img [ref=f42e5265]: 
+                - button "Engenharia de Software para SERPRO (Analista - Desenvolvimento de Sistemas) - Prof. Diego Carvalho 3 professores Pré-Edital PDF e vídeos" [ref=f42e5267] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5271]: Engenharia de Software para SERPRO (Analista - Desenvolvimento de Sistemas) - Prof. Diego Carvalho
+                  - generic [ref=f42e5273]:
+                    - img [ref=f42e5276]: 
+                    - generic [ref=f42e5277]: 3 professores
+                  - generic [ref=f42e5281]: Pré-Edital
+                  - generic [ref=f42e5283]:
+                    - button "PDF e vídeos" [ref=f42e5284]:
+                      - generic [ref=f42e5285]:
+                        - img [ref=f42e5286]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5290]:
+                      - img [ref=f42e5291]: 
+                      - img [ref=f42e5292]: 
+                    - generic [ref=f42e5295]:
+                      - img [ref=f42e5296]: 
+                      - img [ref=f42e5297]: 
+                - button "Estatuto Social do SERPRO para SERPRO (Analista - Desenvolvimento de Sistemas) Equipe Legislação Pré-Edital PDF e vídeos" [ref=f42e5299] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5303]: Estatuto Social do SERPRO para SERPRO (Analista - Desenvolvimento de Sistemas)
+                  - generic [ref=f42e5305]:
+                    - img [ref=f42e5308]: 
+                    - generic [ref=f42e5309]: Equipe Legislação
+                  - generic [ref=f42e5313]: Pré-Edital
+                  - generic [ref=f42e5315]:
+                    - button "PDF e vídeos" [ref=f42e5316]:
+                      - generic [ref=f42e5317]:
+                        - img [ref=f42e5318]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5322]:
+                      - img [ref=f42e5323]: 
+                      - img [ref=f42e5324]: 
+                    - generic [ref=f42e5327]:
+                      - img [ref=f42e5328]: 
+                      - img [ref=f42e5329]: 
+                - button "Legislação Acerca da Privacidade de Proteção de Dados para SERPRO (Analista - Desenvolvimento de Sistemas) - Profs. Antonio Daud e Paulo Sousa 2 professores Pré-Edital PDF e vídeos" [ref=f42e5331] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5335]: Legislação Acerca da Privacidade de Proteção de Dados para SERPRO (Analista - Desenvolvimento de Sistemas) - Profs. Antonio Daud e Paulo Sousa
+                  - generic [ref=f42e5337]:
+                    - img [ref=f42e5340]: 
+                    - generic [ref=f42e5341]: 2 professores
+                  - generic [ref=f42e5345]: Pré-Edital
+                  - generic [ref=f42e5347]:
+                    - button "PDF e vídeos" [ref=f42e5348]:
+                      - generic [ref=f42e5349]:
+                        - img [ref=f42e5350]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5354]:
+                      - img [ref=f42e5355]: 
+                      - img [ref=f42e5356]: 
+                    - generic [ref=f42e5359]:
+                      - img [ref=f42e5360]: 
+                      - img [ref=f42e5361]: 
+                - button "Inglês para SERPRO (Analista - Desenvolvimento de Sistemas) - Prof. Ena Smith Ena Smith Pré-Edital PDF e vídeos" [ref=f42e5363] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5367]: Inglês para SERPRO (Analista - Desenvolvimento de Sistemas) - Prof. Ena Smith
+                  - generic [ref=f42e5369]:
+                    - img [ref=f42e5372]: 
+                    - generic [ref=f42e5373]: Ena Smith
+                  - generic [ref=f42e5377]: Pré-Edital
+                  - generic [ref=f42e5379]:
+                    - button "PDF e vídeos" [ref=f42e5380]:
+                      - generic [ref=f42e5381]:
+                        - img [ref=f42e5382]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5386]:
+                      - img [ref=f42e5387]: 
+                      - img [ref=f42e5388]: 
+                    - generic [ref=f42e5391]:
+                      - img [ref=f42e5392]: 
+                      - img [ref=f42e5393]: 
+                - button "Português para SERPRO (Analista - Desenvolvimento de Sistemas) - Prof. Felipe Luccas 3 professores Pré-Edital PDF e vídeos" [ref=f42e5395] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5399]: Português para SERPRO (Analista - Desenvolvimento de Sistemas) - Prof. Felipe Luccas
+                  - generic [ref=f42e5401]:
+                    - img [ref=f42e5404]: 
+                    - generic [ref=f42e5405]: 3 professores
+                  - generic [ref=f42e5409]: Pré-Edital
+                  - generic [ref=f42e5411]:
+                    - button "PDF e vídeos" [ref=f42e5412]:
+                      - generic [ref=f42e5413]:
+                        - img [ref=f42e5414]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5418]:
+                      - img [ref=f42e5419]: 
+                      - img [ref=f42e5420]: 
+                    - generic [ref=f42e5423]:
+                      - img [ref=f42e5424]: 
+                      - img [ref=f42e5425]: 
+                - button "Raciocínio Lógico para SERPRO (Analista - Desenvolvimento de Sistemas) - Equipe Exatas Equipe Exatas Academy Pré-Edital PDF e vídeos" [ref=f42e5427] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5431]: Raciocínio Lógico para SERPRO (Analista - Desenvolvimento de Sistemas) - Equipe Exatas
+                  - generic [ref=f42e5433]:
+                    - img [ref=f42e5436]: 
+                    - generic [ref=f42e5437]: Equipe Exatas Academy
+                  - generic [ref=f42e5441]: Pré-Edital
+                  - generic [ref=f42e5443]:
+                    - button "PDF e vídeos" [ref=f42e5444]:
+                      - generic [ref=f42e5445]:
+                        - img [ref=f42e5446]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5450]:
+                      - img [ref=f42e5451]: 
+                      - img [ref=f42e5452]: 
+                    - generic [ref=f42e5455]:
+                      - img [ref=f42e5456]: 
+                      - img [ref=f42e5457]: 
+                - button "Segurança da Informação para SERPRO (Analista - Desenvolvimento de Sistemas) André Castro Pré-Edital PDF e vídeos" [ref=f42e5459] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5463]: Segurança da Informação para SERPRO (Analista - Desenvolvimento de Sistemas)
+                  - generic [ref=f42e5465]:
+                    - img [ref=f42e5468]: 
+                    - generic [ref=f42e5469]: André Castro
+                  - generic [ref=f42e5473]: Pré-Edital
+                  - generic [ref=f42e5475]:
+                    - button "PDF e vídeos" [ref=f42e5476]:
+                      - generic [ref=f42e5477]:
+                        - img [ref=f42e5478]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5482]:
+                      - img [ref=f42e5483]: 
+                      - img [ref=f42e5484]: 
+                    - generic [ref=f42e5487]:
+                      - img [ref=f42e5488]: 
+                      - img [ref=f42e5489]: 
+                - button "Servidores Web para SERPRO (Analista - Desenvolvimento de Sistemas) Thiago Cavalcanti Pré-Edital PDF e vídeos" [ref=f42e5491] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f42e5495]: Servidores Web para SERPRO (Analista - Desenvolvimento de Sistemas)
+                  - generic [ref=f42e5497]:
+                    - img [ref=f42e5500]: 
+                    - generic [ref=f42e5501]: Thiago Cavalcanti
+                  - generic [ref=f42e5505]: Pré-Edital
+                  - generic [ref=f42e5507]:
+                    - button "PDF e vídeos" [ref=f42e5508]:
+                      - generic [ref=f42e5509]:
+                        - img [ref=f42e5510]: 
+                        - text: PDF e vídeos
+                    - generic [ref=f42e5514]:
+                      - img [ref=f42e5515]: 
+                      - img [ref=f42e5516]: 
+                    - generic [ref=f42e5519]:
+                      - img [ref=f42e5520]: 
+                      - img [ref=f42e5521]: 
+  - generic:
+    - generic:
+      - generic [ref=f42e386]:
+        - iframe [ref=f42e387]:
+          - button "Fechar mensagem da empresa" [ref=f49e4] [cursor=pointer]:
+            - img [ref=f49e5]
+        - iframe [ref=f42e388]:
+          - button "Olá. Precisa de ajuda?" [ref=f50e5] [cursor=pointer]
+      - iframe [ref=f42e389]:
+        - button "Abrir janela de mensagens" [ref=f51e5] [cursor=pointer]:
+          - img [ref=f51e7]
+          - img [ref=f51e10]
