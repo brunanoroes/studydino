@@ -259,19 +259,24 @@ const MIGRATE_PG = `
   ALTER TABLE cronograma ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
   ALTER TABLE cronograma_dias ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
   ALTER TABLE capitulos ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
+  ALTER TABLE config ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
 
   ALTER TABLE materias DROP CONSTRAINT IF EXISTS materias_nome_key;
   ALTER TABLE trilhas DROP CONSTRAINT IF EXISTS trilhas_nome_key;
+  ALTER TABLE config DROP CONSTRAINT IF EXISTS config_pkey;
 
   UPDATE materias        SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
   UPDATE trilhas         SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
   UPDATE cronograma      SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
   UPDATE cronograma_dias SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
+  UPDATE config          SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
   UPDATE capitulos c     SET usuario_id = t.usuario_id FROM trilhas t WHERE c.trilha_id = t.id AND c.usuario_id IS NULL;
   UPDATE capitulos       SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
 
+  DELETE FROM config WHERE usuario_id IS NULL;
   CREATE UNIQUE INDEX IF NOT EXISTS idx_materias_uid_nome ON materias(usuario_id, nome);
   CREATE UNIQUE INDEX IF NOT EXISTS idx_trilhas_uid_nome ON trilhas(usuario_id, nome);
+  CREATE UNIQUE INDEX IF NOT EXISTS idx_config_uid_chave ON config(usuario_id, chave);
 `;
 
 // ────────────────────────────────────────────────────────────
