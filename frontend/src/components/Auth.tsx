@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Lock } from 'lucide-react';
+import { api } from '../api';
 
 interface Props {
   onLogin: (token: string, username: string) => void;
@@ -38,15 +39,9 @@ export default function Auth({ onLogin }: Props) {
 
     setCarregando(true);
     try {
-      const endpoint = modo === 'login' ? '/api/auth/login' : '/api/auth/registro';
-      const res = await fetch(`http://localhost:3001${endpoint}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, senha }),
-      });
-
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
+      const data = modo === 'login'
+        ? await api.auth.login(username, senha)
+        : await api.auth.registro(username, senha);
 
       onLogin(data.token, data.username);
     } catch (e: any) {

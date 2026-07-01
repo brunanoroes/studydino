@@ -165,6 +165,18 @@ async function req<T>(path: string, opts?: RequestInit): Promise<T> {
 }
 
 export const api = {
+  auth: {
+    login: (username: string, senha: string) =>
+      req<{ id: number; username: string; token: string }>('/auth/login', {
+        method: 'POST',
+        body: JSON.stringify({ username, senha }),
+      }),
+    registro: (username: string, senha: string) =>
+      req<{ id: number; username: string; token: string }>('/auth/registro', {
+        method: 'POST',
+        body: JSON.stringify({ username, senha }),
+      }),
+  },
   materias: {
     list: () => req<Materia[]>('/materias'),
     create: (data: { nome: string; cor: string; emoji: string }) =>
