@@ -157,6 +157,11 @@ async function req<T>(path: string, opts?: RequestInit): Promise<T> {
 
     if (!res.ok) {
       const err = await res.json().catch(() => ({ error: res.statusText }));
+      if (res.status === 401) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('username');
+        window.dispatchEvent(new CustomEvent('auth:unauthorized'));
+      }
       throw new Error(err.error || res.statusText);
     }
     window.dispatchEvent(new CustomEvent('api:ready'));

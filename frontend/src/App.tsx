@@ -44,7 +44,7 @@ export default function App() {
     setUsername(user);
   };
 
-  const handleLogout = () => {
+  const handleLogout = useCallback(() => {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     setToken(null);
@@ -55,7 +55,12 @@ export default function App() {
     setTrilhaAtiva(null);
     inicializadoRef.current = false;
     setAba('timer');
-  };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('auth:unauthorized', handleLogout);
+    return () => window.removeEventListener('auth:unauthorized', handleLogout);
+  }, [handleLogout]);
 
   const carregarMaterias = useCallback(() => {
     api.materias.list().then(setMaterias).catch(console.error);

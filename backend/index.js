@@ -20,17 +20,26 @@ const wrap = (fn) => (req, res) => Promise.resolve(fn(req, res)).catch((e) => {
 });
 
 const isUnique = (e) => e.code === '23505' || /unique|duplicate/i.test(e.message || '');
+const isForeignKey = (e) => e.code === '23503' || /foreign key|constraint/i.test(e.message || '');
 
 // ── AUTENTICAÇÃO ──────────────────────────────────────────
 const verificarToken = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) return res.status(401).json({ error: 'Token não fornecido' });
+  let payload;
   try {
-    req.user = jwt.verify(token, JWT_SECRET);
-    next();
+    payload = jwt.verify(token, JWT_SECRET);
   } catch (e) {
     return res.status(401).json({ error: 'Token inválido ou expirado' });
   }
+  // garante que a conta ainda existe (evita 500 por token de usuário apagado)
+  db.get('SELECT id, username FROM usuarios WHERE id = ?', payload.id)
+    .then((u) => {
+      if (!u) return res.status(401).json({ error: 'Sessão inválida. Faça login novamente.' });
+      req.user = u;
+      next();
+    })
+    .catch(next);
 };
 
 app.post('/api/auth/registro', wrap(async (req, res) => {
@@ -75,7 +84,12 @@ app.post('/api/amigos/adicionar', verificarToken, wrap(async (req, res) => {
   if (!amigo) return res.status(404).json({ error: 'Usuário não encontrado' });
   if (amigo.id === req.user.id) return res.status(400).json({ error: 'Não pode adicionar a si mesmo' });
 
-  await db.run('INSERT OR IGNORE INTO amizades (usuario_id, amigo_id) VALUES (?, ?)', req.user.id, amigo.id);
+  try {
+    await db.run('INSERT OR IGNORE INTO amizades (usuario_id, amigo_id) VALUES (?, ?)', req.user.id, amigo.id);
+  } catch (e) {
+    if (isForeignKey(e)) return res.status(401).json({ error: 'Sessão inválida. Faça login novamente.' });
+    throw e;
+  }
   res.json({ ok: true });
 }));
 
