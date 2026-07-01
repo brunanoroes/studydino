@@ -122,20 +122,46 @@ export interface Dashboard {
   };
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 async function req<T>(path: string, opts?: RequestInit): Promise<T> {
   const token = localStorage.getItem('token');
   const headers: HeadersInit = { 'Content-Type': 'application/json' };
   if (token) headers['Authorization'] = `Bearer ${token}`;
 
-  const res = await fetch(`${BASE}${path}`, {
-    headers,
-    ...opts,
-  });
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({ error: res.statusText }));
-    throw new Error(err.error || res.statusText);
+  // O backend no Render (plano grátis) hiberna após inatividade e leva ~50s
+  // para acordar. Em vez de falhar na 1ª chamada, aguardamos e repetimos por
+  // até ~75s enquanto o servidor sobe, avisando a UI via evento 'api:waking'.
+  const deadline = Date.now() + 75000;
+
+  while (true) {
+    let res: Response;
+    try {
+      res = await fetch(`${BASE}${path}`, { headers, ...opts });
+    } catch (e) {
+      // Falha de rede = backend ainda dormindo/inacessível → espera e tenta de novo
+      if (e instanceof TypeError && Date.now() < deadline) {
+        window.dispatchEvent(new CustomEvent('api:waking'));
+        await sleep(3000);
+        continue;
+      }
+      throw e;
+    }
+
+    // 502/503/504 = servidor acordando no Render → espera e tenta de novo
+    if ((res.status === 502 || res.status === 503 || res.status === 504) && Date.now() < deadline) {
+      window.dispatchEvent(new CustomEvent('api:waking'));
+      await sleep(3000);
+      continue;
+    }
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ error: res.statusText }));
+      throw new Error(err.error || res.statusText);
+    }
+    window.dispatchEvent(new CustomEvent('api:ready'));
+    return res.json();
   }
-  return res.json();
 }
 
 export const api = {
