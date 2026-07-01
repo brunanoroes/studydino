@@ -118,13 +118,16 @@ app.get('/api/amigos/:amigoId/estudando-agora', verificarToken, wrap(async (req,
   const amizade = await db.get('SELECT id FROM amizades WHERE usuario_id = ? AND amigo_id = ?', req.user.id, amigoId);
   if (!amizade) return res.status(403).json({ error: 'Não é seu amigo' });
 
+  // só considera "estudando agora" sessões abertas iniciadas nas últimas 6h
+  const cutoff = new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString();
   const sessaoAtiva = await db.get(`
     SELECT m.nome, m.cor, s.iniciada_em
     FROM sessoes s
     JOIN materias m ON m.id = s.materia_id
-    WHERE s.usuario_id = ? AND s.finalizada_em IS NULL
+    WHERE s.usuario_id = ? AND s.finalizada_em IS NULL AND s.iniciada_em >= ?
+    ORDER BY s.iniciada_em DESC
     LIMIT 1
-  `, amigoId);
+  `, amigoId, cutoff);
 
   res.json(sessaoAtiva ? { estudando: true, ...sessaoAtiva } : { estudando: false });
 }));
@@ -155,7 +158,7 @@ app.get('/api/materias', verificarToken, wrap(async (req, res) => {
       COALESCE(SUM(s.duracao_segundos), 0) AS total_segundos,
       COUNT(s.id) AS total_sessoes
     FROM materias m
-    LEFT JOIN sessoes s ON s.materia_id = m.id AND s.usuario_id = ?
+    LEFT JOIN sessoes s ON s.materia_id = m.id AND s.usuario_id = ? AND s.finalizada_em IS NOT NULL
     WHERE m.usuario_id = ?
     GROUP BY m.id
     ORDER BY m.nome
@@ -197,7 +200,7 @@ app.get('/api/sessoes', verificarToken, wrap(async (req, res) => {
     SELECT s.*, m.nome AS materia_nome, m.cor AS materia_cor, m.emoji AS materia_emoji
     FROM sessoes s
     JOIN materias m ON m.id = s.materia_id
-    WHERE s.usuario_id = ?
+    WHERE s.usuario_id = ? AND s.finalizada_em IS NOT NULL
   `;
   const params = [req.user.id];
   if (materia_id) { query += ' AND s.materia_id = ?'; params.push(materia_id); }
@@ -229,6 +232,32 @@ app.delete('/api/sessoes/:id', verificarToken, wrap(async (req, res) => {
   res.json({ ok: true });
 }));
 
+// Inicia uma sessão ATIVA (finalizada_em NULL) → aparece como "estudando agora"
+// pros amigos. Fecha sessões abertas abandonadas antes de abrir uma nova.
+app.post('/api/sessoes/iniciar', verificarToken, wrap(async (req, res) => {
+  const { materia_id } = req.body;
+  if (!materia_id) return res.status(400).json({ error: 'materia_id obrigatório' });
+  const uid = req.user.id;
+  const r = await db.tx(async (q) => {
+    await q.run('DELETE FROM sessoes WHERE usuario_id = ? AND finalizada_em IS NULL', uid);
+    return q.insert(
+      'INSERT INTO sessoes (usuario_id, materia_id, duracao_segundos, iniciada_em, finalizada_em) VALUES (?, ?, 0, ?, NULL)',
+      uid, materia_id, new Date().toISOString());
+  });
+  res.status(201).json({ id: r.lastInsertRowid });
+}));
+
+// Finaliza a sessão ativa com o tempo real.
+app.put('/api/sessoes/:id/finalizar', verificarToken, wrap(async (req, res) => {
+  const { duracao_segundos, anotacao } = req.body;
+  const now = new Date().toISOString();
+  const r = await db.run(
+    'UPDATE sessoes SET duracao_segundos = ?, finalizada_em = ?, anotacao = ? WHERE id = ? AND usuario_id = ?',
+    duracao_segundos, now, anotacao || null, req.params.id, req.user.id);
+  if (r.changes === 0) return res.status(404).json({ error: 'Sessão não encontrada' });
+  res.json({ ok: true });
+}));
+
 // ── TRILHAS (por usuário) ─────────────────────────────────
 app.get('/api/trilhas', verificarToken, wrap(async (req, res) => {
   const uid = req.user.id;
@@ -248,7 +277,7 @@ app.get('/api/trilhas', verificarToken, wrap(async (req, res) => {
         COALESCE(SUM(s.duracao_segundos), 0) AS total_segundos
       FROM trilha_materias tm
       JOIN materias m ON m.id = tm.materia_id
-      LEFT JOIN sessoes s ON s.materia_id = m.id AND s.usuario_id = ?
+      LEFT JOIN sessoes s ON s.materia_id = m.id AND s.usuario_id = ? AND s.finalizada_em IS NOT NULL
       WHERE tm.trilha_id = ?
       GROUP BY m.id
       ORDER BY m.nome
@@ -405,7 +434,7 @@ app.get('/api/dashboard', verificarToken, wrap(async (req, res) => {
   const whereTrilha = trilha_id
     ? `m.id IN (SELECT materia_id FROM trilha_materias WHERE trilha_id = ${Number(trilha_id)})`
     : '1=1';
-  const sUser = `s.usuario_id = ${uid}`;
+  const sUser = `s.usuario_id = ${uid} AND s.finalizada_em IS NOT NULL`;
   const where = `${wherePeriodo} AND ${whereTrilha} AND ${sUser}`;
 
   const porMateria = await db.all(`
@@ -463,7 +492,7 @@ app.get('/api/dashboard/comparativo', verificarToken, wrap(async (req, res) => {
   const realizado = await db.all(`
     SELECT materia_id, COALESCE(SUM(duracao_segundos), 0) AS total_segundos
     FROM sessoes
-    WHERE usuario_id = ? AND DATE(iniciada_em) >= DATE('now', '-6 days')
+    WHERE usuario_id = ? AND finalizada_em IS NOT NULL AND DATE(iniciada_em) >= DATE('now', '-6 days')
     GROUP BY materia_id
   `, uid);
   const realizadoPorMateria = {};

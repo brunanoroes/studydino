@@ -194,6 +194,11 @@ export const api = {
       materia_id: number; duracao_segundos: number;
       iniciada_em: string; finalizada_em: string; anotacao?: string;
     }) => req<Sessao>('/sessoes', { method: 'POST', body: JSON.stringify(data) }),
+    // marca "estudando agora" (sessão ativa) — retorna o id p/ finalizar depois
+    iniciar: (materia_id: number) =>
+      req<{ id: number }>('/sessoes/iniciar', { method: 'POST', body: JSON.stringify({ materia_id }) }),
+    finalizar: (id: number, data: { duracao_segundos: number; anotacao?: string }) =>
+      req<{ ok: true }>(`/sessoes/${id}/finalizar`, { method: 'PUT', body: JSON.stringify(data) }),
     delete: (id: number) => req<{ ok: true }>(`/sessoes/${id}`, { method: 'DELETE' }),
   },
   trilhas: {

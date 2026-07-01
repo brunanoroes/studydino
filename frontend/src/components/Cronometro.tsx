@@ -23,6 +23,26 @@ export default function Cronometro({ materias, onSessaoSalva, materiaPreSelecion
   const [salvando, setSalvando] = useState(false);
   const [sucesso, setSucesso] = useState(false);
   const iniciadoEmRef = useRef<string>('');
+  const sessaoAtivaIdRef = useRef<number | null>(null);
+
+  // Finaliza a sessão ativa (marcada ao iniciar) com o tempo real.
+  // Se por algum motivo não houver sessão ativa, cria uma já finalizada.
+  const salvarSessao = async (duracao: number) => {
+    const id = sessaoAtivaIdRef.current;
+    const anot = anotacao.trim() || undefined;
+    if (id) {
+      await api.sessoes.finalizar(id, { duracao_segundos: duracao, anotacao: anot });
+      sessaoAtivaIdRef.current = null;
+    } else {
+      await api.sessoes.create({
+        materia_id: materiaId!,
+        duracao_segundos: duracao,
+        iniciada_em: iniciadoEmRef.current,
+        finalizada_em: new Date().toISOString(),
+        anotacao: anot,
+      });
+    }
+  };
 
   // ── Pomodoro ─────────────────────────────────────────────
   const [modo, setModo] = useState<Modo>('livre');
@@ -68,7 +88,13 @@ export default function Cronometro({ materias, onSessaoSalva, materiaPreSelecion
 
   const iniciar = () => {
     if (!materiaId) return;
-    if (segundos === 0) iniciadoEmRef.current = new Date().toISOString();
+    // início fresco (não é retomada de pausa): marca "estudando agora" pros amigos
+    if (segundos === 0) {
+      iniciadoEmRef.current = new Date().toISOString();
+      api.sessoes.iniciar(materiaId)
+        .then(r => { sessaoAtivaIdRef.current = r.id; })
+        .catch(console.error);
+    }
     setRodando(true);
   };
 
@@ -81,13 +107,7 @@ export default function Cronometro({ materias, onSessaoSalva, materiaPreSelecion
     setRodando(false);
     setSalvando(true);
     try {
-      await api.sessoes.create({
-        materia_id: materiaId!,
-        duracao_segundos: segundos,
-        iniciada_em: iniciadoEmRef.current,
-        finalizada_em: new Date().toISOString(),
-        anotacao: anotacao.trim() || undefined,
-      });
+      await salvarSessao(segundos);
       setSucesso(true);
       onSessaoSalva();
       setTimeout(() => { setSucesso(false); resetar(); }, 1400);
@@ -104,13 +124,7 @@ export default function Cronometro({ materias, onSessaoSalva, materiaPreSelecion
     setRodando(false);
     setSalvando(true);
     try {
-      await api.sessoes.create({
-        materia_id: materiaId!,
-        duracao_segundos: segundos,
-        iniciada_em: iniciadoEmRef.current,
-        finalizada_em: new Date().toISOString(),
-        anotacao: anotacao.trim() || undefined,
-      });
+      await salvarSessao(segundos);
       onSessaoSalva();
       avancarFase(segundos);
     } catch (e) {
@@ -127,13 +141,7 @@ export default function Cronometro({ materias, onSessaoSalva, materiaPreSelecion
       if (segundosFoco === duracaoFase) {
         // chegou ao fim naturalmente — salva sessão completa
         try {
-          await api.sessoes.create({
-            materia_id: materiaId!,
-            duracao_segundos: segundosFoco,
-            iniciada_em: iniciadoEmRef.current,
-            finalizada_em: new Date().toISOString(),
-            anotacao: anotacao.trim() || undefined,
-          });
+          await salvarSessao(segundosFoco);
           onSessaoSalva();
         } catch (e) { console.error(e); }
       }
