@@ -49,11 +49,13 @@ export default function App() {
     localStorage.removeItem('username');
     setToken(null);
     setUsername(null);
+    // limpa dados do usuário anterior para não vazar entre contas
+    setMaterias([]);
+    setTrilhas([]);
+    setTrilhaAtiva(null);
+    inicializadoRef.current = false;
+    setAba('timer');
   };
-
-  if (!token || !username) {
-    return <Auth onLogin={handleLogin} />;
-  }
 
   const carregarMaterias = useCallback(() => {
     api.materias.list().then(setMaterias).catch(console.error);
@@ -68,12 +70,22 @@ export default function App() {
     }).catch(console.error);
   }, []);
 
-  useEffect(() => { carregarMaterias(); carregarTrilhas(); }, [carregarMaterias, carregarTrilhas]);
+  // Carrega os dados sempre que houver sessão (e recarrega ao logar). Sem token, não busca.
+  useEffect(() => {
+    if (!token) return;
+    carregarMaterias();
+    carregarTrilhas();
+  }, [token, carregarMaterias, carregarTrilhas]);
 
   useEffect(() => {
     if (!inicializadoRef.current) return;
     api.config.set('trilhaAtivaId', trilhaAtiva ? String(trilhaAtiva.id) : null).catch(console.error);
   }, [trilhaAtiva]);
+
+  // Todos os hooks acima rodam sempre; só depois decidimos mostrar login ou app.
+  if (!token || !username) {
+    return <Auth onLogin={handleLogin} />;
+  }
 
   const aoSalvarSessao = () => {
     carregarMaterias();
