@@ -255,8 +255,8 @@ export default function App() {
         width: '100%',
       }}>
         <div className="glass" style={{ borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)', overflow: 'hidden' }}>
-          {aba === 'timer' && (
-            materiasParaCronometro.length === 0 ? (
+          <div style={{ display: aba === 'timer' ? 'block' : 'none' }}>
+            {materiasParaCronometro.length === 0 ? (
               <div style={{ padding: '64px 32px', textAlign: 'center' }}>
                 <div style={{
                   width: 56, height: 56, borderRadius: 16,
@@ -286,8 +286,8 @@ export default function App() {
                 materiaPreSelecionada={materiaPreSelecionada}
                 onMateriaPreSelecionadaUsada={() => setMateriaPreSelecionada(null)}
               />
-            )
-          )}
+            )}
+          </div>
           {aba === 'materias' && <Materias materias={materiasParaCronometro} todasMaterias={materias} trilhaAtiva={trilhaAtiva} trilhas={trilhas} onAtualizar={carregarMaterias} />}
           {aba === 'trilhas' && (
             <TrilhasComp
