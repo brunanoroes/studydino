@@ -12,10 +12,8 @@ const JWT_SECRET = process.env.JWT_SECRET || 'sua-chave-secreta-aqui-mude-em-pro
 const JWT_EXPIRATION = '7d';
 const PORT = process.env.PORT || 3001;
 
-// Não derruba o processo por uma promise rejeitada solta
 process.on('unhandledRejection', (e) => console.error('unhandledRejection:', e));
 
-// Embrulha handlers async para mandar erros ao Express
 const wrap = (fn) => (req, res) => Promise.resolve(fn(req, res)).catch((e) => {
   console.error(e);
   if (!res.headersSent) res.status(500).json({ error: e.message });
@@ -68,7 +66,7 @@ app.get('/api/auth/me', verificarToken, (req, res) => {
   res.json({ id: req.user.id, username: req.user.username });
 });
 
-// ── AMIZADES ──────────────────────────────────────────────
+// ── AMIZADES (única feature que cruza contas) ─────────────
 app.post('/api/amigos/adicionar', verificarToken, wrap(async (req, res) => {
   const { username_amigo } = req.body;
   if (!username_amigo) return res.status(400).json({ error: 'Username obrigatório' });
@@ -131,41 +129,45 @@ app.get('/api/amigos/:amigoId/estudando-agora', verificarToken, wrap(async (req,
   res.json(sessaoAtiva ? { estudando: true, ...sessaoAtiva } : { estudando: false });
 }));
 
-// ── CONFIG ────────────────────────────────────────────────
-app.get('/api/config/:chave', wrap(async (req, res) => {
-  const row = await db.get('SELECT valor FROM config WHERE chave = ?', req.params.chave);
+// ── CONFIG (por usuário) ──────────────────────────────────
+app.get('/api/config/:chave', verificarToken, wrap(async (req, res) => {
+  const row = await db.get('SELECT valor FROM config WHERE usuario_id = ? AND chave = ?', req.user.id, req.params.chave);
   res.json({ valor: row ? row.valor : null });
 }));
 
-app.put('/api/config/:chave', wrap(async (req, res) => {
+app.put('/api/config/:chave', verificarToken, wrap(async (req, res) => {
   const { valor } = req.body;
-  if (valor === null || valor === undefined) {
-    await db.run('DELETE FROM config WHERE chave = ?', req.params.chave);
-  } else {
-    await db.run('INSERT OR REPLACE INTO config (chave, valor) VALUES (?, ?)', req.params.chave, String(valor));
-  }
+  const uid = req.user.id;
+  await db.tx(async (q) => {
+    await q.run('DELETE FROM config WHERE usuario_id = ? AND chave = ?', uid, req.params.chave);
+    if (valor !== null && valor !== undefined) {
+      await q.run('INSERT INTO config (usuario_id, chave, valor) VALUES (?, ?, ?)', uid, req.params.chave, String(valor));
+    }
+  });
   res.json({ ok: true });
 }));
 
-// ── MATÉRIAS ──────────────────────────────────────────────
-app.get('/api/materias', wrap(async (req, res) => {
+// ── MATÉRIAS (por usuário) ────────────────────────────────
+app.get('/api/materias', verificarToken, wrap(async (req, res) => {
+  const uid = req.user.id;
   const materias = await db.all(`
     SELECT m.*,
       COALESCE(SUM(s.duracao_segundos), 0) AS total_segundos,
       COUNT(s.id) AS total_sessoes
     FROM materias m
-    LEFT JOIN sessoes s ON s.materia_id = m.id
+    LEFT JOIN sessoes s ON s.materia_id = m.id AND s.usuario_id = ?
+    WHERE m.usuario_id = ?
     GROUP BY m.id
     ORDER BY m.nome
-  `);
+  `, uid, uid);
   res.json(materias);
 }));
 
-app.post('/api/materias', wrap(async (req, res) => {
+app.post('/api/materias', verificarToken, wrap(async (req, res) => {
   const { nome, cor, emoji } = req.body;
   if (!nome) return res.status(400).json({ error: 'Nome é obrigatório' });
   try {
-    const result = await db.insert('INSERT INTO materias (nome, cor, emoji) VALUES (?, ?, ?)', nome, cor || '#2d6a4f', emoji || '');
+    const result = await db.insert('INSERT INTO materias (usuario_id, nome, cor, emoji) VALUES (?, ?, ?, ?)', req.user.id, nome, cor || '#2d6a4f', emoji || '');
     const materia = await db.get('SELECT * FROM materias WHERE id = ?', result.lastInsertRowid);
     res.status(201).json(materia);
   } catch (e) {
@@ -174,31 +176,30 @@ app.post('/api/materias', wrap(async (req, res) => {
   }
 }));
 
-app.put('/api/materias/:id', wrap(async (req, res) => {
+app.put('/api/materias/:id', verificarToken, wrap(async (req, res) => {
   const { nome, cor, emoji } = req.body;
-  const { id } = req.params;
-  await db.run('UPDATE materias SET nome=?, cor=?, emoji=? WHERE id=?', nome, cor, emoji, id);
-  const materia = await db.get('SELECT * FROM materias WHERE id = ?', id);
+  await db.run('UPDATE materias SET nome=?, cor=?, emoji=? WHERE id=? AND usuario_id=?', nome, cor, emoji, req.params.id, req.user.id);
+  const materia = await db.get('SELECT * FROM materias WHERE id = ? AND usuario_id = ?', req.params.id, req.user.id);
   if (!materia) return res.status(404).json({ error: 'Matéria não encontrada' });
   res.json(materia);
 }));
 
-app.delete('/api/materias/:id', wrap(async (req, res) => {
-  const result = await db.run('DELETE FROM materias WHERE id = ?', req.params.id);
+app.delete('/api/materias/:id', verificarToken, wrap(async (req, res) => {
+  const result = await db.run('DELETE FROM materias WHERE id = ? AND usuario_id = ?', req.params.id, req.user.id);
   if (result.changes === 0) return res.status(404).json({ error: 'Matéria não encontrada' });
   res.json({ ok: true });
 }));
 
-// ── SESSÕES ───────────────────────────────────────────────
-app.get('/api/sessoes', wrap(async (req, res) => {
+// ── SESSÕES (por usuário) ─────────────────────────────────
+app.get('/api/sessoes', verificarToken, wrap(async (req, res) => {
   const { materia_id, data_inicio, data_fim, limit = 50 } = req.query;
   let query = `
     SELECT s.*, m.nome AS materia_nome, m.cor AS materia_cor, m.emoji AS materia_emoji
     FROM sessoes s
     JOIN materias m ON m.id = s.materia_id
-    WHERE 1=1
+    WHERE s.usuario_id = ?
   `;
-  const params = [];
+  const params = [req.user.id];
   if (materia_id) { query += ' AND s.materia_id = ?'; params.push(materia_id); }
   if (data_inicio) { query += ' AND DATE(s.iniciada_em) >= ?'; params.push(data_inicio); }
   if (data_fim) { query += ' AND DATE(s.iniciada_em) <= ?'; params.push(data_fim); }
@@ -222,21 +223,23 @@ app.post('/api/sessoes', verificarToken, wrap(async (req, res) => {
   res.status(201).json(sessao);
 }));
 
-app.delete('/api/sessoes/:id', wrap(async (req, res) => {
-  const result = await db.run('DELETE FROM sessoes WHERE id = ?', req.params.id);
+app.delete('/api/sessoes/:id', verificarToken, wrap(async (req, res) => {
+  const result = await db.run('DELETE FROM sessoes WHERE id = ? AND usuario_id = ?', req.params.id, req.user.id);
   if (result.changes === 0) return res.status(404).json({ error: 'Sessão não encontrada' });
   res.json({ ok: true });
 }));
 
-// ── TRILHAS ───────────────────────────────────────────────
-app.get('/api/trilhas', wrap(async (req, res) => {
+// ── TRILHAS (por usuário) ─────────────────────────────────
+app.get('/api/trilhas', verificarToken, wrap(async (req, res) => {
+  const uid = req.user.id;
   const trilhas = await db.all(`
     SELECT t.*, COUNT(tm.materia_id) AS total_materias
     FROM trilhas t
     LEFT JOIN trilha_materias tm ON tm.trilha_id = t.id
+    WHERE t.usuario_id = ?
     GROUP BY t.id
     ORDER BY t.nome
-  `);
+  `, uid);
 
   const result = [];
   for (const t of trilhas) {
@@ -245,22 +248,23 @@ app.get('/api/trilhas', wrap(async (req, res) => {
         COALESCE(SUM(s.duracao_segundos), 0) AS total_segundos
       FROM trilha_materias tm
       JOIN materias m ON m.id = tm.materia_id
-      LEFT JOIN sessoes s ON s.materia_id = m.id
+      LEFT JOIN sessoes s ON s.materia_id = m.id AND s.usuario_id = ?
       WHERE tm.trilha_id = ?
       GROUP BY m.id
       ORDER BY m.nome
-    `, t.id);
+    `, uid, t.id);
     result.push({ ...t, materias });
   }
   res.json(result);
 }));
 
-app.post('/api/trilhas', wrap(async (req, res) => {
+app.post('/api/trilhas', verificarToken, wrap(async (req, res) => {
   const { nome, cor, materia_ids = [] } = req.body;
   if (!nome) return res.status(400).json({ error: 'Nome é obrigatório' });
+  const uid = req.user.id;
   try {
     const trilha = await db.tx(async (q) => {
-      const r = await q.insert('INSERT INTO trilhas (nome, cor) VALUES (?, ?)', nome, cor || '#2d6a4f');
+      const r = await q.insert('INSERT INTO trilhas (usuario_id, nome, cor) VALUES (?, ?, ?)', uid, nome, cor || '#2d6a4f');
       const id = r.lastInsertRowid;
       for (const mid of materia_ids) {
         await q.run('INSERT INTO trilha_materias (trilha_id, materia_id) VALUES (?, ?)', id, mid);
@@ -274,9 +278,12 @@ app.post('/api/trilhas', wrap(async (req, res) => {
   }
 }));
 
-app.put('/api/trilhas/:id', wrap(async (req, res) => {
+app.put('/api/trilhas/:id', verificarToken, wrap(async (req, res) => {
   const { nome, cor, materia_ids = [] } = req.body;
   const { id } = req.params;
+  const uid = req.user.id;
+  const dono = await db.get('SELECT id FROM trilhas WHERE id = ? AND usuario_id = ?', id, uid);
+  if (!dono) return res.status(404).json({ error: 'Trilha não encontrada' });
   const trilha = await db.tx(async (q) => {
     await q.run('UPDATE trilhas SET nome=?, cor=? WHERE id=?', nome, cor, id);
     await q.run('DELETE FROM trilha_materias WHERE trilha_id=?', id);
@@ -288,15 +295,15 @@ app.put('/api/trilhas/:id', wrap(async (req, res) => {
   res.json(trilha);
 }));
 
-app.delete('/api/trilhas/:id', wrap(async (req, res) => {
-  const r = await db.run('DELETE FROM trilhas WHERE id=?', req.params.id);
+app.delete('/api/trilhas/:id', verificarToken, wrap(async (req, res) => {
+  const r = await db.run('DELETE FROM trilhas WHERE id=? AND usuario_id=?', req.params.id, req.user.id);
   if (r.changes === 0) return res.status(404).json({ error: 'Trilha não encontrada' });
   res.json({ ok: true });
 }));
 
-// ── CAPÍTULOS (configuráveis por trilha) ─────────────────
-app.get('/api/trilhas/:id/capitulos', wrap(async (req, res) => {
-  const capitulos = await db.all('SELECT * FROM capitulos WHERE trilha_id = ? ORDER BY ordem, id', req.params.id);
+// ── CAPÍTULOS (por usuário) ───────────────────────────────
+app.get('/api/trilhas/:id/capitulos', verificarToken, wrap(async (req, res) => {
+  const capitulos = await db.all('SELECT * FROM capitulos WHERE trilha_id = ? AND usuario_id = ? ORDER BY ordem, id', req.params.id, req.user.id);
   const result = [];
   for (const c of capitulos) {
     const materias = await db.all(`
@@ -311,16 +318,19 @@ app.get('/api/trilhas/:id/capitulos', wrap(async (req, res) => {
   res.json(result);
 }));
 
-app.post('/api/trilhas/:id/capitulos', wrap(async (req, res) => {
+app.post('/api/trilhas/:id/capitulos', verificarToken, wrap(async (req, res) => {
   const { nome, emoji, descricao, materia_ids = [], cronograma = [] } = req.body;
   if (!nome) return res.status(400).json({ error: 'Nome do capítulo é obrigatório' });
   const trilhaId = req.params.id;
+  const uid = req.user.id;
+  const dono = await db.get('SELECT id FROM trilhas WHERE id = ? AND usuario_id = ?', trilhaId, uid);
+  if (!dono) return res.status(404).json({ error: 'Trilha não encontrada' });
 
   const capituloId = await db.tx(async (q) => {
     const max = await q.get('SELECT COALESCE(MAX(ordem), -1) AS m FROM capitulos WHERE trilha_id = ?', trilhaId);
     const r = await q.insert(
-      'INSERT INTO capitulos (trilha_id, ordem, nome, emoji, descricao) VALUES (?,?,?,?,?)',
-      trilhaId, Number(max.m) + 1, nome, emoji || '📚', descricao || null);
+      'INSERT INTO capitulos (usuario_id, trilha_id, ordem, nome, emoji, descricao) VALUES (?,?,?,?,?,?)',
+      uid, trilhaId, Number(max.m) + 1, nome, emoji || '📚', descricao || null);
     const id = r.lastInsertRowid;
     let i = 0;
     for (const mid of materia_ids) {
@@ -336,10 +346,12 @@ app.post('/api/trilhas/:id/capitulos', wrap(async (req, res) => {
   res.status(201).json({ id: capituloId });
 }));
 
-app.put('/api/capitulos/:id', wrap(async (req, res) => {
+app.put('/api/capitulos/:id', verificarToken, wrap(async (req, res) => {
   const { nome, emoji, descricao, materia_ids = [], cronograma = [] } = req.body;
   const id = req.params.id;
   if (!nome) return res.status(400).json({ error: 'Nome do capítulo é obrigatório' });
+  const dono = await db.get('SELECT id FROM capitulos WHERE id = ? AND usuario_id = ?', id, req.user.id);
+  if (!dono) return res.status(404).json({ error: 'Capítulo não encontrado' });
 
   await db.tx(async (q) => {
     await q.run('UPDATE capitulos SET nome=?, emoji=?, descricao=? WHERE id=?', nome, emoji || '📚', descricao || null, id);
@@ -358,14 +370,14 @@ app.put('/api/capitulos/:id', wrap(async (req, res) => {
   res.json({ ok: true });
 }));
 
-app.delete('/api/capitulos/:id', wrap(async (req, res) => {
-  await db.run('DELETE FROM capitulos WHERE id=?', req.params.id);
+app.delete('/api/capitulos/:id', verificarToken, wrap(async (req, res) => {
+  await db.run('DELETE FROM capitulos WHERE id=? AND usuario_id=?', req.params.id, req.user.id);
   res.json({ ok: true });
 }));
 
-app.put('/api/capitulos/:id/mover', wrap(async (req, res) => {
-  const { direcao } = req.body; // 'cima' | 'baixo'
-  const cap = await db.get('SELECT * FROM capitulos WHERE id=?', req.params.id);
+app.put('/api/capitulos/:id/mover', verificarToken, wrap(async (req, res) => {
+  const { direcao } = req.body;
+  const cap = await db.get('SELECT * FROM capitulos WHERE id=? AND usuario_id=?', req.params.id, req.user.id);
   if (!cap) return res.status(404).json({ error: 'Capítulo não encontrado' });
   const vizinho = direcao === 'cima'
     ? await db.get('SELECT * FROM capitulos WHERE trilha_id=? AND ordem < ? ORDER BY ordem DESC LIMIT 1', cap.trilha_id, cap.ordem)
@@ -378,9 +390,10 @@ app.put('/api/capitulos/:id/mover', wrap(async (req, res) => {
   res.json({ ok: true });
 }));
 
-// ── DASHBOARD ─────────────────────────────────────────────
-app.get('/api/dashboard', wrap(async (req, res) => {
+// ── DASHBOARD (por usuário) ───────────────────────────────
+app.get('/api/dashboard', verificarToken, wrap(async (req, res) => {
   const { periodo = 'semana', trilha_id } = req.query;
+  const uid = Number(req.user.id);
 
   const filtros = {
     hoje: "DATE(s.iniciada_em) = DATE('now')",
@@ -392,16 +405,16 @@ app.get('/api/dashboard', wrap(async (req, res) => {
   const whereTrilha = trilha_id
     ? `m.id IN (SELECT materia_id FROM trilha_materias WHERE trilha_id = ${Number(trilha_id)})`
     : '1=1';
-
-  const where = `${wherePeriodo} AND ${whereTrilha}`;
+  const sUser = `s.usuario_id = ${uid}`;
+  const where = `${wherePeriodo} AND ${whereTrilha} AND ${sUser}`;
 
   const porMateria = await db.all(`
     SELECT m.id, m.nome, m.cor, m.emoji,
       COALESCE(SUM(s.duracao_segundos), 0) AS total_segundos,
       COUNT(s.id) AS total_sessoes
     FROM materias m
-    LEFT JOIN sessoes s ON s.materia_id = m.id AND ${wherePeriodo}
-    WHERE ${whereTrilha}
+    LEFT JOIN sessoes s ON s.materia_id = m.id AND ${wherePeriodo} AND ${sUser}
+    WHERE m.usuario_id = ${uid} AND ${whereTrilha}
     GROUP BY m.id
     ORDER BY total_segundos DESC
   `);
@@ -429,14 +442,15 @@ app.get('/api/dashboard', wrap(async (req, res) => {
   res.json({ porMateria, porDia, resumo });
 }));
 
-// ── COMPARATIVO PLANEJADO x REALIZADO ────────────────────
-app.get('/api/dashboard/comparativo', wrap(async (req, res) => {
+// ── COMPARATIVO PLANEJADO x REALIZADO (por usuário) ───────
+app.get('/api/dashboard/comparativo', verificarToken, wrap(async (req, res) => {
+  const uid = req.user.id;
   const blocosEstudo = await db.all(`
     SELECT materia_id, hora_inicio, hora_fim
     FROM cronograma_dias
-    WHERE tipo = 'estudo' AND materia_id IS NOT NULL
+    WHERE usuario_id = ? AND tipo = 'estudo' AND materia_id IS NOT NULL
       AND data >= DATE('now', '-6 days') AND data <= DATE('now')
-  `);
+  `, uid);
 
   const planejadoPorMateria = {};
   for (const b of blocosEstudo) {
@@ -449,9 +463,9 @@ app.get('/api/dashboard/comparativo', wrap(async (req, res) => {
   const realizado = await db.all(`
     SELECT materia_id, COALESCE(SUM(duracao_segundos), 0) AS total_segundos
     FROM sessoes
-    WHERE DATE(iniciada_em) >= DATE('now', '-6 days')
+    WHERE usuario_id = ? AND DATE(iniciada_em) >= DATE('now', '-6 days')
     GROUP BY materia_id
-  `);
+  `, uid);
   const realizadoPorMateria = {};
   for (const r of realizado) realizadoPorMateria[r.materia_id] = Number(r.total_segundos);
 
@@ -460,7 +474,7 @@ app.get('/api/dashboard/comparativo', wrap(async (req, res) => {
     ...Object.keys(realizadoPorMateria).map(Number),
   ]);
 
-  const materias = await db.all('SELECT id, nome, cor FROM materias');
+  const materias = await db.all('SELECT id, nome, cor FROM materias WHERE usuario_id = ?', uid);
   const materiaMap = Object.fromEntries(materias.map(m => [m.id, m]));
 
   const comparativo = [...materiaIds].map(id => ({
@@ -477,120 +491,123 @@ app.get('/api/dashboard/comparativo', wrap(async (req, res) => {
   res.json({ comparativo, totalPlanejado, totalRealizado });
 }));
 
-// ── CRONOGRAMA (template semanal legado) ──────────────────
-app.get('/api/cronograma', wrap(async (req, res) => {
+// ── CRONOGRAMA (template semanal legado, por usuário) ─────
+app.get('/api/cronograma', verificarToken, wrap(async (req, res) => {
   const blocos = await db.all(`
     SELECT c.*, m.nome as materia_nome, m.cor as materia_cor
     FROM cronograma c
     LEFT JOIN materias m ON m.id = c.materia_id
+    WHERE c.usuario_id = ?
     ORDER BY c.dia_semana, c.hora_inicio
-  `);
+  `, req.user.id);
   res.json(blocos);
 }));
 
-app.post('/api/cronograma', wrap(async (req, res) => {
+app.post('/api/cronograma', verificarToken, wrap(async (req, res) => {
   const { dia_semana, hora_inicio, hora_fim, tipo, materia_id, descricao } = req.body;
   const r = await db.insert(
-    'INSERT INTO cronograma (dia_semana, hora_inicio, hora_fim, tipo, materia_id, descricao) VALUES (?,?,?,?,?,?)',
-    dia_semana, hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null);
+    'INSERT INTO cronograma (usuario_id, dia_semana, hora_inicio, hora_fim, tipo, materia_id, descricao) VALUES (?,?,?,?,?,?,?)',
+    req.user.id, dia_semana, hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null);
   res.json({ id: r.lastInsertRowid });
 }));
 
-app.put('/api/cronograma/:id', wrap(async (req, res) => {
+app.put('/api/cronograma/:id', verificarToken, wrap(async (req, res) => {
   const { dia_semana, hora_inicio, hora_fim, tipo, materia_id, descricao } = req.body;
   await db.run(
-    'UPDATE cronograma SET dia_semana=?, hora_inicio=?, hora_fim=?, tipo=?, materia_id=?, descricao=? WHERE id=?',
-    dia_semana, hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null, req.params.id);
+    'UPDATE cronograma SET dia_semana=?, hora_inicio=?, hora_fim=?, tipo=?, materia_id=?, descricao=? WHERE id=? AND usuario_id=?',
+    dia_semana, hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null, req.params.id, req.user.id);
   res.json({ ok: true });
 }));
 
-app.delete('/api/cronograma/:id', wrap(async (req, res) => {
-  await db.run('DELETE FROM cronograma WHERE id=?', req.params.id);
+app.delete('/api/cronograma/:id', verificarToken, wrap(async (req, res) => {
+  await db.run('DELETE FROM cronograma WHERE id=? AND usuario_id=?', req.params.id, req.user.id);
   res.json({ ok: true });
 }));
 
-app.post('/api/cronograma/batch', wrap(async (req, res) => {
+app.post('/api/cronograma/batch', verificarToken, wrap(async (req, res) => {
   const blocos = req.body;
+  const uid = req.user.id;
   await db.tx(async (q) => {
     for (const b of blocos) {
-      await q.run('INSERT INTO cronograma (dia_semana, hora_inicio, hora_fim, tipo, materia_id, descricao) VALUES (?,?,?,?,?,?)',
-        b.dia_semana, b.hora_inicio, b.hora_fim, b.tipo, b.materia_id ?? null, b.descricao ?? null);
+      await q.run('INSERT INTO cronograma (usuario_id, dia_semana, hora_inicio, hora_fim, tipo, materia_id, descricao) VALUES (?,?,?,?,?,?,?)',
+        uid, b.dia_semana, b.hora_inicio, b.hora_fim, b.tipo, b.materia_id ?? null, b.descricao ?? null);
     }
   });
   res.json({ ok: true });
 }));
 
-app.post('/api/cronograma/replace', wrap(async (req, res) => {
+app.post('/api/cronograma/replace', verificarToken, wrap(async (req, res) => {
   const blocos = req.body;
+  const uid = req.user.id;
   await db.tx(async (q) => {
-    await q.run('DELETE FROM cronograma');
+    await q.run('DELETE FROM cronograma WHERE usuario_id = ?', uid);
     for (const b of blocos) {
-      await q.run('INSERT INTO cronograma (dia_semana, hora_inicio, hora_fim, tipo, materia_id, descricao) VALUES (?,?,?,?,?,?)',
-        b.dia_semana, b.hora_inicio, b.hora_fim, b.tipo, b.materia_id ?? null, b.descricao ?? null);
+      await q.run('INSERT INTO cronograma (usuario_id, dia_semana, hora_inicio, hora_fim, tipo, materia_id, descricao) VALUES (?,?,?,?,?,?,?)',
+        uid, b.dia_semana, b.hora_inicio, b.hora_fim, b.tipo, b.materia_id ?? null, b.descricao ?? null);
     }
   });
   res.json({ ok: true });
 }));
 
-// ── CRONOGRAMA POR DATA (calendário real) ────────────────
-app.get('/api/cronograma-dias', wrap(async (req, res) => {
+// ── CRONOGRAMA POR DATA (calendário, por usuário) ─────────
+app.get('/api/cronograma-dias', verificarToken, wrap(async (req, res) => {
   const { inicio, fim } = req.query;
   let query = `
     SELECT c.*, m.nome as materia_nome, m.cor as materia_cor
     FROM cronograma_dias c
     LEFT JOIN materias m ON m.id = c.materia_id
-    WHERE 1=1
+    WHERE c.usuario_id = ?
   `;
-  const params = [];
+  const params = [req.user.id];
   if (inicio) { query += ' AND c.data >= ?'; params.push(inicio); }
   if (fim) { query += ' AND c.data <= ?'; params.push(fim); }
   query += ' ORDER BY c.data, c.hora_inicio';
   res.json(await db.all(query, ...params));
 }));
 
-app.post('/api/cronograma-dias', wrap(async (req, res) => {
+app.post('/api/cronograma-dias', verificarToken, wrap(async (req, res) => {
   const { data, hora_inicio, hora_fim, tipo, materia_id, descricao } = req.body;
   const r = await db.insert(
-    'INSERT INTO cronograma_dias (data, hora_inicio, hora_fim, tipo, materia_id, descricao) VALUES (?,?,?,?,?,?)',
-    data, hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null);
+    'INSERT INTO cronograma_dias (usuario_id, data, hora_inicio, hora_fim, tipo, materia_id, descricao) VALUES (?,?,?,?,?,?,?)',
+    req.user.id, data, hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null);
   res.json({ id: r.lastInsertRowid });
 }));
 
-app.put('/api/cronograma-dias/:id', wrap(async (req, res) => {
+app.put('/api/cronograma-dias/:id', verificarToken, wrap(async (req, res) => {
   const { data, hora_inicio, hora_fim, tipo, materia_id, descricao } = req.body;
   await db.run(
-    'UPDATE cronograma_dias SET data=?, hora_inicio=?, hora_fim=?, tipo=?, materia_id=?, descricao=?, serie_id=NULL WHERE id=?',
-    data, hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null, req.params.id);
+    'UPDATE cronograma_dias SET data=?, hora_inicio=?, hora_fim=?, tipo=?, materia_id=?, descricao=?, serie_id=NULL WHERE id=? AND usuario_id=?',
+    data, hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null, req.params.id, req.user.id);
   res.json({ ok: true });
 }));
 
-app.delete('/api/cronograma-dias/:id', wrap(async (req, res) => {
-  await db.run('DELETE FROM cronograma_dias WHERE id=?', req.params.id);
+app.delete('/api/cronograma-dias/:id', verificarToken, wrap(async (req, res) => {
+  await db.run('DELETE FROM cronograma_dias WHERE id=? AND usuario_id=?', req.params.id, req.user.id);
   res.json({ ok: true });
 }));
 
-app.put('/api/cronograma-dias/serie/:serieId', wrap(async (req, res) => {
+app.put('/api/cronograma-dias/serie/:serieId', verificarToken, wrap(async (req, res) => {
   const { hora_inicio, hora_fim, tipo, materia_id, descricao } = req.body;
   await db.run(
-    'UPDATE cronograma_dias SET hora_inicio=?, hora_fim=?, tipo=?, materia_id=?, descricao=? WHERE serie_id=?',
-    hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null, req.params.serieId);
+    'UPDATE cronograma_dias SET hora_inicio=?, hora_fim=?, tipo=?, materia_id=?, descricao=? WHERE serie_id=? AND usuario_id=?',
+    hora_inicio, hora_fim, tipo, materia_id ?? null, descricao ?? null, req.params.serieId, req.user.id);
   res.json({ ok: true });
 }));
 
-app.delete('/api/cronograma-dias/serie/:serieId', wrap(async (req, res) => {
-  await db.run('DELETE FROM cronograma_dias WHERE serie_id=?', req.params.serieId);
+app.delete('/api/cronograma-dias/serie/:serieId', verificarToken, wrap(async (req, res) => {
+  await db.run('DELETE FROM cronograma_dias WHERE serie_id=? AND usuario_id=?', req.params.serieId, req.user.id);
   res.json({ ok: true });
 }));
 
-// Aplica um template semanal gerando blocos datados só a partir de hoje.
-app.post('/api/cronograma-dias/aplicar-semana', wrap(async (req, res) => {
+app.post('/api/cronograma-dias/aplicar-semana', verificarToken, wrap(async (req, res) => {
   const { blocosSemana, semanas = 12 } = req.body;
+  const uid = req.user.id;
   const hoje = new Date();
   hoje.setHours(0, 0, 0, 0);
   const toISO = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
   await db.tx(async (q) => {
-    await q.run('DELETE FROM cronograma_dias WHERE data >= ?', toISO(hoje));
+    await q.run('DELETE FROM cronograma_dias WHERE usuario_id = ? AND data >= ?', uid, toISO(hoje));
     const serieIds = blocosSemana.map(() => `s_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`);
     const totalDias = semanas * 7;
     for (let i = 0; i < totalDias; i++) {
@@ -601,42 +618,51 @@ app.post('/api/cronograma-dias/aplicar-semana', wrap(async (req, res) => {
         const b = blocosSemana[idx];
         if (b.dia_semana !== diaSemana) continue;
         await q.run(
-          'INSERT INTO cronograma_dias (data, hora_inicio, hora_fim, tipo, materia_id, descricao, serie_id) VALUES (?,?,?,?,?,?,?)',
-          toISO(d), b.hora_inicio, b.hora_fim, b.tipo, b.materia_id ?? null, b.descricao ?? null, serieIds[idx]);
+          'INSERT INTO cronograma_dias (usuario_id, data, hora_inicio, hora_fim, tipo, materia_id, descricao, serie_id) VALUES (?,?,?,?,?,?,?,?)',
+          uid, toISO(d), b.hora_inicio, b.hora_fim, b.tipo, b.materia_id ?? null, b.descricao ?? null, serieIds[idx]);
       }
     }
   });
   res.json({ ok: true });
 }));
 
-// ── PASSOS CONCLUÍDOS (legacy) ────────────────────────────
-app.get('/api/trilhas/:id/passos', wrap(async (req, res) => {
+// ── PASSOS / MATÉRIAS CONCLUÍDAS (via trilha do usuário) ──
+async function trilhaDoUsuario(trilhaId, uid) {
+  return db.get('SELECT id FROM trilhas WHERE id = ? AND usuario_id = ?', trilhaId, uid);
+}
+
+app.get('/api/trilhas/:id/passos', verificarToken, wrap(async (req, res) => {
+  if (!await trilhaDoUsuario(req.params.id, req.user.id)) return res.status(404).json({ error: 'Trilha não encontrada' });
   const rows = await db.all('SELECT passo_index FROM passos_completos WHERE trilha_id = ?', req.params.id);
   res.json(rows.map(r => r.passo_index));
 }));
 
-app.put('/api/trilhas/:id/passos/:index', wrap(async (req, res) => {
+app.put('/api/trilhas/:id/passos/:index', verificarToken, wrap(async (req, res) => {
+  if (!await trilhaDoUsuario(req.params.id, req.user.id)) return res.status(404).json({ error: 'Trilha não encontrada' });
   await db.run('INSERT OR IGNORE INTO passos_completos (trilha_id, passo_index) VALUES (?, ?)', req.params.id, req.params.index);
   res.json({ ok: true });
 }));
 
-app.delete('/api/trilhas/:id/passos/:index', wrap(async (req, res) => {
+app.delete('/api/trilhas/:id/passos/:index', verificarToken, wrap(async (req, res) => {
+  if (!await trilhaDoUsuario(req.params.id, req.user.id)) return res.status(404).json({ error: 'Trilha não encontrada' });
   await db.run('DELETE FROM passos_completos WHERE trilha_id = ? AND passo_index = ?', req.params.id, req.params.index);
   res.json({ ok: true });
 }));
 
-// ── MATÉRIAS CONCLUÍDAS (capítulos) ──────────────────────
-app.get('/api/trilhas/:id/materias-concluidas', wrap(async (req, res) => {
+app.get('/api/trilhas/:id/materias-concluidas', verificarToken, wrap(async (req, res) => {
+  if (!await trilhaDoUsuario(req.params.id, req.user.id)) return res.status(404).json({ error: 'Trilha não encontrada' });
   const rows = await db.all('SELECT materia_id FROM materias_concluidas WHERE trilha_id = ?', req.params.id);
   res.json(rows.map(r => r.materia_id));
 }));
 
-app.put('/api/trilhas/:id/materias-concluidas/:mid', wrap(async (req, res) => {
+app.put('/api/trilhas/:id/materias-concluidas/:mid', verificarToken, wrap(async (req, res) => {
+  if (!await trilhaDoUsuario(req.params.id, req.user.id)) return res.status(404).json({ error: 'Trilha não encontrada' });
   await db.run('INSERT OR IGNORE INTO materias_concluidas (trilha_id, materia_id) VALUES (?, ?)', req.params.id, req.params.mid);
   res.json({ ok: true });
 }));
 
-app.delete('/api/trilhas/:id/materias-concluidas/:mid', wrap(async (req, res) => {
+app.delete('/api/trilhas/:id/materias-concluidas/:mid', verificarToken, wrap(async (req, res) => {
+  if (!await trilhaDoUsuario(req.params.id, req.user.id)) return res.status(404).json({ error: 'Trilha não encontrada' });
   await db.run('DELETE FROM materias_concluidas WHERE trilha_id = ? AND materia_id = ?', req.params.id, req.params.mid);
   res.json({ ok: true });
 }));

@@ -3,19 +3,30 @@ const path = require('path');
 const usePg = !!process.env.DATABASE_URL;
 
 // ────────────────────────────────────────────────────────────
-// Schema (idêntico nos dois bancos, só muda o dialeto de tipos)
+// Schema. Tabelas "de conteúdo" pertencem a um usuário (usuario_id):
+// materias, trilhas, capitulos, cronograma, cronograma_dias, config.
+// Assim cada conta tem seu próprio edital. Só sessoes/amizades cruzam
+// contas (aba Colegas). Nome é único POR usuário, não global.
 // ────────────────────────────────────────────────────────────
 const SCHEMA_PG = `
+  CREATE TABLE IF NOT EXISTS usuarios (
+    id SERIAL PRIMARY KEY,
+    username TEXT NOT NULL UNIQUE,
+    senha_hash TEXT NOT NULL,
+    criado_em TIMESTAMP NOT NULL DEFAULT NOW()
+  );
   CREATE TABLE IF NOT EXISTS materias (
     id SERIAL PRIMARY KEY,
-    nome TEXT NOT NULL UNIQUE,
+    usuario_id INTEGER,
+    nome TEXT NOT NULL,
     cor TEXT NOT NULL DEFAULT '#4CAF50',
     emoji TEXT NOT NULL DEFAULT '',
     criada_em TIMESTAMP NOT NULL DEFAULT NOW()
   );
   CREATE TABLE IF NOT EXISTS trilhas (
     id SERIAL PRIMARY KEY,
-    nome TEXT NOT NULL UNIQUE,
+    usuario_id INTEGER,
+    nome TEXT NOT NULL,
     cor TEXT NOT NULL DEFAULT '#2d6a4f',
     criada_em TIMESTAMP NOT NULL DEFAULT NOW()
   );
@@ -25,11 +36,14 @@ const SCHEMA_PG = `
     PRIMARY KEY (trilha_id, materia_id)
   );
   CREATE TABLE IF NOT EXISTS config (
-    chave TEXT PRIMARY KEY,
-    valor TEXT NOT NULL
+    usuario_id INTEGER NOT NULL,
+    chave TEXT NOT NULL,
+    valor TEXT NOT NULL,
+    PRIMARY KEY (usuario_id, chave)
   );
   CREATE TABLE IF NOT EXISTS cronograma (
     id SERIAL PRIMARY KEY,
+    usuario_id INTEGER,
     dia_semana INTEGER NOT NULL,
     hora_inicio TEXT NOT NULL,
     hora_fim TEXT NOT NULL,
@@ -51,6 +65,7 @@ const SCHEMA_PG = `
   );
   CREATE TABLE IF NOT EXISTS cronograma_dias (
     id SERIAL PRIMARY KEY,
+    usuario_id INTEGER,
     data TEXT NOT NULL,
     hora_inicio TEXT NOT NULL,
     hora_fim TEXT NOT NULL,
@@ -61,12 +76,6 @@ const SCHEMA_PG = `
   );
   CREATE INDEX IF NOT EXISTS idx_cronograma_dias_data ON cronograma_dias(data);
   CREATE INDEX IF NOT EXISTS idx_cronograma_dias_serie ON cronograma_dias(serie_id);
-  CREATE TABLE IF NOT EXISTS usuarios (
-    id SERIAL PRIMARY KEY,
-    username TEXT NOT NULL UNIQUE,
-    senha_hash TEXT NOT NULL,
-    criado_em TIMESTAMP NOT NULL DEFAULT NOW()
-  );
   CREATE TABLE IF NOT EXISTS sessoes (
     id SERIAL PRIMARY KEY,
     materia_id INTEGER NOT NULL REFERENCES materias(id) ON DELETE CASCADE,
@@ -78,6 +87,7 @@ const SCHEMA_PG = `
   );
   CREATE TABLE IF NOT EXISTS capitulos (
     id SERIAL PRIMARY KEY,
+    usuario_id INTEGER,
     trilha_id INTEGER NOT NULL REFERENCES trilhas(id) ON DELETE CASCADE,
     ordem INTEGER NOT NULL DEFAULT 0,
     nome TEXT NOT NULL,
@@ -111,16 +121,24 @@ const SCHEMA_PG = `
 `;
 
 const SCHEMA_SQLITE = `
+  CREATE TABLE IF NOT EXISTS usuarios (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    senha_hash TEXT NOT NULL,
+    criado_em TEXT NOT NULL DEFAULT (datetime('now'))
+  );
   CREATE TABLE IF NOT EXISTS materias (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome TEXT NOT NULL UNIQUE,
+    usuario_id INTEGER,
+    nome TEXT NOT NULL,
     cor TEXT NOT NULL DEFAULT '#4CAF50',
     emoji TEXT NOT NULL DEFAULT '',
     criada_em TEXT NOT NULL DEFAULT (datetime('now'))
   );
   CREATE TABLE IF NOT EXISTS trilhas (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome TEXT NOT NULL UNIQUE,
+    usuario_id INTEGER,
+    nome TEXT NOT NULL,
     cor TEXT NOT NULL DEFAULT '#2d6a4f',
     criada_em TEXT NOT NULL DEFAULT (datetime('now'))
   );
@@ -132,11 +150,14 @@ const SCHEMA_SQLITE = `
     FOREIGN KEY (materia_id) REFERENCES materias(id) ON DELETE CASCADE
   );
   CREATE TABLE IF NOT EXISTS config (
-    chave TEXT PRIMARY KEY,
-    valor TEXT NOT NULL
+    usuario_id INTEGER NOT NULL,
+    chave TEXT NOT NULL,
+    valor TEXT NOT NULL,
+    PRIMARY KEY (usuario_id, chave)
   );
   CREATE TABLE IF NOT EXISTS cronograma (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    usuario_id INTEGER,
     dia_semana INTEGER NOT NULL,
     hora_inicio TEXT NOT NULL,
     hora_fim TEXT NOT NULL,
@@ -162,6 +183,7 @@ const SCHEMA_SQLITE = `
   );
   CREATE TABLE IF NOT EXISTS cronograma_dias (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    usuario_id INTEGER,
     data TEXT NOT NULL,
     hora_inicio TEXT NOT NULL,
     hora_fim TEXT NOT NULL,
@@ -186,6 +208,7 @@ const SCHEMA_SQLITE = `
   );
   CREATE TABLE IF NOT EXISTS capitulos (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    usuario_id INTEGER,
     trilha_id INTEGER NOT NULL,
     ordem INTEGER NOT NULL DEFAULT 0,
     nome TEXT NOT NULL,
@@ -213,12 +236,6 @@ const SCHEMA_SQLITE = `
     FOREIGN KEY (capitulo_id) REFERENCES capitulos(id) ON DELETE CASCADE,
     FOREIGN KEY (materia_id) REFERENCES materias(id) ON DELETE SET NULL
   );
-  CREATE TABLE IF NOT EXISTS usuarios (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT NOT NULL UNIQUE,
-    senha_hash TEXT NOT NULL,
-    criado_em TEXT NOT NULL DEFAULT (datetime('now'))
-  );
   CREATE TABLE IF NOT EXISTS amizades (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     usuario_id INTEGER NOT NULL,
@@ -231,6 +248,32 @@ const SCHEMA_SQLITE = `
   CREATE INDEX IF NOT EXISTS idx_amizades_usuario ON amizades(usuario_id);
 `;
 
+// Migração p/ bancos que já existiam sem usuario_id (produção).
+// Idempotente: adiciona colunas, tira o UNIQUE global do nome, e atribui
+// o conteúdo órfão ao primeiro usuário (a Bruna, dona do histórico atual).
+const MIGRATE_PG = `
+  ALTER TABLE sessoes ADD COLUMN IF NOT EXISTS anotacao TEXT;
+  ALTER TABLE sessoes ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
+  ALTER TABLE materias ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
+  ALTER TABLE trilhas ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
+  ALTER TABLE cronograma ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
+  ALTER TABLE cronograma_dias ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
+  ALTER TABLE capitulos ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
+
+  ALTER TABLE materias DROP CONSTRAINT IF EXISTS materias_nome_key;
+  ALTER TABLE trilhas DROP CONSTRAINT IF EXISTS trilhas_nome_key;
+
+  UPDATE materias        SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
+  UPDATE trilhas         SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
+  UPDATE cronograma      SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
+  UPDATE cronograma_dias SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
+  UPDATE capitulos c     SET usuario_id = t.usuario_id FROM trilhas t WHERE c.trilha_id = t.id AND c.usuario_id IS NULL;
+  UPDATE capitulos       SET usuario_id = (SELECT MIN(id) FROM usuarios) WHERE usuario_id IS NULL;
+
+  CREATE UNIQUE INDEX IF NOT EXISTS idx_materias_uid_nome ON materias(usuario_id, nome);
+  CREATE UNIQUE INDEX IF NOT EXISTS idx_trilhas_uid_nome ON trilhas(usuario_id, nome);
+`;
+
 // ────────────────────────────────────────────────────────────
 // Tradução SQLite → PostgreSQL (placeholders, datas, upserts)
 // ────────────────────────────────────────────────────────────
@@ -240,13 +283,8 @@ function translatePg(sql, returnId) {
   if (/INSERT\s+OR\s+IGNORE/i.test(sql)) {
     sql = sql.replace(/INSERT\s+OR\s+IGNORE/i, 'INSERT');
     suffix = ' ON CONFLICT DO NOTHING';
-  } else if (/INSERT\s+OR\s+REPLACE/i.test(sql)) {
-    // único uso: config(chave, valor)
-    sql = sql.replace(/INSERT\s+OR\s+REPLACE/i, 'INSERT');
-    suffix = ' ON CONFLICT (chave) DO UPDATE SET valor = EXCLUDED.valor';
   }
 
-  // Funções de data do SQLite → PostgreSQL
   sql = sql.replace(/DATE\(\s*'now'\s*,\s*'([+-]?\d+)\s*days?'\s*\)/gi,
     (_m, n) => `(CURRENT_DATE + INTERVAL '${n} days')`);
   sql = sql.replace(/DATE\(\s*'now'\s*\)/gi, 'CURRENT_DATE');
@@ -255,7 +293,6 @@ function translatePg(sql, returnId) {
   sql += suffix;
   if (returnId && !/RETURNING/i.test(sql)) sql += ' RETURNING id';
 
-  // ? → $1, $2, ...
   let i = 0;
   sql = sql.replace(/\?/g, () => `$${++i}`);
   return sql;
@@ -265,12 +302,11 @@ let db;
 
 if (usePg) {
   const pg = require('pg');
-  // Devolve números (não strings) para COUNT/SUM e mantém datas como texto
-  pg.types.setTypeParser(20, (v) => (v === null ? null : parseInt(v, 10)));   // int8
-  pg.types.setTypeParser(1700, (v) => (v === null ? null : parseFloat(v)));    // numeric
-  pg.types.setTypeParser(1082, (v) => v); // date
-  pg.types.setTypeParser(1114, (v) => v); // timestamp
-  pg.types.setTypeParser(1184, (v) => v); // timestamptz
+  pg.types.setTypeParser(20, (v) => (v === null ? null : parseInt(v, 10)));
+  pg.types.setTypeParser(1700, (v) => (v === null ? null : parseFloat(v)));
+  pg.types.setTypeParser(1082, (v) => v);
+  pg.types.setTypeParser(1114, (v) => v);
+  pg.types.setTypeParser(1184, (v) => v);
 
   const pool = new pg.Pool({
     connectionString: process.env.DATABASE_URL,
@@ -311,11 +347,7 @@ if (usePg) {
     },
     init: async () => {
       await pool.query(SCHEMA_PG);
-      // Migrações idempotentes p/ tabelas que possam ter sido criadas antes (scripts antigos)
-      await pool.query(`
-        ALTER TABLE sessoes ADD COLUMN IF NOT EXISTS anotacao TEXT;
-        ALTER TABLE sessoes ADD COLUMN IF NOT EXISTS usuario_id INTEGER;
-      `);
+      await pool.query(MIGRATE_PG);
     },
   };
 } else {
@@ -323,6 +355,16 @@ if (usePg) {
   const sdb = new Database(path.join(__dirname, 'estudos.db'));
   sdb.pragma('foreign_keys = ON');
   sdb.exec(SCHEMA_SQLITE);
+  // Migração best-effort p/ estudos.db antigo (ignora coluna já existente)
+  for (const t of ['materias', 'trilhas', 'cronograma', 'cronograma_dias', 'capitulos']) {
+    try { sdb.exec(`ALTER TABLE ${t} ADD COLUMN usuario_id INTEGER`); } catch (_) { /* já existe */ }
+  }
+  try {
+    sdb.exec(`
+      CREATE UNIQUE INDEX IF NOT EXISTS idx_materias_uid_nome ON materias(usuario_id, nome);
+      CREATE UNIQUE INDEX IF NOT EXISTS idx_trilhas_uid_nome ON trilhas(usuario_id, nome);
+    `);
+  } catch (_) { /* pode falhar se houver duplicatas antigas locais */ }
 
   const makeQ = () => ({
     get: async (sql, ...p) => sdb.prepare(sql).get(...p),
